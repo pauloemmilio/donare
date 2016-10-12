@@ -20,3 +20,8 @@ class Ong(models.Model):
     descricao = models.CharField(max_length=500)
     def __str__(self):
         return self.nome
+    def __unicode__(self):
+        return self.name
+
+    def get_absolute_url(self):
+        return reverse('alterar_ong', kwargs={'pk': self.pk})
