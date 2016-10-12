@@ -7,4 +7,4 @@ def index(request):
     return render(request, 'index.html', context=context_dict)
 
 def ong(request):
-	return render(request, 'projects.html')
+	return render(request, 'ongs.html')
