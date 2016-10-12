@@ -12,11 +12,23 @@
     <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700,200,300' rel='stylesheet' type='text/css'>
-    <link href="{% static "css/style.css" %}" rel="stylesheet">
-    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
-    <link href="{% static "css/jquery-ui.css" %}" rel="stylesheet">
-    <link href="{% static "css/resp.css" %}" rel="stylesheet">
-    <link href="{% static "css/colorbox.css" %}"rel="stylesheet">
+    <link href="{% static 'css/style.css' %}" rel="stylesheet">
+    <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
+    <link href="{% static 'css/jquery-ui.css' %}" rel="stylesheet">
+    <link href="{% static 'css/resp.css' %}" rel="stylesheet">
+    <link href="{% static 'css/colorbox.css' %}"rel="stylesheet">
+
+    <script type="text/javascript" src="{% static 'js/jquery.selectbox.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery-uii.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/contact.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.colorbox.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.placeholder.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.tweet.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jflickrfeed.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+
 
     <link rel="shortcut icon" href="favicon.png" />
     <link rel="apple-touch-icon" href="img/touch-icon.png" />
@@ -48,7 +60,7 @@
     </style>
     <![endif]-->
 
-    <script src="js/jquery.js"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
     <script>
         /* <![CDATA[ */
         $(window).scroll(function fade() {
@@ -1277,16 +1289,6 @@
 
 </script>
 
-<script src="js/jquery.selectbox.min.js"></script>
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.js"></script>
-<script src="js/jquery-uii.js"></script>
-<script src="js/contact.js"></script>
-<script src="js/jquery.colorbox.js"></script>
-<script src="js/jquery.placeholder.js"></script>
-<script src="js/jquery.tweet.js"></script>
-<script src="js/jflickrfeed.min.js"></script>
-<script src="js/scripts.js"></script>
 
 <!--[if IE 8]>
 <script src="js/css3-mediaqueries.js"></script>
