@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+{% load staticfiles %}
 <html lang="en">
 <head>
     <meta charset="utf-8">
@@ -10,9 +11,9 @@
     <link href='http://fonts.googleapis.com/css?family=Patua+One' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Roboto+Slab:400,700,300,100' rel='stylesheet' type='text/css'>
     <link href='http://fonts.googleapis.com/css?family=Titillium+Web:400,700,200,300' rel='stylesheet' type='text/css'>
-    <link href="css/style.css" rel="stylesheet">
-    <link href="css/bootstrap.css" rel="stylesheet">
-    <link href="css/resp.css" rel="stylesheet">
+    <link href="{% static "css/style.css" %}" rel="stylesheet">
+    <link href="{% static "css/bootstrap.css" %}" rel="stylesheet">
+    <link href="{% static "css/resp.css" %}" rel="stylesheet">
     <style type="text/css">
 
     </style>
@@ -78,7 +79,7 @@
     <div class="navigate">
         <div class="width">
             <div class="logo inline">
-                <h1 class="inline fleft">FUNDER</h1>
+                <h1 class="inline fleft logodonare">donare</h1>
             </div>
 
             <div class="navigation inline fright">
@@ -324,6 +325,7 @@
     </div>
 </div>
 <div class="clear"></div>
+<!--
 <div id="author_review">
     <h3 class="decoration text-center"><span class="nobacgr">Author</span></h3>
     <div id="face_social_text">
@@ -348,6 +350,9 @@
         </div>
     </div>
 </div>
+-->
+
+<!--
 <div class="clear"></div>
 <h4 class="decoration text-center"><span class="nobacgr">Ask a Question</span></h4>
 <div id="asc_a_question">
@@ -378,6 +383,9 @@
         </div>
     </div>
 </div>
+-->
+
+<!--
 <div id="asc_a_question_form">
     <h3 class="text-center asc_question_form_name">Ask a <span class="h3_quest">Question</span></h3>
     <div class="form_question">
@@ -396,6 +404,7 @@
         </div>
     </div>
 </div>
+-->
 </div>
 <div class="sidebar_descr span4">
     <div id="back_this_project_block">
