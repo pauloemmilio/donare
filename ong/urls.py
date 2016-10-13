@@ -4,7 +4,7 @@ urlpatterns = [
 
  url(r'^$', views.index, name='index'),
  url(r'^new', views.criar_ong, name='criar'),
- url(r'^edit/(?P<pk>\d+)$', views.alterar_ong, name='alterar_ong'),
+ url(r'^ong/edit/(?P<ong_id>[0-9]+)/', views.alterar_ong, name='alterar_ong'),
  url(r'^delete/(?P<pk>\d+)$', views.deletar_ong, name='deletar_ong'),
  url(r'^ong/(?P<ong_id>[0-9]+)/', views.ong, name='ong'),
 ]

@@ -42,14 +42,18 @@ def criar_ong(request):
         form = OngForm()
     return render(request, 'register.html', context_dict)
 
-def alterar_ong(request, pk, template_name='editOng.html'):
-    ongs = Ong.objects.get(pk = ong_id)
-    if form.is_valid():
-        form = OngForm(request.POST or None, instance=ong)
+def alterar_ong(request, pk):
+    template_name='editOng.html'
+    ong = Ong.objects.get(pk = ong_id)
+    if request.method == 'POST':
+        form = OngForm(request.POST, instance=ong)
         form.save()
-        return redirect('index')
+        return HttpResponseRedirect('/ong/')
+    else:
+        form = OngForm(instance=ong)
     context_dict = {'form': form, 'ong_id': ong_id}
     return render(request, template_name,context_dict)
+
 def deletar_ong(request, pk, template_name='inde.html'):
     ong = get_object_or_404(Ong, pk=pk)
     if request.method=='POST':
