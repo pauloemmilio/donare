@@ -17,7 +17,7 @@ class Ong(models.Model):
         upload_to = 'static/img/ong',
     )
     videoUrl = models.URLField()
-    descricao = models.CharField(max_length=500)
+    descricao = models.TextField(max_length=500)
     def __str__(self):
         return self.nome
     def __unicode__(self):

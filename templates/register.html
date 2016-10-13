@@ -491,18 +491,37 @@
                 <div class="column_project">
                     <h4 class="text-center">Informações e contato:</h4>
                     
+                    <label>Nome da Ong</label>
                     <label for="{{ form.name.auto_id }}"> {{ form.name }} </label>
-                    {{ form.name }}
-                    <!--<input type="text" class="inputp search-query span12" placeholder="Nome da ONG">
-                    -->
-                    <input type="text" class="inputp search-query span12" placeholder="Categoria da ONG">
-                    <input type="text" class="inputp search-query span12" placeholder="CNPJ">
-                    <input type="text" class="inputp search-query span12" placeholder="Telefone de contato">
-                    <input type="email" class="inputp search-query span12" placeholder="E-mail">
-                    <input type="password" class="inputp search-query span12" placeholder="Senha">
-                    <input type="text" class="inputp search-query span12" placeholder="Endereço da ONG">
-                    <input type="text" class="inputp search-query span12 face" style="padding-left: 30px;" placeholder="URL do Facebook">
-                        
+                    
+                    <label>Categoria da Ong</label>
+                    <label for="{{ form.categoria.auto_id }}"> {{ form.categoria }} </label>
+
+                    <br>
+                    <label>CNPJ</label>
+                    <br>
+                    <label for="{{ form.cnpj.auto_id }}"> {{ form.cnpj }} </label>
+
+                    <br>
+                    <label>Telefone</label>
+                    <br>
+                    <label for="{{ form.telefone.auto_id }}"> {{ form.telefone }} </label>
+
+                    <br>
+                    <label>E-mail</label>
+                    <br>
+                    <label for="{{ form.email.auto_id }}"> {{ form.email }} </label>
+
+                    <br>
+                    <label>Senha</label>
+                    <br>
+                    <label for="{{ form.senha.auto_id }}"> {{ form.senha }} </label>
+
+                    <br>
+                    <label>Endereço</label>
+                    <br>
+                    <label for="{{ form.endereco.auto_id }}"> {{ form.endereco }} </label>
+
                 </div>
             </div>
 
@@ -510,20 +529,19 @@
                 <div class="bleft column_project">
                     <h4 class="text-center">Descrição e mídia:</h4>
                     
-                    <input type="text" class="inputp search-query span12" placeholder="URL de vídeo sobre a ONG">
-                    <div class="upload_img inline">
-                        <input type="file" name="upload" placeholder="Logo" />
-                    </div>
-                    <div class="upload_pic1 inline">
-                        <input type="file" name="upload"/>
-                    </div>
-                    <div class="upload_pic2 inline">
-                        <input type="file" name="upload"/>
-                    </div>
-                    <div class="upload_pic3 inline">
-                        <input type="file" name="upload"/>
-                    </div>
-                    <textarea id="redex3" class="inputp search-query span12"  rows="5" placeholder="Descrição da ONG"></textarea>
+                    <label>Url de vídeo sobre a ONG</label>
+                    <br>
+                    <label for="{{ form.videoUrl.auto_id }}"> {{ form.videoUrl }} </label>
+
+                    <br>
+                    <label>Logo ou foto da ONG</label>
+                    <br>
+                    <label for="{{ form.fotos.auto_id }}"> {{ form.fotos }} </label>
+                    
+                    <br>
+                    <label>Descrição da ONG</label>
+                    <br>
+                    <label for="{{ form.descricao.auto_id }}"> {{ form.descricao }} </label>
                     
                 </div>
             </div>
@@ -531,16 +549,26 @@
             <div class="span4">
                 <div class="bleft column_project">
                     <h4 class="text-center">Informações bancárias:</h4>
-                    
-                    <input type="text" class="inputp search-query span12" placeholder="Agência">
-                    <input type="text" class="inputp search-query span12" placeholder="Conta">
-                    <input type="text" class="inputp search-query span12" placeholder="Nome do titular da conta">
+
+                    <label>Agência</label>
+                    <br>
+                    <label for="{{ form.agencia.auto_id }}"> {{ form.agencia }} </label>
+
+                    <br>
+                    <label>Conta</label>
+                    <br>
+                    <label for="{{ form.conta.auto_id }}"> {{ form.conta }} </label>
+
+                    <br>
+                    <label>Titular da conta</label>
+                    <br>
+                    <label for="{{ form.nomeTitular.auto_id }}"> {{ form.nomeTitular }} </label>
                     
                 </div>
             </div>
         </div>
 
-        <div class="decoration text-center create_butt"><span class="nobacgr_whit"><button class="btn btn-large search-query" type="button"> <span class="butt_small"><strong>Cadastrar</strong></span></button></span><a name="id_cont"></a></div>
+        <div class="decoration text-center create_butt"><span class="nobacgr_whit"><button class="btn btn-large search-query" type="submit"> <span class="butt_small"><strong>Cadastrar</strong></span></button></span><a name="id_cont"></a></div>
 
     </form>
 
