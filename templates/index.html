@@ -118,7 +118,7 @@
                         <li class="active"><a class="bleft" href="index.html">HOME</a></li>
                         <li><a id="link_about" class="bleft" href="#">ABOUT</a></li>
                         <li><a id="link" class="bleft" href="#">PROJECTS</a></li>
-                        <li><a id="link_reg" class="bleft" href="#">REGISTER</a></li>
+                        <li><a id="link_reg" class="bleft" href="{% url 'criar' %}">REGISTER</a></li>
                         <li><a id="link_contact" class="bleft" href="#">CONTACTS</a></li>
                         <li><a id="link_partners" class="bleft last" href="#">PARTNERS</a></li>
                     </ul>
@@ -814,12 +814,17 @@
             <h4 class="text-center">Passo 3: <span class="green">Dados bancários</span></h4>
         </div>
     </div>
-    <div class="row-fluid border_proj duration">
-        <div class="span4 ">
-            <div class="column_project">
-                <h4 class="text-center">Informações e contato:</h4>
-                <form class="form-search" >
-                    <input type="text" class="inputp search-query span12" placeholder="Nome da ONG">
+    <form class="form-search" method="post" action="">
+        {% csrf_token %}
+        <div class="row-fluid border_proj duration">
+            <div class="span4 ">
+                <div class="column_project">
+                    <h4 class="text-center">Informações e contato:</h4>
+                    
+                    <label for="{{ form.name.auto_id }}"> {{ form.name }} </label>
+                    {{ form.name }}
+                    <!--<input type="text" class="inputp search-query span12" placeholder="Nome da ONG">
+                    -->
                     <input type="text" class="inputp search-query span12" placeholder="Categoria da ONG">
                     <input type="text" class="inputp search-query span12" placeholder="CNPJ">
                     <input type="text" class="inputp search-query span12" placeholder="Telefone de contato">
@@ -827,25 +832,14 @@
                     <input type="password" class="inputp search-query span12" placeholder="Senha">
                     <input type="text" class="inputp search-query span12" placeholder="Endereço da ONG">
                     <input type="text" class="inputp search-query span12 face" style="padding-left: 30px;" placeholder="URL do Facebook">
-                    <!--
-                    <select class="">
-                        <option>Location</option>
-                        <option>Belarus</option>
-                        <option>Armenia</option>
-                        <option>England</option>
-                        <option>China</option>
-                    </select>
-                    
-                    <input type="text" class="inputp search-query span12 tweet" style="padding-left: 30px;" placeholder="Account Name">
-                    <input type="text" class="inputp search-query span12" placeholder="Payment Gateway">
-                	-->
-                </form>
+                        
+                </div>
             </div>
-        </div>
-        <div class="span4">
-            <div class="bleft column_project">
-                <h4 class="text-center">Descrição e mídia:</h4>
-                <form class="form-search">
+
+            <div class="span4">
+                <div class="bleft column_project">
+                    <h4 class="text-center">Descrição e mídia:</h4>
+                    
                     <input type="text" class="inputp search-query span12" placeholder="URL de vídeo sobre a ONG">
                     <div class="upload_img inline">
                         <input type="file" name="upload" placeholder="Logo" />
@@ -860,7 +854,39 @@
                         <input type="file" name="upload"/>
                     </div>
                     <textarea id="redex3" class="inputp search-query span12"  rows="5" placeholder="Descrição da ONG"></textarea>
-                </form>
+                    
+                </div>
+            </div>
+
+            <div class="span4">
+                <div class="bleft column_project">
+                    <h4 class="text-center">Informações bancárias:</h4>
+                    
+                    <input type="text" class="inputp search-query span12" placeholder="Agência">
+                    <input type="text" class="inputp search-query span12" placeholder="Conta">
+                    <input type="text" class="inputp search-query span12" placeholder="Nome do titular da conta">
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="decoration text-center create_butt"><span class="nobacgr_whit"><button class="btn btn-large search-query" type="button"> <span class="butt_small"><strong>Cadastrar</strong></span></button></span><a name="id_cont"></a></div>
+
+    </form>
+
+<!--
+                    <select class="">
+                        <option>Location</option>
+                        <option>Belarus</option>
+                        <option>Armenia</option>
+                        <option>England</option>
+                        <option>China</option>
+                    </select>
+
+                    <input type="text" class="inputp search-query span12 tweet" style="padding-left: 30px;" placeholder="Account Name">
+                    <input type="text" class="inputp search-query span12" placeholder="Payment Gateway">
+                    -->
+
                 <!--
                 <form class="form-search">
                     <input type="text" class="inputp search-query span12" placeholder="Project Name">
@@ -883,18 +909,7 @@
                     <input type="text" class="inputp search-query span12" placeholder="Payment Gateway">
                 </form>
                 -->
-            </div>
-        </div>
-        <div class="span4">
-            <div class="bleft column_project">
-                <h4 class="text-center">Informações bancárias:</h4>
-                <form class="form-search">
-                    <input type="text" class="inputp search-query span12" placeholder="Agência">
-                    <input type="text" class="inputp search-query span12" placeholder="Conta">
-                    <input type="text" class="inputp search-query span12" placeholder="Nome do titular da conta">
-                </form>
-            </div>
-        </div>
+
         <!--
         <div class="span3">
             <div class="bleft column_project" >
@@ -915,10 +930,6 @@
                 </ul>
             </div>
         </div>-->
-    </div>
-
-
-    <div class="decoration text-center create_butt"><span class="nobacgr_whit"><button class="btn btn-large search-query" type="button"> <span class="butt_small"><strong>Cadastrar</strong></span></button></span><a name="id_cont"></a></div>
 
 </div>
 
