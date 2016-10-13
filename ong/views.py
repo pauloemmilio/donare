@@ -38,9 +38,9 @@ def criar_ong(request):
         return redirect('index')
     else:
         form = OngForm()
-    return render(request, 'index.html', context_dict)
+    return render(request, 'register.html', context_dict)
 
-def alterar_ong(request, pk, template_name='ong/editeOng'):
+def alterar_ong(request, pk, template_name='editOng'):
     ongs = Ong.objects.get(pk = ong_id)
     if form.is_valid():
         form = OngForm(request.POST or None, instance=ong)
