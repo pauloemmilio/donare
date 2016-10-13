@@ -50,6 +50,7 @@ def alterar_ong(request, pk, template_name='editOng.html'):
         return redirect('index')
     context_dict = {'form': form, 'ong_id': ong_id}
     return render(request, template_name,context_dict)
+
 def deletar_ong(request, pk, template_name='inde.html'):
     ong = get_object_or_404(Ong, pk=pk)
     if request.method=='POST':
