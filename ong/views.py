@@ -48,15 +48,12 @@ def alterar_ong(request,ong_id):
     if request.method == 'POST':
         form = OngForm(request.POST, instance=ong)
         form.save()
-        return HttpResponseRedirect('/ong/')
     else:
         form = OngForm(instance=ong)
     context_dict = {'form': form, 'ong_id': ong_id}
     return render(request, template_name,context_dict)
 
-def deletar_ong(request, pk, template_name='index.html'):
-    ong = get_object_or_404(Ong, pk=pk)
-    if request.method=='POST':
-        ong.delete()
-        return redirect('server_list')
-    return render(request, template_name, {'object':ong})
+def deletar_ong(request, ong_id):
+    ong = Ong.objects.get(pk = ong_id)
+    ong.delete()
+    return redirect('index')

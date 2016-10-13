@@ -92,8 +92,8 @@
 
             <div class="navigation inline fright">
                 <ul class="nav inline menuleft">
-                    <li class=""><a class="bleft" href="{% url 'alterar_ong' ong.pk %}">Editar ONG</a></li>
-                    <li><a class="bleft" href="index.html#registr">Excluir ONG</a></li>
+                    <li class=""><a class="bleft" href="{% url 'alterar_ong' ong.id %}">Editar ONG</a></li>
+                    <li><a class="bleft" href="{% url 'deletar_ong' ong.id %}">Excluir ONG</a></li>
                     <li><a class="bleft" href="index.html#id_cont">Sair</a></li>
                 </ul>
             </div>
