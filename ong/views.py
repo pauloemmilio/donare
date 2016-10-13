@@ -18,8 +18,10 @@ from ong.form import OngForm
 def index(request):
     return render(request, 'index.html')
 
-def ong(request):
-	return render(request, 'ongs.html')
+def ong(request, ong_id):
+	ong = Ong.objects.get(pk=ong_id)
+	context_dict = {'ong': ong}
+	return render(request, 'ongs.html', context=context_dict)
 
 
 def ongs_list(request,template_name='index.html' ):
@@ -40,7 +42,7 @@ def criar_ong(request):
         form = OngForm()
     return render(request, 'register.html', context_dict)
 
-def alterar_ong(request, pk, template_name='editOng'):
+def alterar_ong(request, pk, template_name='editOng.html'):
     ongs = Ong.objects.get(pk = ong_id)
     if form.is_valid():
         form = OngForm(request.POST or None, instance=ong)
