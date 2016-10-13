@@ -14,11 +14,13 @@ from ong.form import OngForm
         ##model = Ong
         ##fields = ['nome', 'categoria', 'cnpj', 'telefone', 'email', 'senha', 'endereco', 'agencia', 'conta' ,'nomeTitular', 'fotos', 'videoUrl', 'descricao']
 
-class ResistrarOng(CreateView):
-    model = Ong
-    template_name = "index.html"
-    form_class = OngForm
-    success_url = reverse_lazy('ongs_list')
+
+def index(request):
+    return render(request, 'index.html')
+
+def ong(request):
+	return render(request, 'ongs.html')
+
 
 def ongs_list(request,template_name='index.html' ):
     ongs = Ong.objects.all()
@@ -26,20 +28,26 @@ def ongs_list(request,template_name='index.html' ):
     data['object_list'] = ongs
     return render(request, template_name, data)
 
-def criar_ong(request, template_name='index.html'):
-    form = OngForm(request.POST or None)
-    if form.is_valid():
-        form.save()
-        return redirect('core:index')
-    return render(request, template_name, {'form':form})
+def criar_ong(request):
 
-def alterar_ong(request, pk, template_name='servers/server_form.html'):
-    ongs = get_object_or_404(Server, pk=pk)
-    form = OngForm(request.POST or None, instance=ong)
-    if form.is_valid():
+    form = OngForm()
+    context_dict = {'form': form}
+    if request.method == 'POST':
+        form = OngForm(request.POST)
         form.save()
-        return redirect('core:index')
-    return render(request, template_name, {'form':form})
+        return redirect('index')
+    else:
+        form = OngForm()
+    return render(request, 'register.html', context_dict)
+
+def alterar_ong(request, pk, template_name='editOng'):
+    ongs = Ong.objects.get(pk = ong_id)
+    if form.is_valid():
+        form = OngForm(request.POST or None, instance=ong)
+        form.save()
+        return redirect('index')
+    context_dict = {'form': form, 'ong_id': ong_id}
+    return render(request, template_name,context_dict)
 def deletar_ong(request, pk, template_name='inde.html'):
     ong = get_object_or_404(Ong, pk=pk)
     if request.method=='POST':

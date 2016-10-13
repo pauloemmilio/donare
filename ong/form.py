@@ -1,20 +1,19 @@
-from django.contrib.auth.forms import UserCreationForm
+from django.forms import ModelForm
 from ong.models import Ong
 
-class OngForm(UserCreationForm):
+class OngForm(ModelForm):
         class Meta:
-            model = Ong.objects.all()
-            fields = ['nome',
+            model = Ong
+            fields = ['name',
             'categoria',
             'cnpj',
             'telefone',
             'email',
             'senha',
             'endereco',
+            'fotos',
             'agencia',
             'conta' ,
             'nomeTitular',
-            'fotos',
             'videoUrl',
             'descricao']
-        
