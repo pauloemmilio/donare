@@ -118,7 +118,7 @@
                         <li class="active"><a class="bleft" href="index.html">HOME</a></li>
                         <li><a id="link_about" class="bleft" href="#">ABOUT</a></li>
                         <li><a id="link" class="bleft" href="#">PROJECTS</a></li>
-                        <li><a id="link_reg" class="bleft" href="#">REGISTER</a></li>
+                        <li><a id="link_reg" class="bleft" href="{% url 'criar' %}">REGISTER</a></li>
                         <li><a id="link_contact" class="bleft" href="#">CONTACTS</a></li>
                         <li><a id="link_partners" class="bleft last" href="#">PARTNERS</a></li>
                     </ul>
@@ -818,7 +818,8 @@
         <div class="span4 ">
             <div class="column_project">
                 <h4 class="text-center">Informações e contato:</h4>
-                <form class="form-search" >
+                <form class="form-search" method="post">{% csrf_token %}
+                    {{ form.as_p }}
                     <input type="text" class="inputp search-query span12" placeholder="Nome da ONG">
                     <input type="text" class="inputp search-query span12" placeholder="Categoria da ONG">
                     <input type="text" class="inputp search-query span12" placeholder="CNPJ">
@@ -835,7 +836,7 @@
                         <option>England</option>
                         <option>China</option>
                     </select>
-                    
+
                     <input type="text" class="inputp search-query span12 tweet" style="padding-left: 30px;" placeholder="Account Name">
                     <input type="text" class="inputp search-query span12" placeholder="Payment Gateway">
                 	-->
@@ -845,7 +846,7 @@
         <div class="span4">
             <div class="bleft column_project">
                 <h4 class="text-center">Descrição e mídia:</h4>
-                <form class="form-search">
+                <form class="form-search" method="post">{% csrf_token %}
                     <input type="text" class="inputp search-query span12" placeholder="URL de vídeo sobre a ONG">
                     <div class="upload_img inline">
                         <input type="file" name="upload" placeholder="Logo" />
