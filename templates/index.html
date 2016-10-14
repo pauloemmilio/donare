@@ -83,7 +83,7 @@
         <div class="width titul">
             <div class="reg inline">
                 <div class="bleft inline login"><a href="#" id="login-link" class="login-link">Login</a></div>
-                <div class="bleft bright inline login"><a href="#" id="reg-link" class="login-link">Register</a></div>
+                <div class="bleft bright inline login"><a href="{% url 'criar' %}" id="reg-link" class="login-link">Register</a></div>
             </div>
 
             <div class="social inline fright">
@@ -145,7 +145,7 @@
             <li class="active"><a class="bleft" id="link_home" href="#">HOME</a></li>
             <li><a id="link_about_b" class="bleft" href="#">ABOUT</a></li>
             <li><a id="link_b" class="bleft" href="#">PROJECTS</a></li>
-            <li><a id="link_reg_b" class="bleft" href="#">REGISTER</a></li>
+            <li><a id="link_reg_b" class="bleft" href="{% url 'criar' %}">REGISTER</a></li>
             <li><a id="link_contact_b" class="bleft" href="#">CONTACTS</a></li>
             <li><a id="link_partners_b" class="bleft last" href="#">PARTNERS</a></li>
         </ul>
@@ -801,78 +801,7 @@
     </div>
 
 </div>
-<h1 class="decoration text-center proj"><span class="nobacgr">Cadastre sua ONG</span></h1>
-<div class="create_projects">
-    <div class="row-fluid">
-        <div class="span4">
-            <h4 class="text-center">Passo 1: <span class="green">Informações da ONG</span></h4>
-        </div>
-        <div class="span4 bleft">
-            <h4 class="text-center">Passo 2: <span class="green">Outras informações</span></h4>
-        </div>
-        <div class="span4 bleft">
-            <h4 class="text-center">Passo 3: <span class="green">Dados bancários</span></h4>
-        </div>
-    </div>
-    <form class="form-search" method="post" action="">
-        {% csrf_token %}
-        <div class="row-fluid border_proj duration">
-            <div class="span4 ">
-                <div class="column_project">
-                    <h4 class="text-center">Informações e contato:</h4>
-                    
-                    <label for="{{ form.name.auto_id }}"> {{ form.name }} </label>
-                    {{ form.name }}
-                    <!--<input type="text" class="inputp search-query span12" placeholder="Nome da ONG">
-                    -->
-                    <input type="text" class="inputp search-query span12" placeholder="Categoria da ONG">
-                    <input type="text" class="inputp search-query span12" placeholder="CNPJ">
-                    <input type="text" class="inputp search-query span12" placeholder="Telefone de contato">
-                    <input type="email" class="inputp search-query span12" placeholder="E-mail">
-                    <input type="password" class="inputp search-query span12" placeholder="Senha">
-                    <input type="text" class="inputp search-query span12" placeholder="Endereço da ONG">
-                    <input type="text" class="inputp search-query span12 face" style="padding-left: 30px;" placeholder="URL do Facebook">
-                        
-                </div>
-            </div>
 
-            <div class="span4">
-                <div class="bleft column_project">
-                    <h4 class="text-center">Descrição e mídia:</h4>
-                    
-                    <input type="text" class="inputp search-query span12" placeholder="URL de vídeo sobre a ONG">
-                    <div class="upload_img inline">
-                        <input type="file" name="upload" placeholder="Logo" />
-                    </div>
-                    <div class="upload_pic1 inline">
-                        <input type="file" name="upload"/>
-                    </div>
-                    <div class="upload_pic2 inline">
-                        <input type="file" name="upload"/>
-                    </div>
-                    <div class="upload_pic3 inline">
-                        <input type="file" name="upload"/>
-                    </div>
-                    <textarea id="redex3" class="inputp search-query span12"  rows="5" placeholder="Descrição da ONG"></textarea>
-                    
-                </div>
-            </div>
-
-            <div class="span4">
-                <div class="bleft column_project">
-                    <h4 class="text-center">Informações bancárias:</h4>
-                    
-                    <input type="text" class="inputp search-query span12" placeholder="Agência">
-                    <input type="text" class="inputp search-query span12" placeholder="Conta">
-                    <input type="text" class="inputp search-query span12" placeholder="Nome do titular da conta">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="decoration text-center create_butt"><span class="nobacgr_whit"><button class="btn btn-large search-query" type="button"> <span class="butt_small"><strong>Cadastrar</strong></span></button></span><a name="id_cont"></a></div>
-
-    </form>
 
 <!--
                     <select class="">
@@ -931,7 +860,6 @@
             </div>
         </div>-->
 
-</div>
 
 
 <h1 class="decoration text-center conts"><span class="nobacgr">Contact Us</span></h1>
