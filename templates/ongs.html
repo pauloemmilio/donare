@@ -149,12 +149,14 @@
     </div>
     <div class="tab-content" style="padding-bottom: 9px;">
         <div class="tab-pane active" id="tab1">
-            <div id="description_content">
+            <div id="description_content">{{ong.descricao}}</div>
+                <!--
                 <div class="title_description_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien. Nullam ac nisi vel augue ultrices venenatis sed sed felis.</div>
                 <div class="text_description_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien. Nullam ac nisi vel augue ultrices venenatis sed sed felis. Quisque velit tortor, suscipit et auctor tempus, pretium eu velit. Vestibulum vitae ligula sapien. Donec et felis lorem. Vestibulum non feugiat risus. Sed malesuada nisl vel lorem rhoncus feugiat. Proin pellentesque velit nec metus tincidunt quis egestas tortor venenatis. Phasellus mattis sapien suscipit massa suscipit placerat. Vestibulum semper laoreet tempus. Curabitur ac sagittis urna. Sed rhoncus massa vel lorem lobortis sit amet adipiscing nunc aliquet. Quisque metus velit, mattis a vehicula sed, hendrerit sed leo. Donec aliquet molestie semper. Donec ac condimentum nisl. Ut bibendum scelerisque turpis vitae porttitor. Maecenas eget nisi nulla. Pellentesque sed congue nulla. Etiam magna massa, tempus quis accumsan sit amet, posuere eget odio. Suspendisse pellentesque odio id nunc tempor placerat. Pellentesque ipsum mauris, ultrices ut rhoncus id, vehicula eget est. Sed turpis tortor, accumsan eu ultrices et, egestas eget diam. Praesent ligula felis, varius vitae mollis at, cursus at massa. Sed consequat semper sagittis. Vivamus ultricies massa a urna interdum ultrices. </div>
                 <div class="text_description_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien. Nullam ac nisi vel augue ultrices venenatis sed sed felis. Quisque velit tortor, suscipit et auctor tempus, pretium eu velit. Vestibulum vitae ligula sapien. Donec et felis lorem. Vestibulum non feugiat risus. Sed malesuada nisl vel lorem rhoncus feugiat. Proin pellentesque velit nec metus tincidunt quis egestas tortor venenatis. Phasellus mattis sapien suscipit massa suscipit placerat. </div>
                 <div class="text_description_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien. Nullam ac nisi vel augue ultrices venenatis sed sed felis. Quisque velit tortor, suscipit et auctor tempus, pretium eu velit. Vestibulum vitae ligula sapien.</div>
             </div>
+            -->
         </div>
         <div class="tab-pane" id="tab2">
             <div id="backers_content">
@@ -308,17 +310,36 @@
                 <div class="row-fluid">
                     <div class="span12">
                         <div class="updates_block_text">
-                            <h4>Telefone</h4>
-                            <p>Telefone de contato cadastrado pela ONG </p>
-                        </div>
-                        <div class="updates_block_text">
-                            <h4>E-mail</h4>
-                            <p>E-mail informado pela ONG </p>
+                            <h4>CNPJ</h4>
+                            <p>{{ong.cnpj}}</p>
                         </div>
                         <div class="updates_block_text">
                             <h4>Endereço</h4>
-                            <p>Endereço informado pela ONG </p>
+                            <p>{{ong.endereco}}</p>
                         </div>
+                        <div class="updates_block_text">
+                            <h4>Telefone</h4>
+                            <p>{{ong.telefone}}</p>
+                        </div>
+                        <div class="updates_block_text">
+                            <h4>E-mail</h4>
+                            <p>{{ong.email}}</p>
+                        </div>
+                        </br>
+                        <h3>Dados da conta</h3>
+                        <div class="updates_block_text">
+                            <h4>Nome do Titular</h4>
+                            <p>{{ong.nomeTitular}}</p>
+                        </div>
+                        <div class="updates_block_text">
+                            <h4>Agência</h4>
+                            <p>{{ong.agencia}}</p>
+                        </div>
+                        <div class="updates_block_text">
+                            <h4>Conta</h4>
+                            <p>{{ong.conta}}</p>
+                        </div>
+                        
                     </div>
                 </div>
             </div>
@@ -327,7 +348,7 @@
 </div>
 
 <div id="social_uncategorized">
-    <div class="left_social_uncategorized"><span>Uncategorized</span></div>
+    <div class="left_social_uncategorized"><span>{{ong.categoria}}</span></div>
     <div class="social inline fright">
         <ul id="social_mid" class="bleft_social">
             <li><a href="https://twitter.com/" target="_blank"  original-title="twitter"><img src="{% static "img/social/icon_header_face.png" %}" alt=""></a></li>
