@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>FUNDER - Bootstrap Crowdfunding Site</title>
+    <title>donare - Editar ONG</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -426,35 +426,34 @@
                 <div class="column_project">
                     <h4 class="text-center">Informações e contato:</h4>
 
-                    <label>Nome da Ong</label>
-                    <label for="{{ form.name.auto_id }}"> {{ form.name }} </label>
+                    <h5>Nome da Ong</h5>
+                    <label id="labelForm" for="{{ form.name.auto_id }}"> {{ form.name }} </label>
 
-                    <label>Categoria da Ong</label>
+                    <h5>Categoria da Ong</h5>
                     <label for="{{ form.categoria.auto_id }}"> {{ form.categoria }} </label>
 
-                    <br>
-                    <label>CNPJ</label>
-                    <br>
+                    <h5>CNPJ</h5>
+                    
                     <label for="{{ form.cnpj.auto_id }}"> {{ form.cnpj }} </label>
 
-                    <br>
-                    <label>Telefone</label>
-                    <br>
+                    
+                    <h5>Telefone</h5>
+                    
                     <label for="{{ form.telefone.auto_id }}"> {{ form.telefone }} </label>
 
-                    <br>
-                    <label>E-mail</label>
-                    <br>
+                    
+                    <h5>E-mail</h5>
+                    
                     <label for="{{ form.email.auto_id }}"> {{ form.email }} </label>
 
-                    <br>
-                    <label>Senha</label>
-                    <br>
+                    
+                    <h5>Senha</h5>
+                    
                     <label for="{{ form.senha.auto_id }}"> {{ form.senha }} </label>
 
-                    <br>
-                    <label>Endereço</label>
-                    <br>
+                    
+                    <h5>Endereço</h5>
+                    
                     <label for="{{ form.endereco.auto_id }}"> {{ form.endereco }} </label>
 
                 </div>
@@ -464,18 +463,18 @@
                 <div class="bleft column_project">
                     <h4 class="text-center">Descrição e mídia:</h4>
 
-                    <label>Url de vídeo sobre a ONG</label>
-                    <br>
+                    <h5>Url de vídeo sobre a ONG</h5>
+                    
                     <label for="{{ form.videoUrl.auto_id }}"> {{ form.videoUrl }} </label>
 
-                    <br>
-                    <label>Logo ou foto da ONG</label>
-                    <br>
+                    
+                    <h5>Logo ou foto da ONG</h5>
+                    
                     <label for="{{ form.fotos.auto_id }}"> {{ form.fotos }} </label>
 
-                    <br>
-                    <label>Descrição da ONG</label>
-                    <br>
+                    
+                    <h5>Descrição da ONG</h5>
+                    
                     <label for="{{ form.descricao.auto_id }}"> {{ form.descricao }} </label>
 
                 </div>
@@ -485,18 +484,18 @@
                 <div class="bleft column_project">
                     <h4 class="text-center">Informações bancárias:</h4>
 
-                    <label>Agência</label>
-                    <br>
+                    <h5>Agência</h5>
+                    
                     <label for="{{ form.agencia.auto_id }}"> {{ form.agencia }} </label>
 
-                    <br>
-                    <label>Conta</label>
-                    <br>
+                    
+                    <h5>Conta</h5>
+                    
                     <label for="{{ form.conta.auto_id }}"> {{ form.conta }} </label>
 
-                    <br>
-                    <label>Titular da conta</label>
-                    <br>
+                    
+                    <h5>Titular da conta</h5>
+                    
                     <label for="{{ form.nomeTitular.auto_id }}"> {{ form.nomeTitular }} </label>
 
                 </div>
@@ -641,9 +640,9 @@
               <div class="fleft">© All Rights Reserved. Design by UOU Design.</div>
               <div class="fright">
                 <ul id="social_b" class="socialbott inline">
-                    <li><a href="https://twitter.com/" target="_blank" original-title="twitter"><img src="{% static "img/social/icon_footer_face.png" %}" alt=""></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" original-title="twitter"><img src="{% static "img/social/icon_footer_tw.png" %}" alt=""></a></li>
                     <li><a href="https://plus.google.com" target="_blank" original-title="googleplus"><img src="{% static "img/social/icon_footer_g.png" %}" alt=""></a></li>
-                    <li><a href="https://www.facebook.com" title="facebook" target="_blank"><img src="{% static"img/social/icon_footer_tw.png" %}" alt=""></a></li>
+                    <li><a href="https://www.facebook.com" title="facebook" target="_blank"><img src="{% static "img/social/icon_footer_face.png" %}" alt=""></a></li>
                     <li><a href="http://www.linkedin.com/" target="_blank" original-title="linkedin"><img src="{% static "img/social/icon_footer_in.png" %}" alt=""></a></li>
                     <li><a href="http://www.linkedin.com/" target="_self" original-title="mail"><img src="{% static "img/social/icon_footer_p.png" %}" alt=""></a></li>
                     <li><a href="http://www.linkedin.com/" target="_self" original-title="mail"><img src="{% static "img/social/icon_footer_ball.png" %}" alt=""></a></li>
