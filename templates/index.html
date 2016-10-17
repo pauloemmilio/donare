@@ -83,19 +83,19 @@
         <div class="width titul">
             <div class="reg inline">
                 <div class="bleft inline login"><a href="#" id="login-link" class="login-link">Login</a></div>
-                <div class="bleft bright inline login"><a href="#" id="reg-link" class="login-link">Register</a></div>
+                <div class="bleft bright inline login"><a href="{% url 'criar' %}" id="reg-link" class="login-link">Register</a></div>
             </div>
 
             <div class="social inline fright">
                 <ul id="social">
                 <li class="bleft inline">
                     <ul style="margin-left: 10px">
-                        <li><a href="https://www.facebook.com" target="_blank"  original-title="twitter"><img src="{% static "images/social/icon_header_face.png" %}" alt=""></a></li>
-                        <li><a href="https://plus.google.com" target="_blank"  original-title="googleplus"><img src="img/social/icon_header_g.png" alt=""></a></li>
-                        <li><a href="https://twitter.com/" title="facebook" target="_blank" ><img src="img/social/icon_header_tw.png" alt=""></a></li>
-                        <li><a href="http://www.linkedin.com/" target="_blank" original-title="linkedin"><img src="img/social/icon_header_in.png" alt=""></a></li>
-                        <li><a href="johndoe@domainname.com" target="_self" original-title="mail"><img src="img/social/icon_header_p.png" alt=""></a></li>
-                        <li><a href="johndoe@domainname.com" target="_self" original-title="mail"><img src="img/social/icon_header_ball.png" alt=""></a></li>
+                        <li><a href="https://www.facebook.com" target="_blank"  original-title="twitter"><img src="{% static "img/social/icon_header_face.png" %}" alt=""></a></li>
+                        <li><a href="https://plus.google.com" target="_blank"  original-title="googleplus"><img src="{% static "img/social/icon_header_g.png" %}" alt=""></a></li>
+                        <li><a href="https://twitter.com/" title="facebook" target="_blank" ><img src="{% static "img/social/icon_header_tw.png" %}" alt=""></a></li>
+                        <li><a href="http://www.linkedin.com/" target="_blank" original-title="linkedin"><img src="{% static "img/social/icon_header_in.png" %}" alt=""></a></li>
+                        <li><a href="johndoe@domainname.com" target="_self" original-title="mail"><img src="{% static "img/social/icon_header_p.png" %}" alt=""></a></li>
+                        <li><a href="johndoe@domainname.com" target="_self" original-title="mail"><img src="{% static "img/social/icon_header_ball.png" %} alt=""></a></li>
                     </ul>
                 </li>
                     <li class="bleft first socialz"><a class="active" href="#">EN</a></li>
@@ -145,7 +145,7 @@
             <li class="active"><a class="bleft" id="link_home" href="#">HOME</a></li>
             <li><a id="link_about_b" class="bleft" href="#">ABOUT</a></li>
             <li><a id="link_b" class="bleft" href="#">PROJECTS</a></li>
-            <li><a id="link_reg_b" class="bleft" href="#">REGISTER</a></li>
+            <li><a id="link_reg_b" class="bleft" href="{% url 'criar' %}">REGISTER</a></li>
             <li><a id="link_contact_b" class="bleft" href="#">CONTACTS</a></li>
             <li><a id="link_partners_b" class="bleft last" href="#">PARTNERS</a></li>
         </ul>
@@ -187,8 +187,8 @@
                             <table class="icons">
                                 <tbody>
                                 <tr>
-                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj1.jpg" title=""><img src="img/icon_search.png" alt=""></a></td>
-                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj7"><img src="img/icon_lock.png" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj1.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj7"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -222,8 +222,8 @@
                             <table class="icons">
                                 <tbody>
                                 <tr>
-                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj2.jpg" title=""><img src="img/icon_search.png" alt=""></a></td>
-                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj8"><img src="img/icon_lock.png" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj2.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj8"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -257,8 +257,8 @@
                             <table class="icons">
                                 <tbody>
                                 <tr>
-                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj3.jpg" title=""><img src="img/icon_search.png" alt=""></a></td>
-                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj9"><img src="img/icon_lock.png" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj3.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj9"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -294,8 +294,8 @@
                             <table class="icons">
                                 <tbody>
                                 <tr>
-                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj4.jpg" title=""><img src="img/icon_search.png" alt=""></a></td>
-                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj10"><img src="img/icon_lock.png" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj4.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj10"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -329,8 +329,8 @@
                             <table class="icons">
                                 <tbody>
                                 <tr>
-                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj5.jpg" title=""><img src="img/icon_search.png" alt=""></a></td>
-                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj11"><img src="img/icon_lock.png" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj5.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj11"><img src="{% static "img/icon_lock.png" %" alt=""></a></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -364,8 +364,8 @@
                             <table class="icons">
                                 <tbody>
                                 <tr>
-                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj6.jpg" title=""><img src="img/icon_search.png" alt=""></a></td>
-                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj12"><img src="img/icon_lock.png" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj6.jpg" title=""><img src={% static "img/icon_search.png" %}" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj12"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -422,19 +422,19 @@
                         </div>
                         </div>
                         <ul>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/01.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/02.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/03.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/04.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/05.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/06.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/07.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/08.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/09.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/10.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/11.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/12.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/13.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
+                            <li><a href="#"><img width="155" height="155" src="{% static 'img/slide/01.jpg' %}" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
+                            <li><a href="#"><img width="155" height="155" src="{% static 'img/slide/02.jpg' %}" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
+                            <li><a href="#"><img width="155" height="155" src="{% static 'img/slide/03.jpg' %}" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
+                            <li><a href="#"><img width="155" height="155" src="{% static 'img/slide/01.jpg' %}" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
+                            <li><a href="#"><img width="155" height="155" src="{% static 'img/slide/05.jpg' %}" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
+                            <li><a href="#"><img width="155" height="155" src="{% static 'img/slide/06.jpg' %}" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
+                            <li><a href="#"><img width="155" height="155" src="{% static 'img/slide/07.jpg' %}" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
+                            <li><a href="#"><img width="155" height="155" src="{% static 'img/slide/08.jpg' %}" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
+                            <li><a href="#"><img width="155" height="155" src="{% static 'img/slide/09.jpg' %}" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
+                            <li><a href="#"><img width="155" height="155" src="{% static 'img/slide/10.jpg' %}" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
+                            <li><a href="#"><img width="155" height="155" src="{% static 'img/slide/11.jpg' %}" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
+                            <li><a href="#"><img width="155" height="155" src="{% static 'img/slide/12.jpg' %}" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
+                            <li><a href="#"><img width="155" height="155" src="{% static 'img/slide/13.jpg' %}" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
                         </ul>
                         <ul>
                             <li><a href="#"><img width="155" height="155" src="img/slide/14.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
@@ -486,28 +486,28 @@
         <div class="row-fluid folders">
             <div class="span4">
                 <div class="folder_bordered">
-                    <div class="folder"><a href="#"><img src="img/folder1.png" alt=""></a></div>
+                    <div class="folder"><a href="#"><img src="{% static "img/folder1.png" %}" alt=""></a></div>
                     <div class="folder"><h3 class="nomarg text-center">Step 1:</h3></div>
                     <div class="folder"><p class="green text-center"><strong>Choose a project</strong></p></div>
                 </div>
-                <div class="folder"><img src="img/folder_n.png" alt=""></div>
+                <div class="folder"><img src="{% static "img/folder_n.png" %}" alt=""></div>
             </div>
             <div class="span4">
                 <div class="folder_bordered">
-                    <div class="folder"><a href="#"><img src="img/folder2.png" alt=""></a></div>
+                    <div class="folder"><a href="#"><img src="{% static "img/folder2.png" %}" alt=""></a></div>
                     <div class="folder"><h3 class="nomarg text-center">Step 2:</h3></div>
                     <div class="folder"><p class="green text-center"><strong>Back a project</strong></p></div>
                 </div>
-                <div class="folder"><img src="img/folder_n.png" alt=""></div>
+                <div class="folder"><img src="{% static "img/folder_n.png" %}" alt=""></div>
             </div>
             <div class="span4">
                 <div class="folder_bordered">
-                    <div class="folder"><a href="#"><img src="img/folder3.png" alt=""></a></div>
+                    <div class="folder"><a href="#"><img src="{% static "img/folder3.png" %}" alt=""></a></div>
                     <div class="folder"><h3 class="nomarg text-center">Step 3:</h3></div> <a name="id3"></a>
                     <div class="folder"><p class="green strong text-center"><strong>Receive a gift</strong></p></div>
 
                 </div>
-                <div class="folder"><img src="img/folder_n.png" alt=""></div>
+                <div class="folder"><img src="{% static "img/folder_n.png" %}" alt=""></div>
             </div>
 
         </div>
@@ -553,8 +553,8 @@
                                 <table class="icons">
                                     <tbody>
                                     <tr>
-                                        <td class="icos_proj_sm bleft"><a class="group1" href="img/proj1.jpg" title=""><img src="img/icon_search.png" alt=""></a></td>
-                                        <td class="icos_proj_sm bleft"><a href="projects.html#proj1"><img src="img/icon_lock.png" alt=""></a></td>
+                                        <td class="icos_proj_sm bleft"><a class="group1" href="img/proj1.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                        <td class="icos_proj_sm bleft"><a href="projects.html#proj1"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
                                     </tr>
                                     </tbody>
                                  </table>
@@ -591,8 +591,8 @@
                                 <table class="icons">
                                     <tbody>
                                     <tr>
-                                        <td class="icos_proj_sm bleft"><a class="group1" href="img/proj2.jpg" title=""><img src="img/icon_search.png" alt=""></a></td>
-                                        <td class="icos_proj_sm bleft"><a href="projects.html#proj2"><img src="img/icon_lock.png" alt=""></a></td>
+                                        <td class="icos_proj_sm bleft"><a class="group1" href="img/proj2.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                        <td class="icos_proj_sm bleft"><a href="projects.html#proj2"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -629,8 +629,8 @@
                                 <table class="icons">
                                     <tbody>
                                     <tr>
-                                        <td class="icos_proj_sm bleft"><a class="group1" href="img/proj3.jpg" title=""><img src="img/icon_search.png" alt=""></a></td>
-                                        <td class="icos_proj_sm bleft"><a href="projects.html#proj3"><img src="img/icon_lock.png" alt=""></a></td>
+                                        <td class="icos_proj_sm bleft"><a class="group1" href="img/proj3.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                        <td class="icos_proj_sm bleft"><a href="projects.html#proj3"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -671,8 +671,8 @@
                                 <table class="icons">
                                     <tbody>
                                     <tr>
-                                        <td class="icos_proj_sm bleft"><a class="group1" href="img/proj4.jpg" title=""><img src="img/icon_search.png" alt=""></a></td>
-                                        <td class="icos_proj_sm bleft"><a href="projects.html#proj4"><img src="img/icon_lock.png" alt=""></a></td>
+                                        <td class="icos_proj_sm bleft"><a class="group1" href="img/proj4.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                        <td class="icos_proj_sm bleft"><a href="projects.html#proj4"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -709,8 +709,8 @@
                                 <table class="icons">
                                     <tbody>
                                     <tr>
-                                        <td class="icos_proj_sm bleft"><a class="group1" href="img/proj5.jpg" title=""><img src="img/icon_search.png" alt=""></a></td>
-                                        <td class="icos_proj_sm bleft"><a href="projects.html#proj5"><img src="img/icon_lock.png" alt=""></a></td>
+                                        <td class="icos_proj_sm bleft"><a class="group1" href="img/proj5.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                        <td class="icos_proj_sm bleft"><a href="projects.html#proj5"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -747,8 +747,8 @@
                                 <table class="icons">
                                     <tbody>
                                     <tr>
-                                        <td class="icos_proj_sm bleft"><a class="group1" href="img/proj6.jpg" title=""><img src="img/icon_search.png" alt=""></a></td>
-                                        <td class="icos_proj_sm bleft"><a href="projects.html#proj6"><img src="img/icon_lock.png" alt=""></a></td>
+                                        <td class="icos_proj_sm bleft"><a class="group1" href="img/proj6.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                        <td class="icos_proj_sm bleft"><a href="projects.html#proj6"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
                                     </tr>
                                     </tbody>
                                 </table>
@@ -801,78 +801,7 @@
     </div>
 
 </div>
-<h1 class="decoration text-center proj"><span class="nobacgr">Cadastre sua ONG</span></h1>
-<div class="create_projects">
-    <div class="row-fluid">
-        <div class="span4">
-            <h4 class="text-center">Passo 1: <span class="green">Informações da ONG</span></h4>
-        </div>
-        <div class="span4 bleft">
-            <h4 class="text-center">Passo 2: <span class="green">Outras informações</span></h4>
-        </div>
-        <div class="span4 bleft">
-            <h4 class="text-center">Passo 3: <span class="green">Dados bancários</span></h4>
-        </div>
-    </div>
-    <form class="form-search" method="post" action="">
-        {% csrf_token %}
-        <div class="row-fluid border_proj duration">
-            <div class="span4 ">
-                <div class="column_project">
-                    <h4 class="text-center">Informações e contato:</h4>
-                    
-                    <label for="{{ form.name.auto_id }}"> {{ form.name }} </label>
-                    {{ form.name }}
-                    <!--<input type="text" class="inputp search-query span12" placeholder="Nome da ONG">
-                    -->
-                    <input type="text" class="inputp search-query span12" placeholder="Categoria da ONG">
-                    <input type="text" class="inputp search-query span12" placeholder="CNPJ">
-                    <input type="text" class="inputp search-query span12" placeholder="Telefone de contato">
-                    <input type="email" class="inputp search-query span12" placeholder="E-mail">
-                    <input type="password" class="inputp search-query span12" placeholder="Senha">
-                    <input type="text" class="inputp search-query span12" placeholder="Endereço da ONG">
-                    <input type="text" class="inputp search-query span12 face" style="padding-left: 30px;" placeholder="URL do Facebook">
-                        
-                </div>
-            </div>
 
-            <div class="span4">
-                <div class="bleft column_project">
-                    <h4 class="text-center">Descrição e mídia:</h4>
-                    
-                    <input type="text" class="inputp search-query span12" placeholder="URL de vídeo sobre a ONG">
-                    <div class="upload_img inline">
-                        <input type="file" name="upload" placeholder="Logo" />
-                    </div>
-                    <div class="upload_pic1 inline">
-                        <input type="file" name="upload"/>
-                    </div>
-                    <div class="upload_pic2 inline">
-                        <input type="file" name="upload"/>
-                    </div>
-                    <div class="upload_pic3 inline">
-                        <input type="file" name="upload"/>
-                    </div>
-                    <textarea id="redex3" class="inputp search-query span12"  rows="5" placeholder="Descrição da ONG"></textarea>
-                    
-                </div>
-            </div>
-
-            <div class="span4">
-                <div class="bleft column_project">
-                    <h4 class="text-center">Informações bancárias:</h4>
-                    
-                    <input type="text" class="inputp search-query span12" placeholder="Agência">
-                    <input type="text" class="inputp search-query span12" placeholder="Conta">
-                    <input type="text" class="inputp search-query span12" placeholder="Nome do titular da conta">
-                    
-                </div>
-            </div>
-        </div>
-
-        <div class="decoration text-center create_butt"><span class="nobacgr_whit"><button class="btn btn-large search-query" type="button"> <span class="butt_small"><strong>Cadastrar</strong></span></button></span><a name="id_cont"></a></div>
-
-    </form>
 
 <!--
                     <select class="">
@@ -931,7 +860,6 @@
             </div>
         </div>-->
 
-</div>
 
 
 <h1 class="decoration text-center conts"><span class="nobacgr">Contact Us</span></h1>
@@ -961,19 +889,19 @@
     <div class="span3">
         <h4>Address Details:</h4>
         <div class="cont">
-            <div class="inline-table "><img src="img/icon_street.png" alt=""></div>
+            <div class="inline-table "><img src="{% static "img/icon_street.png" %}" alt=""></div>
             <div class="inline-table mleft10">
                 <span>1234 Street </span>
                 <p>Lorem Ipsum, CA 91919</p>
             </div>
             <div class="clear clrbot"></div>
-            <div class="inline-table"><img src="img/icon_phone.png" alt=""></div>
+            <div class="inline-table"><img src="{% static "img/icon_phone.png" %}" alt=""></div>
             <div class="inline-table mleft10">
                 <span>Phone: +1 123 123-123-123</span>
                 <p>Fax: +1 123-123-123</p>
             </div>
             <div class="clear clrbot"></div>
-            <div class="inline-table"><img src="img/icon_email.png" alt=""></div>
+            <div class="inline-table"><img src="{% static "img/icon_email.png" %}" alt=""></div>
             <div class="inline-table mleft10">
                 <span>E-mail: <span class="green">email@email.by</span></span>
                 <p>Website: <span class="green">www.example.com</span></p>
@@ -1012,13 +940,13 @@
     <div class="partners">
         <h5 class="decoration text-center"><span class="nobacgr_whit">OUR PARTNERS</span></h5>
         <div class="partn_pics">
-                    <a href="http://themeforest.net/" class="partner"><img src="img/partn_1.png" alt=""></a>
-                    <a href="http://activeden.net/" class="partner"><img src="img/partn_2.png" alt="" ></a>
-                    <a href="http://audiojungle.net/" class="partner"><img src="img/partn_3.png" alt=""></a>
-                    <a href="http://graphicriver.net/" class="partner"><img src="img/partn_4.png" alt=""></a>
-                    <a href="http://codecanyon.net/" class="partner"><img src="img/partn_5.png" alt=""></a>
-                    <a href="http://3docean.net/" class="partner"><img src="img/partn_6.png" alt=""></a>
-                    <a href="http://videohive.net/" class="partner"><img src="img/partn_7.png" alt=""></a>
+                    <a href="http://themeforest.net/" class="partner"><img src="{% static "img/partn_1.png" %}" alt=""></a>
+                    <a href="http://activeden.net/" class="partner"><img src="{% static "img/partn_2.png" %}" alt="" ></a>
+                    <a href="http://audiojungle.net/" class="partner"><img src="{% static "img/partn_3.png" %}" alt=""></a>
+                    <a href="http://graphicriver.net/" class="partner"><img src="{% static "img/partn_4.png" %}" alt=""></a>
+                    <a href="http://codecanyon.net/" class="partner"><img src="{% static "img/partn_5.png" %}" alt=""></a>
+                    <a href="http://3docean.net/" class="partner"><img src="{% static "img/partn_6.png" %}" alt=""></a>
+                    <a href="http://videohive.net/" class="partner"><img src="{% static "img/partn_7.png" %}" alt=""></a>
          </div>
         </div>
     </div>
@@ -1093,12 +1021,12 @@
               <div class="fleft">© All Rights Reserved. Design by UOU Design.</div>
               <div class="fright">
                 <ul id="social_b" class="socialbott inline">
-                    <li><a href="https://twitter.com/" target="_blank" original-title="twitter"><img src="img/social/icon_footer_face.png" alt=""></a></li>
-                    <li><a href="https://plus.google.com" target="_blank" original-title="googleplus"><img src="img/social/icon_footer_g.png" alt=""></a></li>
-                    <li><a href="https://www.facebook.com" title="facebook" target="_blank"><img src="img/social/icon_footer_tw.png" alt=""></a></li>
-                    <li><a href="http://www.linkedin.com/" target="_blank" original-title="linkedin"><img src="img/social/icon_footer_in.png" alt=""></a></li>
-                    <li><a href="http://www.linkedin.com/" target="_self" original-title="mail"><img src="img/social/icon_footer_p.png" alt=""></a></li>
-                    <li><a href="http://www.linkedin.com/" target="_self" original-title="mail"><img src="img/social/icon_footer_ball.png" alt=""></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" original-title="twitter"><img src="{% static "img/social/icon_footer_face.png" %}" alt=""></a></li>
+                    <li><a href="https://plus.google.com" target="_blank" original-title="googleplus"><img src="{% static "img/social/icon_footer_g.png" %}" alt=""></a></li>
+                    <li><a href="https://www.facebook.com" title="facebook" target="_blank"><img src="{% static "img/social/icon_footer_tw.png" %}" alt=""></a></li>
+                    <li><a href="http://www.linkedin.com/" target="_blank" original-title="linkedin"><img src="{% static "img/social/icon_footer_in.png" %}" alt=""></a></li>
+                    <li><a href="http://www.linkedin.com/" target="_self" original-title="mail"><img src="{% static "img/social/icon_footer_p.png" %}" alt=""></a></li>
+                    <li><a href="http://www.linkedin.com/" target="_self" original-title="mail"><img src="{% static "img/social/icon_footer_ball.png" %}" alt=""></a></li>
                 </ul>
               </div>
             <div class="clear"></div>

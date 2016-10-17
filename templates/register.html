@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>FUNDER - Bootstrap Crowdfunding Site</title>
+    <title>donare - Cadastrar ONG</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -90,12 +90,12 @@
                 <ul id="social">
                 <li class="bleft inline">
                     <ul style="margin-left: 10px">
-                        <li><a href="https://www.facebook.com" target="_blank"  original-title="twitter"><img src="{% static "images/social/icon_header_face.png" %}" alt=""></a></li>
-                        <li><a href="https://plus.google.com" target="_blank"  original-title="googleplus"><img src="img/social/icon_header_g.png" alt=""></a></li>
-                        <li><a href="https://twitter.com/" title="facebook" target="_blank" ><img src="img/social/icon_header_tw.png" alt=""></a></li>
-                        <li><a href="http://www.linkedin.com/" target="_blank" original-title="linkedin"><img src="img/social/icon_header_in.png" alt=""></a></li>
-                        <li><a href="johndoe@domainname.com" target="_self" original-title="mail"><img src="img/social/icon_header_p.png" alt=""></a></li>
-                        <li><a href="johndoe@domainname.com" target="_self" original-title="mail"><img src="img/social/icon_header_ball.png" alt=""></a></li>
+                        <li><a href="https://www.facebook.com" target="_blank"  original-title="twitter"><img src="{% static "img/social/icon_header_face.png" %}" alt=""></a></li>
+                        <li><a href="https://plus.google.com" target="_blank"  original-title="googleplus"><img src="{% static "img/social/icon_header_g.png" %}" alt=""></a></li>
+                        <li><a href="https://twitter.com/" title="facebook" target="_blank" ><img src="{% static "img/social/icon_header_tw.png" %}" alt=""></a></li>
+                        <li><a href="http://www.linkedin.com/" target="_blank" original-title="linkedin"><img src="{% static "img/social/icon_header_in.png" %}" alt=""></a></li>
+                        <li><a href="johndoe@domainname.com" target="_self" original-title="mail"><img src="{% static "img/social/icon_header_p.png" %}" alt=""></a></li>
+                        <li><a href="johndoe@domainname.com" target="_self" original-title="mail"><img src="{% static "img/social/icon_header_ball.png" %}" alt=""></a></li>
                     </ul>
                 </li>
                     <li class="bleft first socialz"><a class="active" href="#">EN</a></li>
@@ -115,10 +115,10 @@
 
                 <div class="navigation inline">
                     <ul class="nav inline menuleft">
-                        <li class="active"><a class="bleft" href="index.html">HOME</a></li>
+                        <li><a class="bleft" href="index.html">HOME</a></li>
                         <li><a id="link_about" class="bleft" href="#">ABOUT</a></li>
                         <li><a id="link" class="bleft" href="#">PROJECTS</a></li>
-                        <li><a id="link_reg" class="bleft" href="{% url 'criar' %}">REGISTER</a></li>
+                        <li class="active"><a id="link_reg" class="bleft" href="{% url 'criar' %}">REGISTER</a></li>
                         <li><a id="link_contact" class="bleft" href="#">CONTACTS</a></li>
                         <li><a id="link_partners" class="bleft last" href="#">PARTNERS</a></li>
                     </ul>
@@ -179,8 +179,8 @@
                             <table class="icons">
                                 <tbody>
                                 <tr>
-                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj1.jpg" title=""><img src="img/icon_search.png" alt=""></a></td>
-                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj7"><img src="img/icon_lock.png" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj1.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj7"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -214,8 +214,8 @@
                             <table class="icons">
                                 <tbody>
                                 <tr>
-                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj2.jpg" title=""><img src="img/icon_search.png" alt=""></a></td>
-                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj8"><img src="img/icon_lock.png" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj2.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj8"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -249,8 +249,8 @@
                             <table class="icons">
                                 <tbody>
                                 <tr>
-                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj3.jpg" title=""><img src="img/icon_search.png" alt=""></a></td>
-                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj9"><img src="img/icon_lock.png" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj3.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj9"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -286,8 +286,8 @@
                             <table class="icons">
                                 <tbody>
                                 <tr>
-                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj4.jpg" title=""><img src="img/icon_search.png" alt=""></a></td>
-                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj10"><img src="img/icon_lock.png" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj4.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj10"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -321,8 +321,8 @@
                             <table class="icons">
                                 <tbody>
                                 <tr>
-                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj5.jpg" title=""><img src="img/icon_search.png" alt=""></a></td>
-                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj11"><img src="img/icon_lock.png" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj5.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj11"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -356,8 +356,8 @@
                             <table class="icons">
                                 <tbody>
                                 <tr>
-                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj6.jpg" title=""><img src="img/icon_search.png" alt=""></a></td>
-                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj12"><img src="img/icon_lock.png" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj6.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj12"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -399,69 +399,7 @@
                 </div><!-- end of .zone-search -->
             </div><!-- end of .search-wrapper -->
 
-            <div class="map-wrapper">
-
-                <div id="map" class="map" style="position: relative; overflow: hidden; -webkit-transform: translateZ(0);height: 465px">
-                    <div id="home-page-featured">
-                        <div id="Textus">
-                        <div class="clear">
-                        <p>WELCOME TO FUNDER</p>
-                        </div>
-                        <div class="clear">
-                        <p>AMAZING CROWDFUNDING SITE</p>
-                        </div>
-                        </div>
-                        <ul>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/01.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/02.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/03.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/04.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/05.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/06.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/07.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/08.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/09.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/10.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/11.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/12.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/13.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                        </ul>
-                        <ul>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/14.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/15.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/16.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/17.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/18.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/19.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/20.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/21.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/22.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/23.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/01.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/02.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/03.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-
-                        </ul>
-                        <ul>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/16.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/07.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/08.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/10.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/11.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/02.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/03.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/13.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/14.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/15.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/17.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/18.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-                            <li><a href="#"><img width="155" height="155" src="img/slide/19.jpg" class="attachment-post-thumbnail wp-post-image" alt=""></a></li>
-
-                        </ul>
-                        <!-- / container -->
-                    </div>
-                </div>
-            </div><!-- end of .map-wrapper -->
+            
             <a name="id_about"></a>
         </section>
     </div>
@@ -491,35 +429,34 @@
                 <div class="column_project">
                     <h4 class="text-center">Informações e contato:</h4>
 
-                    <label>Nome da Ong</label>
-                    <label for="{{ form.name.auto_id }}"> {{ form.name }} </label>
+                    <h5>Nome da Ong</h5>
+                    <label id="labelForm" for="{{ form.name.auto_id }}"> {{ form.name }} </label>
 
-                    <label>Categoria da Ong</label>
+                    <h5>Categoria da Ong</h5>
                     <label for="{{ form.categoria.auto_id }}"> {{ form.categoria }} </label>
 
-                    <br>
-                    <label>CNPJ</label>
-                    <br>
+                    <h5>CNPJ</h5>
+                    
                     <label for="{{ form.cnpj.auto_id }}"> {{ form.cnpj }} </label>
 
-                    <br>
-                    <label>Telefone</label>
-                    <br>
+                    
+                    <h5>Telefone</h5>
+                    
                     <label for="{{ form.telefone.auto_id }}"> {{ form.telefone }} </label>
 
-                    <br>
-                    <label>E-mail</label>
-                    <br>
+                    
+                    <h5>E-mail</h5>
+                    
                     <label for="{{ form.email.auto_id }}"> {{ form.email }} </label>
 
-                    <br>
-                    <label>Senha</label>
-                    <br>
+                    
+                    <h5>Senha</h5>
+                    
                     <label for="{{ form.senha.auto_id }}"> {{ form.senha }} </label>
 
-                    <br>
-                    <label>Endereço</label>
-                    <br>
+                    
+                    <h5>Endereço</h5>
+                    
                     <label for="{{ form.endereco.auto_id }}"> {{ form.endereco }} </label>
 
                 </div>
@@ -529,18 +466,18 @@
                 <div class="bleft column_project">
                     <h4 class="text-center">Descrição e mídia:</h4>
 
-                    <label>Url de vídeo sobre a ONG</label>
-                    <br>
+                    <h5>Url de vídeo sobre a ONG</h5>
+                    
                     <label for="{{ form.videoUrl.auto_id }}"> {{ form.videoUrl }} </label>
 
-                    <br>
-                    <label>Logo ou foto da ONG</label>
-                    <br>
+                    
+                    <h5>Logo ou foto da ONG</h5>
+                    
                     <label for="{{ form.fotos.auto_id }}"> {{ form.fotos }} </label>
 
-                    <br>
-                    <label>Descrição da ONG</label>
-                    <br>
+                    
+                    <h5>Descrição da ONG</h5>
+                    
                     <label for="{{ form.descricao.auto_id }}"> {{ form.descricao }} </label>
 
                 </div>
@@ -550,18 +487,18 @@
                 <div class="bleft column_project">
                     <h4 class="text-center">Informações bancárias:</h4>
 
-                    <label>Agência</label>
-                    <br>
+                    <h5>Agência</h5>
+                    
                     <label for="{{ form.agencia.auto_id }}"> {{ form.agencia }} </label>
 
-                    <br>
-                    <label>Conta</label>
-                    <br>
+                    
+                    <h5>Conta</h5>
+                    
                     <label for="{{ form.conta.auto_id }}"> {{ form.conta }} </label>
 
-                    <br>
-                    <label>Titular da conta</label>
-                    <br>
+                    
+                    <h5>Titular da conta</h5>
+                    
                     <label for="{{ form.nomeTitular.auto_id }}"> {{ form.nomeTitular }} </label>
 
                 </div>
@@ -706,12 +643,12 @@
               <div class="fleft">© All Rights Reserved. Design by UOU Design.</div>
               <div class="fright">
                 <ul id="social_b" class="socialbott inline">
-                    <li><a href="https://twitter.com/" target="_blank" original-title="twitter"><img src="img/social/icon_footer_face.png" alt=""></a></li>
-                    <li><a href="https://plus.google.com" target="_blank" original-title="googleplus"><img src="img/social/icon_footer_g.png" alt=""></a></li>
-                    <li><a href="https://www.facebook.com" title="facebook" target="_blank"><img src="img/social/icon_footer_tw.png" alt=""></a></li>
-                    <li><a href="http://www.linkedin.com/" target="_blank" original-title="linkedin"><img src="img/social/icon_footer_in.png" alt=""></a></li>
-                    <li><a href="http://www.linkedin.com/" target="_self" original-title="mail"><img src="img/social/icon_footer_p.png" alt=""></a></li>
-                    <li><a href="http://www.linkedin.com/" target="_self" original-title="mail"><img src="img/social/icon_footer_ball.png" alt=""></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" original-title="twitter"><img src="{% static "img/social/icon_footer_face.png" %}" alt=""></a></li>
+                    <li><a href="https://plus.google.com" target="_blank" original-title="googleplus"><img src="{% static "img/social/icon_footer_g.png" %}" alt=""></a></li>
+                    <li><a href="https://www.facebook.com" title="facebook" target="_blank"><img src="{% static "img/social/icon_footer_tw.png" %}" alt=""></a></li>
+                    <li><a href="http://www.linkedin.com/" target="_blank" original-title="linkedin"><img src="{% static "img/social/icon_footer_in.png" %}" alt=""></a></li>
+                    <li><a href="http://www.linkedin.com/" target="_self" original-title="mail"><img src="{% static "img/social/icon_footer_p.png" %}" alt=""></a></li>
+                    <li><a href="http://www.linkedin.com/" target="_self" original-title="mail"><img src="{% static "img/social/icon_footer_ball.png" %}" alt=""></a></li>
                 </ul>
               </div>
             <div class="clear"></div>

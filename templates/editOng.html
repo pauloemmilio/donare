@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>FUNDER - Bootstrap Crowdfunding Site</title>
+    <title>donare - Editar ONG</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -79,63 +79,60 @@
 
 <body>
 <div id="header" class="header">
-    <div class="width titul">
-        <!--
-        <div class="reg inline">
-            <div class="bleft inline login"><a href="#" id="login-link" class="login-link">Login</a></div>
-            <div class="bleft bright inline login"><a href="#" id="reg-link" class="login-link">Register</a></div>
-        </div>
-        -->
-        <div class="social inline fright">
-            <ul id="social">
-                <li class="bleft inline">
-                    <ul>
-                        <li><a href="https://www.facebook.com" target="_blank"  original-title="twitter"><img src="img/social/icon_header_face.png" alt=""></a></li>
-                        <li><a href="https://plus.google.com" target="_blank"  original-title="googleplus"><img src="img/social/icon_header_g.png" alt=""></a></li>
-                        <li><a href="https://twitter.com/" title="facebook" target="_blank" ><img src="img/social/icon_header_tw.png" alt=""></a></li>
-                        <li><a href="http://www.linkedin.com/" target="_blank" original-title="linkedin"><img src="img/social/icon_header_in.png" alt=""></a></li>
-                        <li><a href="johndoe@domainname.com" target="_self" original-title="mail"><img src="img/social/icon_header_p.png" alt=""></a></li>
-                        <li><a href="johndoe@domainname.com" target="_self" original-title="mail"><img src="img/social/icon_header_ball.png" alt=""></a></li>
-                    </ul>
-                </li>
-                <!--
-                <li class="bleft first socialz"><a class="active" href="#">EN</a></li>
-                <li class="bleft socialz"><a href="#">FR</a></li>
-                <li class="bleft socialz"><a href="#">IT</a></li>
-                <li class="bleft last socialz"><a href="#">DE</a></li>
-                -->
-            </ul>
-        </div>
-    </div>
-
-    <div class="clear"></div>
-    <div class="navigate">
-        <div class="width">
-            <div class="logo inline">
-                <h1 class="inline fleft logodonare">donare</h1>
+    <a name="id_home"></a>
+        <div class="width titul">
+            <div class="reg inline">
+                <div class="bleft inline login"><a href="#" id="login-link" class="login-link">Login</a></div>
+                <div class="bleft bright inline login"><a href="#" id="reg-link" class="login-link">mudou</a></div>
             </div>
 
-            <div class="navigation inline fright">
-                <ul class="nav inline menuleft">
-                    <li class=""><a class="bleft" href="projects.html#id3">Editar ONG</a></li>
-                    <li><a class="bleft" href="index.html#registr">Excluir ONG</a></li>
-                    <li><a class="bleft" href="index.html#id_cont">Sair</a></li>
+            <div class="social inline fright">
+                <ul id="social">
+                <li class="bleft inline">
+                    <ul style="margin-left: 10px">
+                        <li><a href="https://www.facebook.com" target="_blank"  original-title="twitter"><img src="{% static "images/social/icon_header_face.png" %}" alt=""></a></li>
+                        <li><a href="https://plus.google.com" target="_blank"  original-title="googleplus"><img src="{% static "img/social/icon_header_g.png" %}" alt=""></a></li>
+                        <li><a href="https://twitter.com/" title="facebook" target="_blank" ><img src="{% static "img/social/icon_header_tw.png" %}" alt=""></a></li>
+                        <li><a href="http://www.linkedin.com/" target="_blank" original-title="linkedin"><img src="{% static "img/social/icon_header_in.png" %}" alt=""></a></li>
+                        <li><a href="johndoe@domainname.com" target="_self" original-title="mail"><img src="{% static "img/social/icon_header_p.png" %}" alt=""></a></li>
+                        <li><a href="johndoe@domainname.com" target="_self" original-title="mail"><img src="{% static "img/social/icon_header_ball.png" %}" alt=""></a></li>
+                    </ul>
+                </li>
+                    <li class="bleft first socialz"><a class="active" href="#">EN</a></li>
+                    <li class="bleft socialz"><a href="#">FR</a></li>
+                    <li class="bleft socialz"><a href="#">IT</a></li>
+                    <li class="bleft last socialz"><a href="#">DE</a></li>
                 </ul>
             </div>
         </div>
+
         <div class="clear"></div>
-        <div id="header_select">
-            <select id="dynamic_select">
-                <option value="" selected>Select A Page</option>
-                <option value="index.html#id_about">About</option>
-                <option value="index.html#id3">Projects</option>
-                <option value="index.html#id_reg">Registration</option>
-                <option value="index.html#id_cont">Contacts</option>
-                <option value="index.html#id_partn">Partners</option>
-            </select>
+        <div class="navigate">
+            <div class="width">
+                <div class="logo inline">
+                    <h1 class="inline fleft logodonare" color="#99b709">donare</h1>
+                </div>
+
+                <div class="navigation inline">
+                    <ul class="nav inline menuleft">
+                        <li class="active"><a class="bleft" href="index.html">Editar ONG</a></li>
+                        <li><a id="link_contact" class="bleft" href="#">Excluir ONG</a></li>
+                        <li><a id="link_partners" class="bleft last" href="#">Sair</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="clear"></div>
+            <div id="header_select">
+                <select id="dynamic_select">
+                    <option value="" selected>Select A Page</option>
+                    <option value="index.html#id_about">About</option>
+                    <option value="index.html#id3">Projects</option>
+                    <option value="index.html#id_reg">Registration</option>
+                    <option value="index.html#id_cont">Contacts</option>
+                    <option value="index.html#id_partn">Partners</option>
+                </select>
+            </div>
         </div>
-    </div>
-</div>
 
 
     </div>
@@ -152,9 +149,264 @@
     </div>
 </div>
 
+<div class="contentt">
+<div class="container-fluid line">
 
-  
-<h1 class="decoration text-center proj"><span class="nobacgr">Editar informações da ONG</span></h1>
+
+
+    <div class="top_widgets black">
+        <section class="black">
+            <div class="search-wrapper clearfix">
+                <div class="zone clearfix">
+                <div class="searchr block">
+                <div id="default-search" >
+
+                </div>
+                <div id="advanced-search"  style="display: none;">
+
+                <div class="row-fluid projects font_p" id="top_slide">
+                <div id="myCarousel" class="carousel slide">
+                <div class="carousel-inner content">
+                <div class="item active">
+                    <div class="span4 bordered">
+                        <div class="folder"><h4 class="text-center title"><a href="projects.html#proj7">Projects title goes here</a></h4></div>
+                        <div class="proj_name">
+                            <div class="clear"></div>
+                            <span class="fleft author">Author Name</span>
+                            <table class="icons">
+                                <tbody>
+                                <tr>
+                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj1.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj7"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="folder border"><a href="projects.html#proj7"><div class="author_proj proj_1" ></div></a></div>
+                        <div class="folder lorem lines">
+                            <div id="project7" value="645" class="slider"></div>
+                        </div>
+                        <p class="descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate egestas sem, eu cursus ligula ullamcorper non. Curabitur tristique velit eu</p>
+                        <div class="folder price topbordered">
+                            <div class="span4">
+                                <strong class="green"><span>$</span><span class="project_value" href="#project7">26</span></strong>
+                                <p>pledged</p>
+                            </div>
+                            <div class="span4 bleft">
+                                <strong>80</strong>
+                                <p>backers</p>
+                            </div>
+                            <div class="span4 bleft">
+                                <strong>25</strong>
+                                <p>days to go</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4 bordered">
+                        <div class="folder"><h4 class="text-center title"><a href="projects.html#proj8">Projects title goes here</a></h4></div>
+                        <div class="proj_name">
+                            <div class="clear"></div>
+                            <span class="fleft author">Author Name</span>
+                            <table class="icons">
+                                <tbody>
+                                <tr>
+                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj2.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj8"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="folder border"><a href="projects.html#proj8"><div class="author_proj proj_2"></div></a></div>
+                        <div class="folder lorem lines">
+                            <div id="project8" value="132" class="slider"></div>
+                        </div>
+                        <p class="descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate egestas sem, eu cursus ligula ullamcorper non. Curabitur tristique velit eu</p>
+                        <div class="folder price topbordered">
+                            <div class="span4">
+                                <strong class="green"><span>$</span><span class="project_value" href="#project8">123</span></strong>
+                                <p>pledged</p>
+                            </div>
+                            <div class="span4 bleft">
+                                <strong>80</strong>
+                                <p>backers</p>
+                            </div>
+                            <div class="span4 bleft">
+                                <strong>25</strong>
+                                <p>days to go</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4 bordered">
+                        <div class="folder"><h4 class="text-center title"><a href="projects.html#proj9">Projects title goes here</a></h4></div>
+                        <div class="proj_name">
+                            <div class="clear"></div>
+                            <span class="fleft author">Author Name</span>
+                            <table class="icons">
+                                <tbody>
+                                <tr>
+                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj3.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj9"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="folder border"><a href="projects.html#proj9"><div class="author_proj proj_3"></div></a></div>
+                        <div class="folder lorem lines">
+                            <div id="project9" value="765" class="slider"></div>
+                        </div>
+                        <p class="descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate egestas sem, eu cursus ligula ullamcorper non. Curabitur tristique velit eu</p>
+                        <div class="folder price topbordered">
+                            <div class="span4">
+                                <strong class="green"><span>$</span><span class="project_value" href="#project9">154</span></strong>
+                                <p>pledged</p>
+                            </div>
+                            <div class="span4 bleft">
+                                <strong>80</strong>
+                                <p>backers</p>
+                            </div>
+                            <div class="span4 bleft">
+                                <strong>25</strong>
+                                <p>days to go</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="span4 bordered">
+                        <div class="folder"><h4 class="text-center title"><a href="projects.html#proj10">Projects title goes here</a></h4></div>
+                        <div class="proj_name">
+                            <div class="clear"></div>
+                            <span class="fleft author">Author Name</span>
+                            <table class="icons">
+                                <tbody>
+                                <tr>
+                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj4.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj10"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="folder border"><a href="projects.html#proj10"><div class="author_proj proj_4"></div></a></div>
+                        <div class="folder lorem lines">
+                            <div id="project10" value="125" class="slider"></div>
+                        </div>
+                        <p class="descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate egestas sem, eu cursus ligula ullamcorper non. Curabitur tristique velit eu</p>
+                        <div class="folder price topbordered">
+                            <div class="span4">
+                                <strong class="green"><span>$</span><span class="project_value" href="#project10">98</span></strong>
+                                <p>pledged</p>
+                            </div>
+                            <div class="span4 bleft">
+                                <strong>80</strong>
+                                <p>backers</p>
+                            </div>
+                            <div class="span4 bleft">
+                                <strong>25</strong>
+                                <p>days to go</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4 bordered">
+                        <div class="folder"><h4 class="text-center title"><a href="projects.html#proj11">Projects title goes here</a></h4></div>
+                        <div class="proj_name">
+                            <div class="clear"></div>
+                            <span class="fleft author">Author Name</span>
+                            <table class="icons">
+                                <tbody>
+                                <tr>
+                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj5.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj11"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="folder border"><a href="projects.html#proj11"><div class="author_proj proj_5"></div></a></div>
+                        <div class="folder lorem lines">
+                            <div id="project11" value="876" class="slider"></div>
+                        </div>
+                        <p class="descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate egestas sem, eu cursus ligula ullamcorper non. Curabitur tristique velit eu</p>
+                        <div class="folder price topbordered">
+                            <div class="span4">
+                                <strong class="green"><span>$</span><span class="project_value" href="#project11">76</span></strong>
+                                <p>pledged</p>
+                            </div>
+                            <div class="span4 bleft">
+                                <strong>80</strong>
+                                <p>backers</p>
+                            </div>
+                            <div class="span4 bleft">
+                                <strong>25</strong>
+                                <p>days to go</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="span4 bordered">
+                        <div class="folder"><h4 class="text-center title"><a href="projects.html#proj12">Projects title goes here</a></h4></div>
+                        <div class="proj_name">
+                            <div class="clear"></div>
+                            <span class="fleft author">Author Name</span>
+                            <table class="icons">
+                                <tbody>
+                                <tr>
+                                    <td class="icos_proj_sm bleft"><a class="group1" href="img/proj6.jpg" title=""><img src="{% static "img/icon_search.png" %}" alt=""></a></td>
+                                    <td class="icos_proj_sm bleft"><a href="projects.html#proj12"><img src="{% static "img/icon_lock.png" %}" alt=""></a></td>
+                                </tr>
+                                </tbody>
+                            </table>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="folder border"><a href="projects.html#proj12"><div class="author_proj proj_6"></div></a></div>
+                        <div class="folder lorem lines">
+                            <div id="project12" value="875" class="slider"></div>
+                        </div>
+                        <p class="descr">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate egestas sem, eu cursus ligula ullamcorper non. Curabitur tristique velit eu</p>
+                        <div class="folder price topbordered">
+                            <div class="span4">
+                                <strong class="green"><span>$</span><span class="project_value" href="#project12">200</span></strong>
+                                <p>pledged</p>
+                            </div>
+                            <div class="span4 bleft">
+                                <strong>80</strong>
+                                <p>backers</p>
+                            </div>
+                            <div class="span4 bleft">
+                                <strong>25</strong>
+                                <p>days to go</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                </div>
+                <a class="left carousel-control" href="#myCarousel" data-slide="prev"></a>
+                <a class="right carousel-control" href="#myCarousel" data-slide="next"></a>
+                </div>
+
+                </div>
+
+
+                </div>
+
+                </div>
+
+                </div><!-- end of .zone-search -->
+            </div><!-- end of .search-wrapper -->
+
+            
+            <a name="id_about"></a>
+        </section>
+    </div>
+</div>
+
+<div class="clear"></div>
+
+<div class="content">
+
+<h1 class="decoration text-center proj"><span class="nobacgr">Edite as informações da sua ONG</span></h1>
 <div class="create_projects">
     <div class="row-fluid">
         <div class="span4">
@@ -167,20 +419,103 @@
             <h4 class="text-center">Passo 3: <span class="green">Dados bancários</span></h4>
         </div>
     </div>
-    <div class="row-fluid border_proj duration">
-        <div class="span4 ">
-            <div class="column_project">
-                <h4 class="text-center">Informações e contato:</h4>
-                <form class="form-search" >
-                    <input type="text" class="inputp search-query span12" placeholder="Nome da ONG">
-                    <input type="text" class="inputp search-query span12" placeholder="Categoria da ONG">
-                    <input type="text" class="inputp search-query span12" placeholder="CNPJ">
-                    <input type="text" class="inputp search-query span12" placeholder="Telefone de contato">
-                    <input type="email" class="inputp search-query span12" placeholder="E-mail">
-                    <input type="password" class="inputp search-query span12" placeholder="Senha">
-                    <input type="text" class="inputp search-query span12" placeholder="Endereço da ONG">
-                    <input type="text" class="inputp search-query span12 face" style="padding-left: 30px;" placeholder="URL do Facebook">
-                    <!--
+    <form class="form-search" method="post" action="">
+        {% csrf_token %}
+        <div class="row-fluid border_proj duration">
+            <div class="span4 ">
+                <div class="column_project">
+                    <h4 class="text-center">Informações e contato:</h4>
+
+                    <h5>Nome da Ong</h5>
+                    <label id="labelForm" for="{{ form.name.auto_id }}"> {{ form.name }} </label>
+
+                    <h5>Categoria da Ong</h5>
+                    <label for="{{ form.categoria.auto_id }}"> {{ form.categoria }} </label>
+
+                    <h5>CNPJ</h5>
+                    
+                    <label for="{{ form.cnpj.auto_id }}"> {{ form.cnpj }} </label>
+
+                    
+                    <h5>Telefone</h5>
+                    
+                    <label for="{{ form.telefone.auto_id }}"> {{ form.telefone }} </label>
+
+                    
+                    <h5>E-mail</h5>
+                    
+                    <label for="{{ form.email.auto_id }}"> {{ form.email }} </label>
+
+                    
+                    <h5>Senha</h5>
+                    
+                    <label for="{{ form.senha.auto_id }}"> {{ form.senha }} </label>
+
+                    
+                    <h5>Endereço</h5>
+                    
+                    <label for="{{ form.endereco.auto_id }}"> {{ form.endereco }} </label>
+
+                </div>
+            </div>
+
+            <div class="span4">
+                <div class="bleft column_project">
+                    <h4 class="text-center">Descrição e mídia:</h4>
+
+                    <h5>Url de vídeo sobre a ONG</h5>
+                    
+                    <label for="{{ form.videoUrl.auto_id }}"> {{ form.videoUrl }} </label>
+
+                    
+                    <h5>Logo ou foto da ONG</h5>
+                    
+                    <label for="{{ form.fotos.auto_id }}"> {{ form.fotos }} </label>
+
+                    
+                    <h5>Descrição da ONG</h5>
+                    
+                    <label for="{{ form.descricao.auto_id }}"> {{ form.descricao }} </label>
+
+                </div>
+            </div>
+
+            <div class="span4">
+                <div class="bleft column_project">
+                    <h4 class="text-center">Informações bancárias:</h4>
+
+                    <h5>Agência</h5>
+                    
+                    <label for="{{ form.agencia.auto_id }}"> {{ form.agencia }} </label>
+
+                    
+                    <h5>Conta</h5>
+                    
+                    <label for="{{ form.conta.auto_id }}"> {{ form.conta }} </label>
+
+                    
+                    <h5>Titular da conta</h5>
+                    
+                    <label for="{{ form.nomeTitular.auto_id }}"> {{ form.nomeTitular }} </label>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="decoration text-center create_butt"><span class="nobacgr_whit"><button class="btn btn-large search-query" type="submit"> <span class="butt_small"><strong>Editar</strong></span></button></span><a name="id_cont"></a></div>
+
+    </form>
+
+
+
+</div>
+
+</div>
+
+</div>
+</div>
+
+<!--
                     <select class="">
                         <option>Location</option>
                         <option>Belarus</option>
@@ -188,32 +523,11 @@
                         <option>England</option>
                         <option>China</option>
                     </select>
-                    
+
                     <input type="text" class="inputp search-query span12 tweet" style="padding-left: 30px;" placeholder="Account Name">
                     <input type="text" class="inputp search-query span12" placeholder="Payment Gateway">
-                	-->
-                </form>
-            </div>
-        </div>
-        <div class="span4">
-            <div class="bleft column_project">
-                <h4 class="text-center">Descrição e mídia:</h4>
-                <form class="form-search">
-                    <input type="text" class="inputp search-query span12" placeholder="URL de vídeo sobre a ONG">
-                    <div class="upload_img inline">
-                        <input type="file" name="upload" placeholder="Logo" />
-                    </div>
-                    <div class="upload_pic1 inline">
-                        <input type="file" name="upload"/>
-                    </div>
-                    <div class="upload_pic2 inline">
-                        <input type="file" name="upload"/>
-                    </div>
-                    <div class="upload_pic3 inline">
-                        <input type="file" name="upload"/>
-                    </div>
-                    <textarea id="redex3" class="inputp search-query span12"  rows="5" placeholder="Descrição da ONG"></textarea>
-                </form>
+                    -->
+
                 <!--
                 <form class="form-search">
                     <input type="text" class="inputp search-query span12" placeholder="Project Name">
@@ -236,18 +550,7 @@
                     <input type="text" class="inputp search-query span12" placeholder="Payment Gateway">
                 </form>
                 -->
-            </div>
-        </div>
-        <div class="span4">
-            <div class="bleft column_project">
-                <h4 class="text-center">Informações bancárias:</h4>
-                <form class="form-search">
-                    <input type="text" class="inputp search-query span12" placeholder="Agência">
-                    <input type="text" class="inputp search-query span12" placeholder="Conta">
-                    <input type="text" class="inputp search-query span12" placeholder="Nome do titular da conta">
-                </form>
-            </div>
-        </div>
+
         <!--
         <div class="span3">
             <div class="bleft column_project" >
@@ -268,12 +571,6 @@
                 </ul>
             </div>
         </div>-->
-    </div>
-
-
-    <div class="decoration text-center create_butt"><span class="nobacgr_whit"><button class="btn btn-large search-query" type="button"> <span class="butt_small"><strong>Editar</strong></span></button></span><a name="id_cont"></a></div>
-
-</div>
 
 <div id="footer">
     <div class="footer">
@@ -343,12 +640,12 @@
               <div class="fleft">© All Rights Reserved. Design by UOU Design.</div>
               <div class="fright">
                 <ul id="social_b" class="socialbott inline">
-                    <li><a href="https://twitter.com/" target="_blank" original-title="twitter"><img src="img/social/icon_footer_face.png" alt=""></a></li>
-                    <li><a href="https://plus.google.com" target="_blank" original-title="googleplus"><img src="img/social/icon_footer_g.png" alt=""></a></li>
-                    <li><a href="https://www.facebook.com" title="facebook" target="_blank"><img src="img/social/icon_footer_tw.png" alt=""></a></li>
-                    <li><a href="http://www.linkedin.com/" target="_blank" original-title="linkedin"><img src="img/social/icon_footer_in.png" alt=""></a></li>
-                    <li><a href="http://www.linkedin.com/" target="_self" original-title="mail"><img src="img/social/icon_footer_p.png" alt=""></a></li>
-                    <li><a href="http://www.linkedin.com/" target="_self" original-title="mail"><img src="img/social/icon_footer_ball.png" alt=""></a></li>
+                    <li><a href="https://twitter.com/" target="_blank" original-title="twitter"><img src="{% static "img/social/icon_footer_tw.png" %}" alt=""></a></li>
+                    <li><a href="https://plus.google.com" target="_blank" original-title="googleplus"><img src="{% static "img/social/icon_footer_g.png" %}" alt=""></a></li>
+                    <li><a href="https://www.facebook.com" title="facebook" target="_blank"><img src="{% static "img/social/icon_footer_face.png" %}" alt=""></a></li>
+                    <li><a href="http://www.linkedin.com/" target="_blank" original-title="linkedin"><img src="{% static "img/social/icon_footer_in.png" %}" alt=""></a></li>
+                    <li><a href="http://www.linkedin.com/" target="_self" original-title="mail"><img src="{% static "img/social/icon_footer_p.png" %}" alt=""></a></li>
+                    <li><a href="http://www.linkedin.com/" target="_self" original-title="mail"><img src="{% static "img/social/icon_footer_ball.png" %}" alt=""></a></li>
                 </ul>
               </div>
             <div class="clear"></div>
