@@ -19,7 +19,7 @@ class Ong(models.Model):
     videoUrl = models.URLField()
     descricao = models.TextField(max_length=500)
     def __str__(self):
-        return self.nome
+        return self.name
     def __unicode__(self):
         return self.name
 
