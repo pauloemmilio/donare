@@ -39,3 +39,8 @@ def editar_doador(request,doador_id):
     context_dict = {'form': form, 'doador_id': doador_id}
     return render(request, template_name,context_dict)
 
+def deletar_doador(request, doador_id):
+    doador = Doador.objects.get(pk = doador_id)
+    doador.delete()
+    return redirect('index')
+
