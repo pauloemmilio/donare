@@ -3,7 +3,7 @@
 <html lang="en">
 <head>
     <meta charset="utf-8">
-    <title>donare - Cadastrar Doador</title>
+    <title>donare - Cadastrar doador</title>
     <meta name="description" content="">
     <meta name="keywords" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -412,97 +412,38 @@
 <h1 class="decoration text-center proj"><span class="nobacgr">Cadastre-se</span></h1>
 <div class="create_projects">
     <div class="row-fluid">
-        <div class="span4">
-            <h4 class="text-center">Passo 1: <span class="green">Informações da ONG</span></h4>
-        </div>
-        <div class="span4 bleft">
-            <h4 class="text-center">Passo 2: <span class="green">Outras informações</span></h4>
-        </div>
-        <div class="span4 bleft">
-            <h4 class="text-center">Passo 3: <span class="green">Dados bancários</span></h4>
+        <div class="span12">
+            <h4 class="text-center">Passo 1: <span class="green">Informações pessoais</span></h4>
         </div>
     </div>
     <form class="form-search" method="post" action="">
         {% csrf_token %}
         <div class="row-fluid border_proj duration">
-            <div class="span4 ">
+            <div class="span12 ">
                 <div class="column_project">
                     <h4 class="text-center">Informações e contato:</h4>
 
-                    <h5>Nome da Ong</h5>
+                    <h5>Nome</h5>
                     <label id="labelForm" for="{{ form.name.auto_id }}"> {{ form.name }} </label>
 
-                    <h5>Categoria da Ong</h5>
-                    <label for="{{ form.categoria.auto_id }}"> {{ form.categoria }} </label>
+                    <h5>Data de nascimento</h5>
+                    <label for="{{ form.dataDeNascimento.auto_id }}"> {{ form.dataDeNascimento }} </label>
 
-                    <h5>CNPJ</h5>
+                    <h5>CPF</h5>
                     
-                    <label for="{{ form.cnpj.auto_id }}"> {{ form.cnpj }} </label>
-
-                    
-                    <h5>Telefone</h5>
-                    
-                    <label for="{{ form.telefone.auto_id }}"> {{ form.telefone }} </label>
-
+                    <label for="{{ form.cpf.auto_id }}"> {{ form.cpf }} </label>
                     
                     <h5>E-mail</h5>
                     
                     <label for="{{ form.email.auto_id }}"> {{ form.email }} </label>
-
                     
                     <h5>Senha</h5>
                     
                     <label for="{{ form.senha.auto_id }}"> {{ form.senha }} </label>
 
-                    
-                    <h5>Endereço</h5>
-                    
-                    <label for="{{ form.endereco.auto_id }}"> {{ form.endereco }} </label>
-
                 </div>
             </div>
 
-            <div class="span4">
-                <div class="bleft column_project">
-                    <h4 class="text-center">Descrição e mídia:</h4>
-
-                    <h5>Url de vídeo sobre a ONG</h5>
-                    
-                    <label for="{{ form.videoUrl.auto_id }}"> {{ form.videoUrl }} </label>
-
-                    
-                    <h5>Logo ou foto da ONG</h5>
-                    
-                    <label for="{{ form.fotos.auto_id }}"> {{ form.fotos }} </label>
-
-                    
-                    <h5>Descrição da ONG</h5>
-                    
-                    <label for="{{ form.descricao.auto_id }}"> {{ form.descricao }} </label>
-
-                </div>
-            </div>
-
-            <div class="span4">
-                <div class="bleft column_project">
-                    <h4 class="text-center">Informações bancárias:</h4>
-
-                    <h5>Agência</h5>
-                    
-                    <label for="{{ form.agencia.auto_id }}"> {{ form.agencia }} </label>
-
-                    
-                    <h5>Conta</h5>
-                    
-                    <label for="{{ form.conta.auto_id }}"> {{ form.conta }} </label>
-
-                    
-                    <h5>Titular da conta</h5>
-                    
-                    <label for="{{ form.nomeTitular.auto_id }}"> {{ form.nomeTitular }} </label>
-
-                </div>
-            </div>
         </div>
 
         <div class="decoration text-center create_butt"><span class="nobacgr_whit"><button class="btn btn-large search-query" type="submit"> <span class="butt_small"><strong>Cadastrar</strong></span></button></span><a name="id_cont"></a></div>
