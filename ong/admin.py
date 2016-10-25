@@ -1,3 +1,6 @@
 from django.contrib import admin
 
-# Register your models here.
+from ong.models import Ong, Despesas
+
+admin.site.register(Ong)
+admin.site.register(Despesas)
