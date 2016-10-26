@@ -436,27 +436,18 @@
                     <label for="{{ form.categoria.auto_id }}"> {{ form.categoria }} </label>
 
                     <h5>CNPJ</h5>
-                    
                     <label for="{{ form.cnpj.auto_id }}"> {{ form.cnpj }} </label>
 
-                    
                     <h5>Telefone</h5>
-                    
-                    <label for="{{ form.telefone.auto_id }}"> {{ form.telefone }} </label>
-
+                    {{ form.telefone }}
                     
                     <h5>E-mail</h5>
-                    
                     <label for="{{ form.email.auto_id }}"> {{ form.email }} </label>
 
-                    
                     <h5>Senha</h5>
-                    
                     <label for="{{ form.senha.auto_id }}"> {{ form.senha }} </label>
 
-                    
                     <h5>Endereço</h5>
-                    
                     <label for="{{ form.endereco.auto_id }}"> {{ form.endereco }} </label>
 
                 </div>
@@ -585,7 +576,7 @@
             <div class="span3 foot">
                 <h4>Recent Tweets</h4>
                 <div class="tmargin20">
-                    <img class="fleft tw" src="img/social_tweet.png" alt="">
+                    <img class="fleft tw" src="{% static 'img/social_tweet.png' %}" alt="">
                     <div class="mleft40">
                         <span>1234 Street </span>
                         <span>4r6yg 456hv  </span>
@@ -594,7 +585,7 @@
                         <a class="green">http://www.envato.com</a>
                     </div>
                     <div class="clear foot"></div>
-                    <img class="fleft tw" src="img/social_tweet.png" alt="">
+                    <img class="fleft tw" src="{% static 'img/social_tweet.png' %}" alt="">
                     <div class=" mleft40">
                         <span>1234 Street </span>
                         <span>4r6yg 456hv  </span>
