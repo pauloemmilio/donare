@@ -165,13 +165,14 @@
             <div id="backers_content">
                 <div class="row-fluid">
                     <div class="updates_block_text">
-                        <h4>Despesas ou projetos</h4>
-                        <p>Descrição da despesa ou projeto</p>
-                        <p>Valor necessário</p>
-
+                      <a href="{% url 'alterar_despesas' despesas.id %}"
+                        <h4>{{despesas.tipo}}</h4>
+                        <p>{{despesas.descricao}}</p>
+                        <h4>R$ = {{despesas.valor}}</h4>
+                      </a>
                         <div class="payment_getaway_button">
                             <button class="btn btn-large make_payment" type="button">
-                                <small>Cadastrar Despesas</small>
+                                <small><a href="{% url 'criar_despesas'%}" id="reg-link" class="login-link">Cadastrar Despesas</a></small>
                              </button>
                         </div>
                     </div>
@@ -348,7 +349,7 @@
                             <h4>Conta</h4>
                             <p>{{ong.conta}}</p>
                         </div>
-                        
+
                     </div>
                 </div>
             </div>

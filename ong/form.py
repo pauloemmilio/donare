@@ -22,4 +22,5 @@ class DespesasForm(ModelForm):
             model = Despesas
             fields = ['tipo',
             'descricao',
-            'valor']
+            'valor',
+	        'ong']
