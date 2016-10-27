@@ -1,5 +1,5 @@
 from django.forms import ModelForm
-from ong.models import Ong
+from ong.models import Ong, Despesas
 
 class OngForm(ModelForm):
         class Meta:
@@ -17,3 +17,10 @@ class OngForm(ModelForm):
             'nomeTitular',
             'videoUrl',
             'descricao']
+class DespesasForm(ModelForm):
+    class Meta:
+            model = Despesas
+            fields = ['tipo',
+            'descricao',
+            'valor',
+	        'ong']
