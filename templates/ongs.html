@@ -179,160 +179,43 @@
                                 <div id="backers_content">
                                     <div class="row-fluid">
                                         <div class="updates_block_text">
-
+                                            
                                             {%for de in despesas%}
                                               {% if de.ong.id == ong.id %}
-                                                <a href="{% url 'alterar_despesas' de.id %}"
-                                                <h4>{{de.tipo}}</h4>
-                                                <p>{{de.descricao}}</p>
-                                                <h4>R$ = {{de.valor}}</h4>
-                                                <p> {{de.ong.id}}</p>
+                                              <div>
+                                                <div class=" span10"> 
+                                                    <h4>{{de.tipo}}</h4>
+                                                    <p>{{de.descricao}}</p>
+                                                    <h4>R$ = {{de.valor}}</h4>
+                                                </div>
+                                                <div class=" span2">
+                                                    <button class="btn btn-large make_payment" type="button">
+                                    <small><a href="{% url 'alterar_despesas' ong.id %}" id="reg-link" class="login-link">Editar</a></small></button>
+                                                    <br>
+                                                    <br>
+                                                    <button class="btn btn-large make_payment" type="button">
+                                    <small><a href="{% url 'deletar_despesas' ong.id %}" id="reg-link" class="login-link">Excluir</a></small></button>
+                                                </div>
+                                              </div>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
+                                            <br>
                                               {% endif %}
                                             {% endfor %}
-                      </a>
+                                            
                                             <div class="payment_getaway_button">
                                                 <button class="btn btn-large make_payment" type="button">
                                 <small><a href="{% url 'criar_despesas' ong.id %}" id="reg-link" class="login-link">Cadastrar Despesas</a></small>
                              </button>
                                             </div>
                                         </div>
-                                        <!--
-                    <div class=" span6">
-                        <div class="backers_block_text">
-                            <div class="image_face_backers_content"><div class="face_backers_content"></div></div>
-                            <div class="text_backers_content">
-                                <div class="backer_name">Backer</div>
-                                <div class="backer_date">April 2, 2013 at 8:45 pm</div>
-                                <div class="number_project">Backed 5 project</div>
-                            </div>
-                        </div>
-                        <div class="backers_block_text">
-                            <div class="image_face_backers_content"><div class="face_backers_content"></div></div>
-                            <div class="text_backers_content">
-                                <div class="backer_name">Backer</div>
-                                <div class="backer_date">April 2, 2013 at 8:45 pm</div>
-                                <div class="number_project">Backed 5 project</div>
-                            </div>
-                        </div>
-                        <div class="backers_block_text">
-                            <div class="image_face_backers_content"><div class="face_backers_content"></div></div>
-                            <div class="text_backers_content">
-                                <div class="backer_name">Backer</div>
-                                <div class="backer_date">April 2, 2013 at 8:45 pm</div>
-                                <div class="number_project">Backed 5 project</div>
-                            </div>
-                        </div>
-                        <div class="backers_block_text">
-                            <div class="image_face_backers_content"><div class="face_backers_content"></div></div>
-                            <div class="text_backers_content">
-                                <div class="backer_name">Backer</div>
-                                <div class="backer_date">April 2, 2013 at 8:45 pm</div>
-                                <div class="number_project">Backed 5 project</div>
-                            </div>
-                        </div>
-                        <div class="backers_block_text">
-                            <div class="image_face_backers_content"><div class="face_backers_content"></div></div>
-                            <div class="text_backers_content">
-                                <div class="backer_name">Backer</div>
-                                <div class="backer_date">April 2, 2013 at 8:45 pm</div>
-                                <div class="number_project">Backed 5 project</div>
-                            </div>
-                        </div>
-                        <div class="backers_block_text">
-                            <div class="image_face_backers_content"><div class="face_backers_content"></div></div>
-                            <div class="text_backers_content">
-                                <div class="backer_name">Backer</div>
-                                <div class="backer_date">April 2, 2013 at 8:45 pm</div>
-                                <div class="number_project">Backed 5 project</div>
-                            </div>
-                        </div>
-                        <div class="backers_block_text">
-                            <div class="image_face_backers_content"><div class="face_backers_content"></div></div>
-                            <div class="text_backers_content">
-                                <div class="backer_name">Backer</div>
-                                <div class="backer_date">April 2, 2013 at 8:45 pm</div>
-                                <div class="number_project">Backed 5 project</div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="span6">
-                        <div class="backers_block_text">
-                            <div class="image_face_backers_content"><div class="face_backers_content"></div></div>
-                            <div class="text_backers_content">
-                                <div class="backer_name">Backer</div>
-                                <div class="backer_date">April 2, 2013 at 8:45 pm</div>
-                                <div class="number_project">Backed 5 project</div>
-                            </div>
-                        </div>
-                        <div class="backers_block_text">
-                            <div class="image_face_backers_content"><div class="face_backers_content"></div></div>
-                            <div class="text_backers_content">
-                                <div class="backer_name">Backer</div>
-                                <div class="backer_date">April 2, 2013 at 8:45 pm</div>
-                                <div class="number_project">Backed 5 project</div>
-                            </div>
-                        </div>
-                        <div class="backers_block_text">
-                            <div class="image_face_backers_content"><div class="face_backers_content"></div></div>
-                            <div class="text_backers_content">
-                                <div class="backer_name">Backer</div>
-                                <div class="backer_date">April 2, 2013 at 8:45 pm</div>
-                                <div class="number_project">Backed 5 project</div>
-                            </div>
-                        </div>
-                        <div class="backers_block_text">
-                            <div class="image_face_backers_content"><div class="face_backers_content"></div></div>
-                            <div class="text_backers_content">
-                                <div class="backer_name">Backer</div>
-                                <div class="backer_date">April 2, 2013 at 8:45 pm</div>
-                                <div class="number_project">Backed 5 project</div>
-                            </div>
-                        </div>
-                        <div class="backers_block_text">
-                            <div class="image_face_backers_content"><div class="face_backers_content"></div></div>
-                            <div class="text_backers_content">
-                                <div class="backer_name">Backer</div>
-                                <div class="backer_date">April 2, 2013 at 8:45 pm</div>
-                                <div class="number_project">Backed 5 project</div>
-                            </div>
-                        </div>
-                        <div class="backers_block_text">
-                            <div class="image_face_backers_content"><div class="face_backers_content"></div></div>
-                            <div class="text_backers_content">
-                                <div class="backer_name">Backer</div>
-                                <div class="backer_date">April 2, 2013 at 8:45 pm</div>
-                                <div class="number_project">Backed 5 project</div>
-                            </div>
-                        </div>
-                        <div class="backers_block_text">
-                            <div class="image_face_backers_content"><div class="face_backers_content"></div></div>
-                            <div class="text_backers_content">
-                                <div class="backer_name">Backer</div>
-                                <div class="backer_date">April 2, 2013 at 8:45 pm</div>
-                                <div class="number_project">Backed 5 project</div>
-                            </div>
-                        </div>
-                    </div>
-                    -->
-
+                                        
                                     </div>
-                                    <!--
-                <div class="row-fluid">
-                    <div class="span12">
-                        <div class="btn-toolbar text-center">
-                            <div class="decoration text-center proj">
-                                <div class="btn-group nobacgr">
-                                    <button class="btn"><span class="gray">1</span></button>
-                                    <button class="btn mleft10">2</button>
-                                    <button class="btn mleft10">3</button>
-                                    <button class="btn mleft10">4</button>
-                                    <button class="btn mleft10">5</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                -->
+                                    
                                 </div>
                             </div>
                             <div class="tab-pane" id="tab3">
@@ -403,86 +286,7 @@
                         </div>
                     </div>
                     <div class="clear"></div>
-                    <!--
-<div id="author_review">
-    <h3 class="decoration text-center"><span class="nobacgr">Author</span></h3>
-    <div id="face_social_text">
-        <div class="left_face_social_text span4">
-            <div class="face_big span9"><div class="pix_author"></div></div>
-            <div class="social_link_author">
-                <div class="social_bord"><a href="#" >
-                    <img class="social_decc" src="img/description/facebook_author_icon.png" alt="">
-                </a></div>
-                <div class="social_bord"><a href="#" >
-                    <img class="social_decc" src="img/description/twitter_author_icon.png" alt="">
-                </a></div>
-                <div class="social_bord_last"><a href="#" >
-                    <img class="social_decc" src="img/description/google_author_icon.png" alt="">
-                </a></div>
-            </div>
-        </div>
-        <div class="right_face_social_text span8">
-            <div class="name_surname">John Doe</div>
-            <div class="proff">CEO</div>
-            <div class="text_author_right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien.</div>
-        </div>
-    </div>
-</div>
--->
-
-                    <!--
-<div class="clear"></div>
-<h4 class="decoration text-center"><span class="nobacgr">Ask a Question</span></h4>
-<div id="asc_a_question">
-
-    <div class="reply_user main_reply">
-        <div class="row-fluid">
-            <div class="span2">
-                <div class="image_face"></div>
-            </div>
-            <div class="span10">
-                <div class="name_and_date"><span class="user_name">User</span> - April 10, 2013 at 7:34 pm - <span class="reply_t">Reply</span></div>
-                <div class="text_reply">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien.</div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="reply_user subreply">
-        <div class="row-fluid">
-            <div class="span2">
-                <div class="image_face"></div>
-            </div>
-            <div class="span10">
-                <div class="name_and_date"><span class="user_name">Admin</span> - April 10, 2013 at 7:34 pm - <span class="reply_t">Reply</span></div>
-                <div class="text_reply">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien.</div>
-
-            </div>
-        </div>
-    </div>
-</div>
--->
-
-                    <!--
-<div id="asc_a_question_form">
-    <h3 class="text-center asc_question_form_name">Ask a <span class="h3_quest">Question</span></h3>
-    <div class="form_question">
-        <div class="row-fluid">
-            <div class="controls controls-row message">
-                <input class="inputp search-query span4" type="text" placeholder="Name*">
-                <input class="inputp search-query span4" type="text" placeholder="Email*">
-                <input class="inputp search-query span4" type="text" placeholder="Website*">
-                <div class="clear"></div>
-                <textarea id="redex" class="inputp search-query span12"  rows="5" placeholder="Project description"></textarea>
-                <div class="clear"></div>
-                <div class="tmargin20">
-                    <button type="submit" class="btn"><strong>Send Message</strong></button>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
--->
+                    
                 </div>
                 <div class="sidebar_descr span4">
                     <div id="back_this_project_block">
@@ -493,7 +297,7 @@
                                 </div>
                                 <div class="text_backers_days_blocks span10">
                                     <div class="top_text_backers_days_blocks">480</div>
-                                    <div class="bottom_text_backers_days_blocks">Backers</div>
+                                    <div class="bottom_text_backers_days_blocks">Doações</div>
                                 </div>
                             </div>
                         </div>
@@ -503,8 +307,8 @@
                                     <div class="image_second"></div>
                                 </div>
                                 <div class="text_backers_days_blocks span10">
-                                    <div class="top_text_backers_days_blocks">25,000</div>
-                                    <div class="bottom_text_backers_days_blocks">pledged of $50,000 goal</div>
+                                    <div class="top_text_backers_days_blocks">R$ = 25,00 arrecadado</div>
+                                    <div class="bottom_text_backers_days_blocks">Faltam R$ = 50,00</div>
                                 </div>
                             </div>
                         </div>
@@ -514,82 +318,20 @@
                                     <div class="image_third"></div>
                                 </div>
                                 <div class="text_backers_days_blocks span10">
-                                    <div class="top_text_backers_days_blocks">60</div>
-                                    <div class="bottom_text_backers_days_blocks">days to go</div>
+                                    <div class="top_text_backers_days_blocks">15</div>
+                                    <div class="bottom_text_backers_days_blocks">dias para o final da campanha</div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="back_this_project_button">
                         <button class="btn btn-large back_project" type="button">
-            <small>BACK THIS PROJECT</small>
+            <small>Realizar doação</small>
         </button>
                     </div>
-
                     <!--
-    <div id="pledges_block">
-        <h3 class="decoration text-center"><span class="nobacgr_desc">Pledges</span></h3>
-        <div class="pledges_block_info">
-            <div class="pledges_block_info_link"><a id="link_pledges_block_info_link_1">Pledge $5 or more</a></div>
-            <div id="pledges_block_info_1">
-                <div class="pledges_block_info_backers">10 backers</div>
-                <div class="pledges_block_info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                <div class="pledges_block_info_estimate_delivery">Estimate delivery: Jan 2013</div>
-            </div>
-        </div>
-        <div class="pledges_block_info">
-            <div class="pledges_block_info_link"><a id="link_pledges_block_info_link_2">Pledge $10 or more</a></div>
-            <div id="pledges_block_info_2">
-                <div class="pledges_block_info_backers">15 backers</div>
-                <div class="pledges_block_info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                <div class="pledges_block_info_estimate_delivery">Estimate delivery: Feb 2013</div>
-            </div>
-        </div>
-        <div class="pledges_block_info">
-            <div class="pledges_block_info_link"><a id="link_pledges_block_info_link_3">Pledge $15 or more</a></div>
-            <div id="pledges_block_info_3">
-                <div class="pledges_block_info_backers">20 backers</div>
-                <div class="pledges_block_info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                <div class="pledges_block_info_estimate_delivery">Estimate delivery: Mar 2013</div>
-            </div>
-        </div>
-        <div class="pledges_block_info">
-            <div class="pledges_block_info_link"><a id="link_pledges_block_info_link_4">Pledge $20 or more</a></div>
-            <div id="pledges_block_info_4">
-                <div class="pledges_block_info_backers">5 backers</div>
-                <div class="pledges_block_info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                <div class="pledges_block_info_estimate_delivery">Estimate delivery: Jan 2013</div>
-            </div>
-        </div>
-        <div class="pledges_block_info">
-            <div class="pledges_block_info_link"><a id="link_pledges_block_info_link_5">Pledge $25 or more</a></div>
-            <div id="pledges_block_info_5">
-                <div class="pledges_block_info_backers">20 backers</div>
-                <div class="pledges_block_info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                <div class="pledges_block_info_estimate_delivery">Estimate delivery: Feb 2013</div>
-            </div>
-        </div>
-        <div class="pledges_block_info">
-            <div class="pledges_block_info_link"><a id="link_pledges_block_info_link_6">Pledge $30 or more</a></div>
-            <div id="pledges_block_info_6">
-                <div class="pledges_block_info_backers">30 backers</div>
-                <div class="pledges_block_info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                <div class="pledges_block_info_estimate_delivery">Estimate delivery: Mar 2013</div>
-            </div>
-        </div>
-        <div class="pledges_block_info">
-            <div class="pledges_block_info_link"><a id="link_pledges_block_info_link_7">Pledge $35 or more</a></div>
-            <div id="pledges_block_info_7">
-                <div class="pledges_block_info_backers">20 backers</div>
-                <div class="pledges_block_info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                <div class="pledges_block_info_estimate_delivery">Estimate delivery: Jan 2013</div>
-            </div>
-        </div>
-    </div>
-    -->
-
                     <div id="payment_getaway">
-                        <!--<h3 class="text-center payment_getaway_name"><span class="title_h3 left_t"></span>Payment Getaway<span class="title_h3 right_t"></span></h3>-->
+                        <!--<h3 class="text-center payment_getaway_name"><span class="title_h3 left_t"></span>Payment Getaway<span class="title_h3 right_t"></span></h3>
                         <h3 class="decoration text-center"><span class="nobacgr_desc">Payment Getaway</span></h3>
                         <div class="payment_getaway_block">
                             <div class="payment_cost">$15</div>
@@ -618,6 +360,7 @@
                             </div>
                         </div>
                     </div>
+                    -->
                 </div>
             </div>
         </div>
