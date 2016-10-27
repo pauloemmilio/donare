@@ -14,7 +14,8 @@ def index(request):
 
 def ong(request, ong_id):
     ong = Ong.objects.get(pk=ong_id)
-    despesas = Despesas.objects.get(ong = ong_id)
+
+    despesas = Despesas.objects.all()
     context_dict = {'ong': ong, 'despesas': despesas}
     return render(request, 'ongs.html', context=context_dict)
 
@@ -59,7 +60,7 @@ def Despesas_list(request):
     data['object_list'] = despesas
     return render(request, 'index.html', data)
 
-def criar_despesas(request):
+def criar_despesas(request, ong_id):
 
     form = DespesasForm()
     context_dict = {'form': form}
