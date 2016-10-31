@@ -37,16 +37,17 @@ def criar_ong(request):
         form = OngForm()
     return render(request, 'register.html', context_dict)
 
-def alterar_ong(request,ong_id):
-    template_name='editOng.html'
-    ong = Ong.objects.get(pk = ong_id)
-    if request.method == 'POST':
-        form = OngForm(request.POST, instance=ong)
-        form.save()
-    else:
-        form = OngForm(instance=ong)
-    context_dict = {'form': form, 'ong_id': ong_id}
-    return render(request, template_name,context_dict)
+def alterar_ong(request, ong_id):
+	template_name = 'editOng.html'
+	ong = Ong.objects.get(pk = ong_id)
+	if request.method == 'POST':
+		form = OngForm(request.POST, instance=ong)
+		form.save()
+		return redirect('ong', ong_id = ong.id)
+	else:
+		form = OngForm(instance=ong)
+	context_dict = {'form': form, 'ong_id': ong_id}
+	return render(request, template_name, context_dict)
 
 def deletar_ong(request, ong_id):
     ong = Ong.objects.get(pk = ong_id)
@@ -72,15 +73,16 @@ def criar_despesas(request, ong_id):
     return render(request, 'cadastrarDespesas.html', context_dict)
 
 def alterar_despesas(request, ong_id, despesas_id):
-    template_name='editDespesas.html'
-    despesas = Despesas.objects.get(pk = despesas_id)
-    if request.method == 'POST':
-        form = DespesasForm(request.POST, instance=despesas)
-        new_despesa = form.save()
-    else:
-        form = DespesasForm(instance=despesas)
-    context_dict = {'form': form, 'despesas_id': despesas_id}
-    return render(request, template_name,context_dict)
+	template_name = 'editDespesas.html'
+	despesas = Despesas.objects.get(pk = despesas_id)
+	if request.method == 'POST':
+		form = DespesasForm(request.POST, instance=despesas)
+		new_despesa = form.save()
+		return redirect('ong', ong_id)
+	else:
+		form = DespesasForm(instance = despesas)
+	context_dict = {'form': form, 'despesas_id': despesas_id}
+	return render(request, template_name, context_dict)
 
 def deletar_despesas(request, ong_id, despesas_id):
     despesas = Despesas.objects.get(pk = despesas_id)
