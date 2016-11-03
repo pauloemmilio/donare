@@ -72,7 +72,6 @@
             }
         });
         /* ]]> */
-
     </script>
 
 </head>
@@ -459,7 +458,6 @@
                         <option>England</option>
                         <option>China</option>
                     </select>
-
                     <input type="text" class="inputp search-query span12 tweet" style="padding-left: 30px;" placeholder="Account Name">
                     <input type="text" class="inputp search-query span12" placeholder="Payment Gateway">
                     -->
@@ -593,15 +591,12 @@
         /* <![CDATA[ */
         (function($) {
             $(function() {
-
                 $('select').selectbox();
-
                 $('#add').click(function(e) {
                     $(this).parents('div.section').append('<br /><br /><select><option>-- Выберите --</option><option>Пункт 1</option><option>Пункт 2</option><option>Пункт 3</option><option>Пункт 4</option><option>Пункт 5</option></select>');
                     $('select').selectbox();
                     e.preventDefault();
                 })
-
                 $('#add2').click(function(e) {
                     var options = '';
                     for (i = 1; i <= 5; i++) {
@@ -613,17 +608,14 @@
                     $('select').trigger('refresh');
                     e.preventDefault();
                 })
-
                 $('#che').click(function(e) {
                     $(this).parents('div.section').find('option:nth-child(5)').attr('selected', true);
                     $('select').trigger('refresh');
                     e.preventDefault();
                 })
-
             })
         })(jQuery)
         /* ]]> */
-
     </script>
     <script>
         /* <![CDATA[ */
@@ -647,12 +639,10 @@
         jQuery(this).toggleClass('expanded');
     });
     /* ]]> */
-
 </script>
 <script>
     /* <![CDATA[ */
     $(function() {
-
         var availableTags = [
             "ActionScript",
             "AppleScript",
@@ -680,7 +670,6 @@
         $( "#autocomplete" ).autocomplete({
             source: availableTags
         });
-
         // Hover states on the static widgets
         $( "#dialog-link, #icons li" ).hover(
                 function() {
@@ -692,7 +681,6 @@
         );
     });
     /* ]]> */
-
 </script>
 <script>
     /* <![CDATA[ */
@@ -734,8 +722,6 @@
         scrollToAnchor('id_partn');
     });
     /* ]]> */
-
-
 </script>
 <script>
     /* <![CDATA[ */
@@ -759,7 +745,6 @@
                 blues = $( "#project4" ).slider( "value" ),
                 hex = hexFromRGB( red, green, blue);
         $( "#swatch" ).css( "background-color", "#" + hex );
-
     }
     $(function() {
         $( "#project1, #project2, #project3, #project4, #project5, #project6, #project7, #project8, #project9, #project10, #project11, #project12" ).slider({
@@ -770,17 +755,14 @@
             slide: refreshSwatch,
             change: refreshSwatch
         });
-
         $.each($('.project_value'), function(k,v){
             var value = 100 * Number($(v).text())/Number($($(v).attr('href')).attr('value'));
             value = Math.floor(value);
             $($(v).attr('href')).slider("value", value);
             $($(v).attr('href')).find(".ui-slider-handle").text(value+'%');
         });
-
     });
     /* ]]> */
-
 </script>
 
 
@@ -813,10 +795,8 @@
     $(document).ready(function(){
         //Examples of how to assign the Colorbox event to elements
         $(".group1").colorbox({rel:'nofollow',scalePhotos:'false'});
-
     });
     /* ]]> */
-
 </script>
 <script>
     /* <![CDATA[ */
@@ -824,7 +804,6 @@
         $('input, textarea').placeholder();
     });
     /* ]]> */
-
 </script>
 <script>
     /* <![CDATA[ */

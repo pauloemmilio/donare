@@ -21,7 +21,6 @@
     <script type="text/javascript" src="{% static 'js/css3-mediaqueries.js' %}"></script>
 
     <style type="text/css">
-
     </style>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -190,11 +189,11 @@
                                                 </div>
                                                 <div class=" span2">
                                                     <button class="btn btn-large make_payment" type="button">
-                                    <small><a href="{% url 'alterar_despesas' ong.id %}" id="reg-link" class="login-link">Editar</a></small></button>
+                                    <small><a href="{% url 'alterar_despesas' ong.id de.id %}" id="reg-link" class="login-link">Editar</a></small></button>
                                                     <br>
                                                     <br>
                                                     <button class="btn btn-large make_payment" type="button">
-                                    <small><a href="{% url 'deletar_despesas' ong.id %}" id="reg-link" class="login-link">Excluir</a></small></button>
+                                    <small><a href="{% url 'deletar_despesas' ong.id de.id%}" id="reg-link" class="login-link">Excluir</a></small></button>
                                                 </div>
                                               </div>
                                             <br>
@@ -337,7 +336,6 @@
                             <div class="payment_cost">$15</div>
                             <div class="your_card">
                                 <h3>Choose Your Card:</h3>
-
                                 <ul class="choose">
                                     <li>
                                         <input id="rfirst" type="radio" name="radio" checked hidden />
@@ -469,7 +467,6 @@
                 $("#pledges_block_info_1").toggle();
             }
         });
-
         $("#link_pledges_block_info_link_2").click(function() {
             if ($('#pledges_block_info_2').is(':visible')) {
                 $('#link_pledges_block_info_link_2').addClass('not_active');
@@ -479,7 +476,6 @@
                 $("#pledges_block_info_2").toggle();
             }
         });
-
         $("#link_pledges_block_info_link_3").click(function() {
             if ($('#pledges_block_info_3').is(':visible')) {
                 $('#link_pledges_block_info_link_3').addClass('not_active');
@@ -489,7 +485,6 @@
                 $("#pledges_block_info_3").toggle();
             }
         });
-
         $("#link_pledges_block_info_link_4").click(function() {
             if ($('#pledges_block_info_4').is(':visible')) {
                 $('#link_pledges_block_info_link_4').addClass('not_active');
@@ -499,7 +494,6 @@
                 $("#pledges_block_info_4").toggle();
             }
         });
-
         $("#link_pledges_block_info_link_5").click(function() {
             if ($('#pledges_block_info_5').is(':visible')) {
                 $('#link_pledges_block_info_link_5').addClass('not_active');
@@ -509,7 +503,6 @@
                 $("#pledges_block_info_5").toggle();
             }
         });
-
         $("#link_pledges_block_info_link_6").click(function() {
             if ($('#pledges_block_info_6').is(':visible')) {
                 $('#link_pledges_block_info_link_6').addClass('not_active');
@@ -519,7 +512,6 @@
                 $("#pledges_block_info_6").toggle();
             }
         });
-
         $("#link_pledges_block_info_link_7").click(function() {
             if ($('#pledges_block_info_7').is(':visible')) {
                 $('#link_pledges_block_info_link_7').addClass('not_active');
@@ -529,34 +521,25 @@
                 $("#pledges_block_info_7").toggle();
             }
         });
-
         $(function() {
             var iframe = $('#player1')[0];
             var player = $f(iframe);
             var $myCarousel = $('#myCarousel');
-
             player.addEvent('ready', function() {
                 // player.addEvent('pause', onPause);
                 player.addEvent('play', onPlay);
                 //player.addEvent('playProgress', onPlayProgress);
             });
-
-
             $('#myCarousel').bind('slide', function() {
                 player.api('pause');
                 $('#myCarousel').carousel({
                     interval: 6000
                 })
             });
-
-
             function onPlay(id) {
                 $myCarousel.carousel('pause');
             }
-
-
         });
-
         /* ]]> */
     </script>
     <script>
