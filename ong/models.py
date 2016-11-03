@@ -18,6 +18,7 @@ class Ong(models.Model):
     )
     videoUrl = models.URLField()
     descricao = models.TextField(max_length=500)
+    
     def __str__(self):
         return self.name
     def __unicode__(self):
@@ -25,3 +26,13 @@ class Ong(models.Model):
 
     def get_absolute_url(self):
         return reverse('alterar_ong', kwargs={'pk': self.pk})
+
+class Despesas(models.Model):
+    tipo = models.CharField(max_length=200)
+    descricao = models.TextField(max_length=500)
+    valor = models.IntegerField()
+    ong = models.ForeignKey(Ong)
+    def __str__(self):
+        return self.tipo
+    def __unicode__(self):
+        return self.tipo

@@ -43,4 +43,3 @@ def deletar_doador(request, doador_id):
     doador = Doador.objects.get(pk = doador_id)
     doador.delete()
     return redirect('index')
-

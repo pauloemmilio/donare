@@ -398,7 +398,7 @@
                 </div><!-- end of .zone-search -->
             </div><!-- end of .search-wrapper -->
 
-            
+
             <a name="id_about"></a>
         </section>
     </div>
@@ -408,11 +408,11 @@
 
 <div class="content">
 
-<h1 class="decoration text-center proj"><span class="nobacgr">Cadastre-se</span></h1>
+<h1 class="decoration text-center proj"><span class="nobacgr">Editar a Despesa</span></h1>
 <div class="create_projects">
     <div class="row-fluid">
         <div class="span12">
-            <h4 class="text-center">Passo 1: <span class="green">Informações pessoais</span></h4>
+            <h4 class="text-center"><span class="green">Informações da Despesa</span></h4>
         </div>
     </div>
     <form class="form-search" method="post" action="">
@@ -420,32 +420,25 @@
         <div class="row-fluid border_proj duration">
             <div class="span12 ">
                 <div class="column_project">
-                    <h4 class="text-center">Informações e contato:</h4>
+                    <!--<h4 class="text-center">Informações e contato:</h4>-->
 
-                    <h5>Nome</h5>
-                    <label id="labelForm" for="{{ form.name.auto_id }}"> {{ form.name }} </label>
+                    <h5>Tipo</h5>
+                    <label id="labelForm" for="{{ form.tipo.auto_id }}"> {{ form.tipo }} </label>
 
-                    <h5>Data de nascimento</h5>
-                    <label for="{{ form.dataDeNascimento.auto_id }}"> {{ form.dataDeNascimento }} </label>
+                    <h5>Descricao</h5>
+                    <label for="{{ form.descricao.auto_id }}"> {{ form.descricao }} </label>
 
-                    <h5>CPF</h5>
-                    
-                    <label for="{{ form.cpf.auto_id }}"> {{ form.cpf }} </label>
-                    
-                    <h5>E-mail</h5>
-                    
-                    <label for="{{ form.email.auto_id }}"> {{ form.email }} </label>
-                    
-                    <h5>Senha</h5>
-                    
-                    <label for="{{ form.senha.auto_id }}"> {{ form.senha }} </label>
+                    <h5>Valor</h5>
+                    <label for="{{ form.valor.auto_id }}"> {{ form.valor }} </label>
+
+                    {{form.ong}}
 
                 </div>
             </div>
 
         </div>
 
-        <div class="decoration text-center create_butt"><span class="nobacgr_whit"><button class="btn btn-large search-query" type="submit"> <span class="butt_small"><strong>Cadastrar</strong></span></button></span><a name="id_cont"></a></div>
+        <div class="decoration text-center create_butt"><span class="nobacgr_whit"><button class="btn btn-large search-query" type="submit"> <span class="butt_small"><strong>Editar</strong></span></button></span><a name="id_cont"></a></div>
 
     </form>
 
@@ -524,7 +517,7 @@
             <div class="span3 foot">
                 <h4>Recent Tweets</h4>
                 <div class="tmargin20">
-                    <img class="fleft tw" src="img/social_tweet.png" alt="">
+                    <img class="fleft tw" src="{% static 'img/social_tweet.png' %}" alt="">
                     <div class="mleft40">
                         <span>1234 Street </span>
                         <span>4r6yg 456hv  </span>
@@ -533,7 +526,7 @@
                         <a class="green">http://www.envato.com</a>
                     </div>
                     <div class="clear foot"></div>
-                    <img class="fleft tw" src="img/social_tweet.png" alt="">
+                    <img class="fleft tw" src="{% static 'img/social_tweet.png' %}" alt="">
                     <div class=" mleft40">
                         <span>1234 Street </span>
                         <span>4r6yg 456hv  </span>
