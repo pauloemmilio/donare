@@ -77,11 +77,74 @@
 </head>
 
 <body>
+
+
+
 <div id="header" class="header">
+
     <a name="id_home"></a>
         <div class="width titul">
+
             <div class="reg inline">
-                <div class="bleft inline login"><a href="#" id="login-link" class="login-link">Login</a></div>
+            	<!--<div class="modal hidden" id="MyModalLogin" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+            		
+            		<div class="model-dialog" role="document">
+            			<div class="modal-content">
+            				<div class="modal-header">
+            					<button type="button" class="close" data-dimiss="modal" aria-label="Close"><span aria-hidden="true"></span></button>
+            						<h4 class="modal-title" id"myModalLabel">Faça seu Login</h4>
+            				</div>
+            				<div class="modal-body">
+            					<p>
+            					deindiende
+            					</p>
+            				</div>
+            				<div class="modal-footer">
+            					<button type="button" class="btn btn-default" data-dimiss="modal">Fechar</button>
+            					<button type="button" class="btn btn-primary">Login</button>
+            				</div>
+            			</div>
+            		</div>
+
+            		</div>-->
+
+
+
+
+
+            	 <section id="model">
+            	 		
+					<section id="MeuModal" class="modal hide" tabindex="-1" role="dialog" aria-labelledby="meuModalLabel" aria-hidden="true">
+						<header class="modal-header">
+							<button class="close" data-dismiss="modal" aria-hidden="true">x</button>
+							<h3 id="meuModalLabel">Logar no sistema</h3>
+						</header>
+						<section class="modal-body">
+							<form action="" class="form-horizontal">
+							<div class="control-group">
+								<label for="" class="control-label">Email</label>
+								<div class="controls">
+									<input type="email" id="inputEmail" required>
+								</div>
+							</div>
+							<div class="control-group">
+								<label for="" class="control-label">Senha</label>
+								<div class="controls">
+									<input type="Password" id="inputPassword" required>
+								</div>
+							</div>
+						</form>
+						</section>
+						<footer class="modal-footer">
+							<button class="button-2-green" data-dismiss="modal" aria-hidden="true">Fechar</button>
+							<button class="button-2-green">Entrar</button>
+							
+
+						</footer>
+					</section>
+				</section>
+				                
+        		<div class="bleft inline login"><a href="#MeuModal" id="login-link" class="login-link" role="button" data-toggle="modal">Login</a></div>
                 <div class="bleft bright inline login"><a href="{% url 'criar' %}" id="reg-link" class="login-link">Register</a></div>
             </div>
 
