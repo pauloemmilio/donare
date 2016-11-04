@@ -116,8 +116,8 @@
 					</section>
 				</section>
 				                
-        		<div class="bleft inline login"><a href="#MeuModal" id="login-link" class="login-link" role="button" data-toggle="modal">Login</a></div>
-                <div class="bleft bright inline login"><a href="{% url 'criar' %}" id="reg-link" class="login-link">Register</a></div>
+        		<div class="bleft inline login"><a href="#MeuModal" id="login-link" class="login-link" role="button" data-toggle="modal">Entrar</a></div>
+                <div class="bleft bright inline login"><a href="{% url 'criar' %}" id="reg-link" class="login-link">Inscreva-se</a></div>
             </div>
 
             <div class="social inline fright">
@@ -132,10 +132,10 @@
                         <li><a href="johndoe@domainname.com" target="_self" original-title="mail"><img src="{% static "img/social/icon_header_ball.png" %}" alt=""></a></li>
                     </ul>
                 </li>
-                    <li class="bleft first socialz"><a class="active" href="#">EN</a></li>
+                    <li class="bleft first socialz"><a class="active" href="#">PT</a></li>
+                    <li class="bleft socialz"><a href="#">EN</a></li>
                     <li class="bleft socialz"><a href="#">FR</a></li>
-                    <li class="bleft socialz"><a href="#">IT</a></li>
-                    <li class="bleft last socialz"><a href="#">DE</a></li>
+                    <li class="bleft last socialz"><a href="#">SP</a></li>
                 </ul>
             </div>
         </div>
@@ -149,24 +149,24 @@
 
                 <div class="navigation inline">
                     <ul class="nav inline menuleft">
-                        <li class="active"><a class="bleft" href="index.html">HOME</a></li>
-                        <li><a id="link_about" class="bleft" href="#">ABOUT</a></li>
-                        <li><a id="link" class="bleft" href="#">PROJECTS</a></li>
-                        <li><a id="link_reg" class="bleft" href="{% url 'criar' %}">REGISTER</a></li>
-                        <li><a id="link_contact" class="bleft" href="#">CONTACTS</a></li>
-                        <li><a id="link_partners" class="bleft last" href="#">PARTNERS</a></li>
+                        <li class="active"><a class="bleft" href="index.html">INÍCIO</a></li>
+                        <li><a id="link_about" class="bleft" href="#">SOBRE</a></li>
+                        <li><a id="link" class="bleft" href="#">PROJETOS</a></li>
+                        <li><a id="link_reg" class="bleft" href="{% url 'criar' %}">CADASTRO DE ONG</a></li>
+                        <li><a id="link_contact" class="bleft" href="#">CONTATOS</a></li>
+                        <li><a id="link_partners" class="bleft last" href="#">PARCEIROS</a></li>
                     </ul>
                 </div>
             </div>
             <div class="clear"></div>
             <div id="header_select">
                 <select id="dynamic_select">
-                    <option value="" selected>Select A Page</option>
-                    <option value="index.html#id_about">About</option>
-                    <option value="index.html#id3">Projects</option>
-                    <option value="index.html#id_reg">Registration</option>
-                    <option value="index.html#id_cont">Contacts</option>
-                    <option value="index.html#id_partn">Partners</option>
+                    <option value="" selected>Selecione a Página</option>
+                    <option value="index.html#id_about">Sobre</option>
+                    <option value="index.html#id3">Projetos</option>
+                    <option value="index.html#id_reg">Cadastro de ONG</option>
+                    <option value="index.html#id_cont">Contatos</option>
+                    <option value="index.html#id_partn">Parceiros</option>
                 </select>
             </div>
         </div>
@@ -176,12 +176,12 @@
 <div id="navtop" class="width navigate" style="position: fixed;  display: none; top: 0px; left: 0px;right: 0px;z-index: 99999999999999999;">
     <div class="navigation">
         <ul class="nav inline menuleft">
-            <li class="active"><a class="bleft" id="link_home" href="#">HOME</a></li>
-            <li><a id="link_about_b" class="bleft" href="#">ABOUT</a></li>
-            <li><a id="link_b" class="bleft" href="#">PROJECTS</a></li>
-            <li><a id="link_reg_b" class="bleft" href="{% url 'criar' %}">REGISTER</a></li>
-            <li><a id="link_contact_b" class="bleft" href="#">CONTACTS</a></li>
-            <li><a id="link_partners_b" class="bleft last" href="#">PARTNERS</a></li>
+            <li class="active"><a class="bleft" id="link_home" href="#">INÍCIO</a></li>
+            <li><a id="link_about_b" class="bleft" href="#">SOBRE</a></li>
+            <li><a id="link_b" class="bleft" href="#">PROJETOS</a></li>
+            <li><a id="link_reg_b" class="bleft" href="{% url 'criar' %}">CADASTRO DE ONG</a></li>
+            <li><a id="link_contact_b" class="bleft" href="#">CONTATOS</a></li>
+            <li><a id="link_partners_b" class="bleft last" href="#">PARCEIROS</a></li>
         </ul>
     </div>
 </div>
@@ -192,7 +192,7 @@
     <div class="slides">
             <div class="search_top">
                 <div class="search" id="searchh">
-                    <span class="white"><strong>Find a project:</strong></span>
+                    <span class="white"><strong>Buscar Projeto:</strong></span>
                     <input id="autocomplete" title="" type="text" class="span7 search-query">
                     <input type="submit" class="submit" value="search" name="submit">
                 </div>
@@ -443,10 +443,10 @@
                     <div id="home-page-featured">
                         <div id="Textus">
                         <div class="clear">
-                        <p>WELCOME TO FUNDER</p>
+                        <p>BEM VINDO AO DONARE</p>
                         </div>
                         <div class="clear">
-                        <p>AMAZING CROWDFUNDING SITE</p>
+                        <p>SURPREENDENTE SITE DE DOAÇÕES</p>
                         </div>
                         </div>
                         <ul>
@@ -504,37 +504,37 @@
 </div>
 <div class="clear"></div>
 <div class="content">
-    <h1 class="decoration text-center about"><span class="nobacgr">About</span></h1>
+    <h1 class="decoration text-center about"><span class="nobacgr">Sobre</span></h1>
     <div class="about_block">
-        <p class="about_cont"><strong>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate egestas sem, eu cursus ligula ullamcorper non. Curabitur tristique velit eu mauris venenatis egestas. Phasellus bibendum placerat metus, sed molestie magna semper eget. Sed sit amet dui felis, tempus porttitor justo.</strong></p>
+        <p class="about_cont"><strong>Donare é um site de doações que aproxima você de projetos que são de seu interesse. Aqui você pode fazer a sua contribuição em projetos de todo o país. Não importa o valor, cada doação recebida é de grande importância para a entidade responsável continuar com o projeto. Participe agora mesmo! São apenas 3 passos:</strong></p>
         <div class="row-fluid folders">
             <div class="span4">
                 <div class="folder_bordered">
                     <div class="folder"><a href="#"><img src="{% static "img/folder1.png" %}" alt=""></a></div>
-                    <div class="folder"><h3 class="nomarg text-center">Step 1:</h3></div>
-                    <div class="folder"><p class="green text-center"><strong>Choose a project</strong></p></div>
+                    <div class="folder"><h3 class="nomarg text-center">Passo 1:</h3></div>
+                    <div class="folder"><p class="green text-center"><strong>Procure um projeto</strong></p></div>
                 </div>
                 <div class="folder"><img src="{% static "img/folder_n.png" %}" alt=""></div>
             </div>
             <div class="span4">
                 <div class="folder_bordered">
                     <div class="folder"><a href="#"><img src="{% static "img/folder2.png" %}" alt=""></a></div>
-                    <div class="folder"><h3 class="nomarg text-center">Step 2:</h3></div>
-                    <div class="folder"><p class="green text-center"><strong>Back a project</strong></p></div>
+                    <div class="folder"><h3 class="nomarg text-center">Passo 2:</h3></div>
+                    <div class="folder"><p class="green text-center"><strong>Conheça o projeto</strong></p></div>
                 </div>
                 <div class="folder"><img src="{% static "img/folder_n.png" %}" alt=""></div>
             </div>
             <div class="span4">
                 <div class="folder_bordered">
                     <div class="folder"><a href="#"><img src="{% static "img/folder3.png" %}" alt=""></a></div>
-                    <div class="folder"><h3 class="nomarg text-center">Step 3:</h3></div> <a name="id3"></a>
-                    <div class="folder"><p class="green strong text-center"><strong>Receive a gift</strong></p></div>
+                    <div class="folder"><h3 class="nomarg text-center">Passo 3:</h3></div> <a name="id3"></a>
+                    <div class="folder"><p class="green strong text-center"><strong>Envie sua doação</strong></p></div>
                 </div>
                 <div class="folder"><img src="{% static "img/folder_n.png" %}" alt=""></div>
             </div>
         </div>
     </div>
-<h1 class="decoration text-center proj"><span class="nobacgr">Projects</span></h1>
+<h1 class="decoration text-center proj"><span class="nobacgr">Projetos</span></h1>
     <section class="section content" id="portfolio-list">
         <div class="wrapper row-fluid projects font_p" id="contentWrapper">
             <div class="zone-content clearfix">
@@ -544,13 +544,13 @@
                             <div class="inline nobacgr">
                                 <div class="text-center tags">
                                     <ul id="portfolio-filter">
-                                        <li><input class="btn" id="all" type="button" value="All" class="button-2-green current" title=""> </li>
-                                        <li><input class="btn" id="creative" type="button" value="Creative" class="button-2-green" title=""> </li>
-                                        <li><input class="btn" id="developments" type="button" value="Developments" class="button-2-green" title=""> </li>
-                                        <li><input class="btn" id="fashion" type="button" value="Fashion" class="button-2-green" title="">  </li>
-                                        <li><input class="btn" id="identity" type="button" value="Identity" class="button-2-green" title="">  </li>
-                                        <li><input class="btn" id="movies" type="button" value="Movies" class="button-2-green" title="">  </li>
-                                        <li><input class="btn" id="other" type="button" value="Other" class="button-2-green" title="">   </li>
+                                        <li><input class="btn" id="all" type="button" value="Todos" class="button-2-green current" title=""> </li>
+                                        <li><input class="btn" id="creative" type="button" value="Criativos" class="button-2-green" title=""> </li>
+                                        <li><input class="btn" id="developments" type="button" value="Desenvolvimentos" class="button-2-green" title=""> </li>
+                                        <li><input class="btn" id="fashion" type="button" value="Modas" class="button-2-green" title="">  </li>
+                                        <li><input class="btn" id="identity" type="button" value="Identidades" class="button-2-green" title="">  </li>
+                                        <li><input class="btn" id="movies" type="button" value="Filmes" class="button-2-green" title="">  </li>
+                                        <li><input class="btn" id="other" type="button" value="Outros" class="button-2-green" title="">   </li>
                                     </ul>
                                 </div>
                             </div>
@@ -853,21 +853,21 @@
                 </ul>
             </div>
         </div>-->
-<h1 class="decoration text-center conts"><span class="nobacgr">Contact Us</span></h1>
+<h1 class="decoration text-center conts"><span class="nobacgr">Entre em contato conosco</span></h1>
 <div class="contacts">
     <div class="bborder">
-        <p><strong>Send Us a <span class="green">Message</span></strong></p>
+        <p><strong>Envie-nos uma <span class="green">Mensagem</span></strong></p>
     </div>
     <form id="contact-us-form" class="row-fluid message" data-ajax="true">
         <div class="controls controls-row">
-            <input class="inputp search-query span4" type="text" name="name" placeholder="Name*">
+            <input class="inputp search-query span4" type="text" name="name" placeholder="Nome*">
             <input class="inputp search-query span4" type="text" name="email" placeholder="Email*">
             <input class="inputp search-query span4" type="text" name="website" placeholder="Website*">
             <div class="clear"></div>
-            <textarea id="redex" name="message" class="inputp search-query span12"  rows="5" placeholder="Project description"></textarea>
+            <textarea id="redex" name="message" class="inputp search-query span12"  rows="5" placeholder="Descrição do projeto"></textarea>
             <div class="clear"></div>
             <div class="tmargin20">
-                <button type="button" class="btn" name="submit" value="submit" id="contact_submit"><strong>Send Message</strong></button>
+                <button type="button" class="btn" name="submit" value="submit" id="contact_submit"><strong>Envie a Mensagem</strong></button>
             </div>
             <div id="error_placeholder" class="form-message text-green"></div>
         </div>
@@ -876,7 +876,7 @@
 <div class="decoration text-center line_decor"></div>
 <div class="row-fluid contacts_row">
     <div class="span3">
-        <h4>Address Details:</h4>
+        <h4>Detalhes do Endereço:</h4>
         <div class="cont">
             <div class="inline-table "><img src="{% static "img/icon_street.png" %}" alt=""></div>
             <div class="inline-table mleft10">
@@ -886,29 +886,29 @@
             <div class="clear clrbot"></div>
             <div class="inline-table"><img src="{% static "img/icon_phone.png" %}" alt=""></div>
             <div class="inline-table mleft10">
-                <span>Phone: +1 123 123-123-123</span>
+                <span>Telefone: +1 123 123-123-123</span>
                 <p>Fax: +1 123-123-123</p>
             </div>
             <div class="clear clrbot"></div>
             <div class="inline-table"><img src="{% static "img/icon_email.png" %}" alt=""></div>
             <div class="inline-table mleft10">
-                <span>E-mail: <span class="green">email@email.by</span></span>
+                <span>Email: <span class="green">email@email.by</span></span>
                 <p>Website: <span class="green">www.example.com</span></p>
             </div>
         </div>
     </div>
     <div class="span3">
-        <h4>Opening Hours:</h4>
+        <h4>Horário de Funcionamento:</h4>
         <div class="cont contp">
             <div class="inline">
-                <p><strong>Monday-Friday:</strong></p>
-                <p><strong>Saturday:</strong></p>
-                <p><strong>Sunday:</strong></p>
+                <p><strong>Segunda-Sexta:</strong></p>
+                <p><strong>Sabado:</strong></p>
+                <p><strong>Domingo:</strong></p>
             </div>
             <div class="inline mleft10">
                 <p>9am - 5pm</p>
                 <p>10am - 3pm</p>
-                <p>Closed</p>
+                <p>Fechado</p>
             </div>
         </div>
     </div>
@@ -923,7 +923,7 @@
 <a name="id_partn"></a>
 <div class="partner_bott">
     <div class="partners">
-        <h5 class="decoration text-center"><span class="nobacgr_whit">OUR PARTNERS</span></h5>
+        <h5 class="decoration text-center"><span class="nobacgr_whit">NOSSOS PARCEIROS</span></h5>
         <div class="partn_pics">
                     <a href="http://themeforest.net/" class="partner"><img src="{% static "img/partn_1.png" %}" alt=""></a>
                     <a href="http://activeden.net/" class="partner"><img src="{% static "img/partn_2.png" %}" alt="" ></a>
@@ -941,11 +941,11 @@
     <div class="footer">
         <div class="row-fluid">
             <div class="span3">
-                <h2>FUNDER</h2>
+                <h2>donare</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate egestas sem, eu cursus ligula ullamcorper non. Curabitur tristique velit eu mauris venenapus</p>
             </div>
             <div class="span3 foot">
-                <h4>Recent Tweets</h4>
+                <h4>Tweets Recentes</h4>
                 <div class="tmargin20">
                     <img class="fleft tw" src="{% static 'img/social_tweet.png' %}" alt="">
                     <div class="mleft40">
@@ -958,7 +958,7 @@
                     <div class="clear foot"></div>
                     <img class="fleft tw" src="{% static 'img/social_tweet.png' %}" alt="">
                     <div class=" mleft40">
-                        <span>1234 Street </span>
+                        <span>Rua 1258 </span>
                         <span>4r6yg 456hv  </span>
                         <span>Lorem ipus ex vixc ilflf n </span>
                         <br>
@@ -967,7 +967,7 @@
                 </div>
             </div>
             <div class="span3 foot">
-                <h4>Recent Posts</h4>
+                <h4>Postagens Recentes</h4>
                 <div class="tmargin20">
                     <div class="recents">
                         <p class="green"><a href="#">Lorem ipsus dolor sit amet</a></p>
