@@ -35,9 +35,12 @@ def criar_ong(request):
     form = OngForm()
     context_dict = {'form': form}
     if request.method == 'POST':
-        form = OngForm(request.POST)
-        form.save()
-        return redirect('index')
+        form = OngForm(request.POST, request.FILES)
+        if form.is_valid():
+            
+            
+            form.save()
+            return redirect('index')
     else:
         form = OngForm()
     return render(request, 'register.html', context_dict)
