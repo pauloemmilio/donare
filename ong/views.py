@@ -30,7 +30,7 @@ def criar_ong(request):
     form = OngForm()
     context_dict = {'form': form}
     if request.method == 'POST':
-        form = OngForm(request.POST)
+        form = OngForm(request.POST, request.FILES)
         new_ong = form.save()
         return redirect('ong', ong_id = new_ong.id)
     else:
@@ -41,7 +41,7 @@ def alterar_ong(request, ong_id):
 	template_name = 'editOng.html'
 	ong = Ong.objects.get(pk = ong_id)
 	if request.method == 'POST':
-		form = OngForm(request.POST, instance=ong)
+		form = OngForm(request.POST, request.FILES, instance=ong)
 		form.save()
 		return redirect('ong', ong_id = ong.id)
 	else:
@@ -65,7 +65,7 @@ def criar_despesas(request, ong_id):
     form = DespesasForm()
     context_dict = {'form': form}
     if request.method == 'POST':
-        form = DespesasForm(request.POST)
+        form = DespesasForm(request.POST, request.FILES)
         new_despesa = form.save()
         return redirect('ong', ong_id)
     else:
@@ -76,7 +76,7 @@ def alterar_despesas(request, ong_id, despesas_id):
 	template_name = 'editDespesas.html'
 	despesas = Despesas.objects.get(pk = despesas_id)
 	if request.method == 'POST':
-		form = DespesasForm(request.POST, instance=despesas)
+		form = DespesasForm(request.POST,request.FILES, instance=despesas)
 		new_despesa = form.save()
 		return redirect('ong', ong_id)
 	else:

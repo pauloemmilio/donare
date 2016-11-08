@@ -1,5 +1,7 @@
 from django.conf.urls import url
 from ong import views
+from django.conf.urls.static import static
+from django.conf import settings
 urlpatterns = [
 
  url(r'^$', views.index, name='index'),
@@ -12,4 +14,4 @@ urlpatterns = [
  url(r'^ong/despesas/(?P<ong_id>[0-9]+)/delete(?P<despesas_id>[0-9]+)/', views.deletar_despesas, name='deletar_despesas'),
 
 
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

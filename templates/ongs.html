@@ -123,7 +123,8 @@
             </div>
         </div>
     </div>
-    <<<<<<< HEAD <div class="container-fluid line contentt description_page">
+
+    <div class="container-fluid line contentt description_page">
 
         <div class="clear"></div>
         <div class="content description">
@@ -141,7 +142,8 @@
                                 </div>
                                 <div class="item active">
                                     <div>
-                                        <img src="{% static ong.fotos.url %}">
+                                        <img src="{% static ong.fotos %}">
+
 
                                     </div>
                                 </div>
@@ -173,51 +175,15 @@
                 <div class="text_description_content">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien. Nullam ac nisi vel augue ultrices venenatis sed sed felis. Quisque velit tortor, suscipit et auctor tempus, pretium eu velit. Vestibulum vitae ligula sapien.</div>
             </div>
             -->
-                                <<<<<<< HEAD </div>
-                                    <div class="tab-pane" id="tab2">
-                                        <div id="backers_content">
-                                            <div class="row-fluid">
-                                                <div class="updates_block_text">
-                                                    <h4>Despesas ou projetos</h4>
-                                                    <p>Descrição da despesa ou projeto</p>
-                                                    <p>Valor necessário</p>
-                                                </div>
-                                                <!--
-                    <div class=" span6">
-                        <div class="backers_block_text">
-                            <div class="image_face_backers_content"><div class="face_backers_content"></div></div>
-                            <div class="text_backers_content">
-                                <div class="backer_name">Backer</div>
-                                <div class="backer_date">April 2, 2013 at 8:45 pm</div>
-                                <div class="number_project">Backed 5 project</div>
-                            </div>
-                        </div>
-                        <div class="backers_block_text">
-                            <div class="image_face_backers_content"><div class="face_backers_content"></div></div>
-                            <div class="text_backers_content">
-                                <div class="backer_name">Backer</div>
-                                <div class="backer_date">April 2, 2013 at 8:45 pm</div>
-                                <div class="number_project">Backed 5 project</div>
-                            </div>
-                        </div>
-                        <div class="backers_block_text">
-                            <div class="image_face_backers_content"><div class="face_backers_content"></div></div>
-                            <div class="text_backers_content">
-                                <div class="backer_name">Backer</div>
-                                <div class="backer_date">April 2, 2013 at 8:45 pm</div>
-                                <div class="number_project">Backed 5 project</div>
-=======
->>>>>>> e7e3ea3e5f7c53a092c06ebc4d16fc20ac8ef76f
                             </div>
                             <div class="tab-pane" id="tab2">
                                 <div id="backers_content">
                                     <div class="row-fluid">
                                         <div class="updates_block_text">
-                                            
-                                            {%for de in despesas%}
-                                              {% if de.ong.id == ong.id %}
-                                              <div>
-                                                <div class=" span10"> 
+
+                                            {%for de in despesas%} {% if de.ong.id == ong.id %}
+                                            <div>
+                                                <div class=" span10">
                                                     <h4>{{de.tipo}}</h4>
                                                     <p>{{de.descricao}}</p>
                                                     <h4>R$ = {{de.valor}}</h4>
@@ -230,26 +196,24 @@
                                                     <button class="btn btn-large make_payment" type="button">
                                     <small><a href="{% url 'deletar_despesas' ong.id de.id%}" id="reg-link" class="login-link">Excluir</a></small></button>
                                                 </div>
-                                              </div>
+                                            </div>
                                             <br>
                                             <br>
                                             <br>
                                             <br>
                                             <br>
                                             <br>
-                                            <br>
-                                              {% endif %}
-                                            {% endfor %}
-                                            
+                                            <br> {% endif %} {% endfor %}
+
                                             <div class="payment_getaway_button">
                                                 <button class="btn btn-large make_payment" type="button">
                                 <small><a href="{% url 'criar_despesas' ong.id %}" id="reg-link" class="login-link">Cadastrar Despesas</a></small>
                              </button>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             <div class="tab-pane" id="tab3">
@@ -320,7 +284,7 @@
                         </div>
                     </div>
                     <div class="clear"></div>
-                    
+
                 </div>
                 <div class="sidebar_descr span4">
                     <div id="back_this_project_block">
@@ -394,618 +358,218 @@
                         </div>
                     </div>
                     -->
-                                                <<<<<<< HEAD </div>
-                                                    <!--
-                <div class="row-fluid">
-                    <div class="span12">
-                        <div class="btn-toolbar text-center">
-                            <div class="decoration text-center proj">
-                                <div class="btn-group nobacgr">
-                                    <button class="btn"><span class="gray">1</span></button>
-                                    <button class="btn mleft10">2</button>
-                                    <button class="btn mleft10">3</button>
-                                    <button class="btn mleft10">4</button>
-                                    <button class="btn mleft10">5</button>
-                                </div>
-                            </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="footer">
+        <div class="footer">
+            <div class="row-fluid">
+                <div class="span3">
+                    <h3>FUNDER</h3>
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate egestas sem, eu cursus ligula ullamcorper non. Curabitur tristique velit eu mauris venenapus</p>
+                </div>
+                <div class="span3 foot">
+                    <h4>Recent Tweets</h4>
+                    <div class="tmargin20">
+                        <img class="fleft tw" src="{% static 'img/social_tweet.png' %}" alt="">
+                        <div class="mleft40">
+                            <span>1234 Street </span>
+                            <span>4r6yg 456hv  </span>
+                            <span>Lorem ipus ex vixc ilflf nfnfoof wrfoo rcgetg  erger </span>
+                            <br>
+                            <a class="green">http://www.envato.com</a>
+                        </div>
+                        <div class="clear foot"></div>
+                        <img class="fleft tw" src="{% static 'img/social_tweet.png' %}" alt="">
+                        <div class=" mleft40">
+                            <span>1234 Street </span>
+                            <span>4r6yg 456hv  </span>
+                            <span>Lorem ipus ex vixc ilflf n </span>
+                            <br>
+                            <a class="green">http://www.envato.com</a>
                         </div>
                     </div>
                 </div>
-                -->
-                                            </div>
-                                        </div>
-                                        <div class="tab-pane" id="tab3">
-                                            <div id="updates_content">
-                                                <div class="row-fluid">
-                                                    <div class="span12">
-                                                        <div class="updates_block_text">
-                                                            <h4>CNPJ</h4>
-                                                            <p>{{ong.cnpj}}</p>
-                                                        </div>
-                                                        <div class="updates_block_text">
-                                                            <h4>Endereço</h4>
-                                                            <p>{{ong.endereco}}</p>
-                                                        </div>
-                                                        <div class="updates_block_text">
-                                                            <h4>Telefone</h4>
-                                                            <p>{{ong.telefone}}</p>
-                                                        </div>
-                                                        <div class="updates_block_text">
-                                                            <h4>E-mail</h4>
-                                                            <p>{{ong.email}}</p>
-                                                        </div>
-                                                        </br>
-                                                        <h3>Dados da conta</h3>
-                                                        <div class="updates_block_text">
-                                                            <h4>Nome do Titular</h4>
-                                                            <p>{{ong.nomeTitular}}</p>
-                                                        </div>
-                                                        <div class="updates_block_text">
-                                                            <h4>Agência</h4>
-                                                            <p>{{ong.agencia}}</p>
-                                                        </div>
-                                                        <div class="updates_block_text">
-                                                            <h4>Conta</h4>
-                                                            <p>{{ong.conta}}</p>
-                                                        </div>
+                <div class="span3 foot">
+                    <h4>Recent Posts</h4>
+                    <div class="tmargin20">
+                        <div class="recents">
+                            <p class="green"><a href="#">Lorem ipsus dolor sit amet</a></p>
+                            <p class="green"><a href="#">Proin nibh aufu suscript</a></p>
+                            <p class="green"><a href="#">Lorem ipsus dolor sit amet</a></p>
+                        </div>
+                        <p class="green recents"><a href="#">LQuri wfcw ertvc</a></p>
+                    </div>
+                </div>
+                <div class="span3 foot">
+                    <h4>Flickr Feed</h4>
+                    <div class="flckr">
+                        <div>
+                            <div class="flickr"></div>
+                            <div class="flickr"></div>
+                            <div class="flickr"></div>
+                            <div class="flickrl"></div>
 
-                                                    </div>
-                                                </div>
-                                            </div>
-                                        </div>
-                                    </div>
-                            </div>
+                            <div class="flickr"></div>
+                            <div class="flickr"></div>
+                            <div class="flickr"></div>
+                            <div class="flickrl"></div>
 
-                            <div id="social_uncategorized">
-                                <div class="left_social_uncategorized"><span>{{ong.categoria}}</span></div>
-                                <div class="social inline fright">
-                                    <ul id="social_mid" class="bleft_social">
-                                        <li>
-                                            <a href="https://twitter.com/" target="_blank" original-title="twitter"><img src="{% static " img/social/icon_header_face.png " %}" alt=""></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://plus.google.com" target="_blank" original-title="googleplus"><img src="{% static " img/social/icon_header_g.png " %}" alt=""></a>
-                                        </li>
-                                        <li>
-                                            <a href="https://www.facebook.com" title="facebook" target="_blank"><img src="{% static " img/social/icon_header_tw.png " %}" alt=""></a>
-                                        </li>
-                                        <li>
-                                            <a href="http://www.linkedin.com/" target="_blank" original-title="linkedin"><img src="{% static " img/social/icon_header_in.png " %}" alt=""></a>
-                                        </li>
-                                        <li>
-                                            <a href="johndoe@domainname.com" target="_self" original-title="mail"><img src="{% static " img/social/icon_header_p.png " %}" alt=""></a>
-                                        </li>
-                                        <li>
-                                            <a href="johndoe@domainname.com" target="_self" original-title="mail"><img src="{% static " img/social/icon_header_ball.png " %}" alt=""></a>
-                                        </li>
-                                    </ul>
-                                </div>
-                            </div>
-                            <div class="clear"></div>
-                            <!--
-<div id="author_review">
-    <h3 class="decoration text-center"><span class="nobacgr">Author</span></h3>
-    <div id="face_social_text">
-        <div class="left_face_social_text span4">
-            <div class="face_big span9"><div class="pix_author"></div></div>
-            <div class="social_link_author">
-                <div class="social_bord"><a href="#" >
-                    <img class="social_decc" src="img/description/facebook_author_icon.png" alt="">
-                </a></div>
-                <div class="social_bord"><a href="#" >
-                    <img class="social_decc" src="img/description/twitter_author_icon.png" alt="">
-                </a></div>
-                <div class="social_bord_last"><a href="#" >
-                    <img class="social_decc" src="img/description/google_author_icon.png" alt="">
-                </a></div>
+                            <div class="flickr"></div>
+                            <div class="flickr"></div>
+                            <div class="flickr"></div>
+                            <div class="flickrl"></div>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>
-        <div class="right_face_social_text span8">
-            <div class="name_surname">John Doe</div>
-            <div class="proff">CEO</div>
-            <div class="text_author_right">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien.</div>
-        </div>
-    </div>
-</div>
--->
-
-                            <!--
-<div class="clear"></div>
-<h4 class="decoration text-center"><span class="nobacgr">Ask a Question</span></h4>
-<div id="asc_a_question">
-
-    <div class="reply_user main_reply">
-        <div class="row-fluid">
-            <div class="span2">
-                <div class="image_face"></div>
-            </div>
-            <div class="span10">
-                <div class="name_and_date"><span class="user_name">User</span> - April 10, 2013 at 7:34 pm - <span class="reply_t">Reply</span></div>
-                <div class="text_reply">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien.</div>
-
-            </div>
-        </div>
-    </div>
-
-    <div class="reply_user subreply">
-        <div class="row-fluid">
-            <div class="span2">
-                <div class="image_face"></div>
-            </div>
-            <div class="span10">
-                <div class="name_and_date"><span class="user_name">Admin</span> - April 10, 2013 at 7:34 pm - <span class="reply_t">Reply</span></div>
-                <div class="text_reply">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien.Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam nec massa ut justo accumsan malesuada ut pharetra sapien.</div>
-
-            </div>
-        </div>
-    </div>
-</div>
--->
-
-                            <!--
-<div id="asc_a_question_form">
-    <h3 class="text-center asc_question_form_name">Ask a <span class="h3_quest">Question</span></h3>
-    <div class="form_question">
-        <div class="row-fluid">
-            <div class="controls controls-row message">
-                <input class="inputp search-query span4" type="text" placeholder="Name*">
-                <input class="inputp search-query span4" type="text" placeholder="Email*">
-                <input class="inputp search-query span4" type="text" placeholder="Website*">
+        <div class="footer_bot">
+            <div class="footer_bott">
+                <div class="fleft">© All Rights Reserved. Design by UOU Design.</div>
+                <div class="fright">
+                    <ul id="social_b" class="socialbott inline">
+                        <li>
+                            <a href="https://twitter.com/" target="_blank" original-title="twitter"><img src="{% static " img/social/icon_footer_face.png " %}" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="https://plus.google.com" target="_blank" original-title="googleplus"><img src="{% static " img/social/icon_footer_g.png " %}" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="https://www.facebook.com" title="facebook" target="_blank"><img src="{% static " img/social/icon_footer_tw.png " %}" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="http://www.linkedin.com/" target="_blank" original-title="linkedin"><img src="{% static " img/social/icon_footer_in.png " %}" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="http://www.linkedin.com/" target="_self" original-title="mail"><img src="{% static " img/social/icon_footer_p.png " %}" alt=""></a>
+                        </li>
+                        <li>
+                            <a href="http://www.linkedin.com/" target="_self" original-title="mail"><img src="{% static " img/social/icon_footer_ball.png " %}" alt=""></a>
+                        </li>
+                    </ul>
+                </div>
                 <div class="clear"></div>
-                <textarea id="redex" class="inputp search-query span12"  rows="5" placeholder="Project description"></textarea>
-                <div class="clear"></div>
-                <div class="tmargin20">
-                    <button type="submit" class="btn"><strong>Send Message</strong></button>
-=======
->>>>>>> e7e3ea3e5f7c53a092c06ebc4d16fc20ac8ef76f
-                </div>
             </div>
         </div>
     </div>
-<<<<<<< HEAD
-</div>
--->
-                        </div>
-                        <div class="sidebar_descr span4">
-                            <div id="back_this_project_block">
-                                <div class="backers_days_blocks first">
-                                    <div class="row-fluid">
-                                        <div class="span1" style="margin-right: 10px">
-                                            <div class="image_first"></div>
-                                        </div>
-                                        <div class="text_backers_days_blocks span10">
-                                            <div class="top_text_backers_days_blocks">480</div>
-                                            <div class="bottom_text_backers_days_blocks">Backers</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="backers_days_blocks">
-                                    <div class="row-fluid">
-                                        <div class="span1" style="margin-right: 10px">
-                                            <div class="image_second"></div>
-                                        </div>
-                                        <div class="text_backers_days_blocks span10">
-                                            <div class="top_text_backers_days_blocks">25,000</div>
-                                            <div class="bottom_text_backers_days_blocks">pledged of $50,000 goal</div>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="backers_days_blocks">
-                                    <div class="row-fluid">
-                                        <div class="span1" style="margin-right: 10px">
-                                            <div class="image_third"></div>
-                                        </div>
-                                        <div class="text_backers_days_blocks span10">
-                                            <div class="top_text_backers_days_blocks">60</div>
-                                            <div class="bottom_text_backers_days_blocks">days to go</div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="back_this_project_button">
-                                <button class="btn btn-large back_project" type="button">
-            <small>BACK THIS PROJECT</small>
-        </button>
-                            </div>
 
-                            <!--
-    <div id="pledges_block">
-        <h3 class="decoration text-center"><span class="nobacgr_desc">Pledges</span></h3>
-        <div class="pledges_block_info">
-            <div class="pledges_block_info_link"><a id="link_pledges_block_info_link_1">Pledge $5 or more</a></div>
-            <div id="pledges_block_info_1">
-                <div class="pledges_block_info_backers">10 backers</div>
-                <div class="pledges_block_info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                <div class="pledges_block_info_estimate_delivery">Estimate delivery: Jan 2013</div>
-            </div>
-        </div>
-        <div class="pledges_block_info">
-            <div class="pledges_block_info_link"><a id="link_pledges_block_info_link_2">Pledge $10 or more</a></div>
-            <div id="pledges_block_info_2">
-                <div class="pledges_block_info_backers">15 backers</div>
-                <div class="pledges_block_info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                <div class="pledges_block_info_estimate_delivery">Estimate delivery: Feb 2013</div>
-            </div>
-        </div>
-        <div class="pledges_block_info">
-            <div class="pledges_block_info_link"><a id="link_pledges_block_info_link_3">Pledge $15 or more</a></div>
-            <div id="pledges_block_info_3">
-                <div class="pledges_block_info_backers">20 backers</div>
-                <div class="pledges_block_info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                <div class="pledges_block_info_estimate_delivery">Estimate delivery: Mar 2013</div>
-            </div>
-        </div>
-        <div class="pledges_block_info">
-            <div class="pledges_block_info_link"><a id="link_pledges_block_info_link_4">Pledge $20 or more</a></div>
-            <div id="pledges_block_info_4">
-                <div class="pledges_block_info_backers">5 backers</div>
-                <div class="pledges_block_info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                <div class="pledges_block_info_estimate_delivery">Estimate delivery: Jan 2013</div>
-            </div>
-        </div>
-        <div class="pledges_block_info">
-            <div class="pledges_block_info_link"><a id="link_pledges_block_info_link_5">Pledge $25 or more</a></div>
-            <div id="pledges_block_info_5">
-                <div class="pledges_block_info_backers">20 backers</div>
-                <div class="pledges_block_info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                <div class="pledges_block_info_estimate_delivery">Estimate delivery: Feb 2013</div>
-            </div>
-        </div>
-        <div class="pledges_block_info">
-            <div class="pledges_block_info_link"><a id="link_pledges_block_info_link_6">Pledge $30 or more</a></div>
-            <div id="pledges_block_info_6">
-                <div class="pledges_block_info_backers">30 backers</div>
-                <div class="pledges_block_info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                <div class="pledges_block_info_estimate_delivery">Estimate delivery: Mar 2013</div>
-            </div>
-        </div>
-        <div class="pledges_block_info">
-            <div class="pledges_block_info_link"><a id="link_pledges_block_info_link_7">Pledge $35 or more</a></div>
-            <div id="pledges_block_info_7">
-                <div class="pledges_block_info_backers">20 backers</div>
-                <div class="pledges_block_info_text">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</div>
-                <div class="pledges_block_info_estimate_delivery">Estimate delivery: Jan 2013</div>
-            </div>
-        </div>
-    </div>
-    -->
+    <script>
+        /* <![CDATA[ */
+        $("#link_pledges_block_info_link_1").click(function() {
+            if ($('#pledges_block_info_1').is(':visible')) {
+                $('#link_pledges_block_info_link_1').addClass('not_active');
+                $("#pledges_block_info_1").toggle();
+            } else {
+                $('#link_pledges_block_info_link_1').removeClass('not_active');
+                $("#pledges_block_info_1").toggle();
+            }
+        });
+        $("#link_pledges_block_info_link_2").click(function() {
+            if ($('#pledges_block_info_2').is(':visible')) {
+                $('#link_pledges_block_info_link_2').addClass('not_active');
+                $("#pledges_block_info_2").toggle();
+            } else {
+                $('#link_pledges_block_info_link_2').removeClass('not_active');
+                $("#pledges_block_info_2").toggle();
+            }
+        });
+        $("#link_pledges_block_info_link_3").click(function() {
+            if ($('#pledges_block_info_3').is(':visible')) {
+                $('#link_pledges_block_info_link_3').addClass('not_active');
+                $("#pledges_block_info_3").toggle();
+            } else {
+                $('#link_pledges_block_info_link_3').removeClass('not_active');
+                $("#pledges_block_info_3").toggle();
+            }
+        });
+        $("#link_pledges_block_info_link_4").click(function() {
+            if ($('#pledges_block_info_4').is(':visible')) {
+                $('#link_pledges_block_info_link_4').addClass('not_active');
+                $("#pledges_block_info_4").toggle();
+            } else {
+                $('#link_pledges_block_info_link_4').removeClass('not_active');
+                $("#pledges_block_info_4").toggle();
+            }
+        });
+        $("#link_pledges_block_info_link_5").click(function() {
+            if ($('#pledges_block_info_5').is(':visible')) {
+                $('#link_pledges_block_info_link_5').addClass('not_active');
+                $("#pledges_block_info_5").toggle();
+            } else {
+                $('#link_pledges_block_info_link_5').removeClass('not_active');
+                $("#pledges_block_info_5").toggle();
+            }
+        });
+        $("#link_pledges_block_info_link_6").click(function() {
+            if ($('#pledges_block_info_6').is(':visible')) {
+                $('#link_pledges_block_info_link_6').addClass('not_active');
+                $("#pledges_block_info_6").toggle();
+            } else {
+                $('#link_pledges_block_info_link_6').removeClass('not_active');
+                $("#pledges_block_info_6").toggle();
+            }
+        });
+        $("#link_pledges_block_info_link_7").click(function() {
+            if ($('#pledges_block_info_7').is(':visible')) {
+                $('#link_pledges_block_info_link_7').addClass('not_active');
+                $("#pledges_block_info_7").toggle();
+            } else {
+                $('#link_pledges_block_info_link_7').removeClass('not_active');
+                $("#pledges_block_info_7").toggle();
+            }
+        });
+        $(function() {
+            var iframe = $('#player1')[0];
+            var player = $f(iframe);
+            var $myCarousel = $('#myCarousel');
+            player.addEvent('ready', function() {
+                // player.addEvent('pause', onPause);
+                player.addEvent('play', onPlay);
+                //player.addEvent('playProgress', onPlayProgress);
+            });
+            $('#myCarousel').bind('slide', function() {
+                player.api('pause');
+                $('#myCarousel').carousel({
+                    interval: 6000
+                })
+            });
 
-                            <div id="payment_getaway">
-                                <!--<h3 class="text-center payment_getaway_name"><span class="title_h3 left_t"></span>Payment Getaway<span class="title_h3 right_t"></span></h3>-->
-                                <h3 class="decoration text-center"><span class="nobacgr_desc">Payment Getaway</span></h3>
-                                <div class="payment_getaway_block">
-                                    <div class="payment_cost">$15</div>
-                                    <div class="your_card">
-                                        <h3>Choose Your Card:</h3>
+            function onPlay(id) {
+                $myCarousel.carousel('pause');
+            }
+        });
+        /* ]]> */
+    </script>
+    <script>
+        /* <![CDATA[ */
+        var a = $('.left_content_descr').height();
+        $('.sidebar_descr').height(a - 70);
+        /* ]]> */
+    </script>
 
-                                        <ul class="choose">
-                                            <li>
-                                                <input id="rfirst" type="radio" name="radio" checked hidden />
-                                                <label for="rfirst">Visa</label>
-                                            </li>
-                                            <li>
-                                                <input id="rsecond" type="radio" name="radio" hidden />
-                                                <label for="rsecond">MasterCard</label>
-                                            </li>
-                                            <li>
-                                                <input id="re" type="radio" name="radio" hidden />
-                                                <label for="re">American Express</label>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                    <div class="payment_getaway_button">
-                                        <button class="btn btn-large make_payment" type="button">
-                    <small>Make Payment</small>
-                </button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            ======= >>>>>>> e7e3ea3e5f7c53a092c06ebc4d16fc20ac8ef76f
-            <div id="footer">
-                <div class="footer">
-                    <div class="row-fluid">
-                        <div class="span3">
-                            <h3>FUNDER</h3>
-                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Morbi vulputate egestas sem, eu cursus ligula ullamcorper non. Curabitur tristique velit eu mauris venenapus</p>
-                        </div>
-                        <div class="span3 foot">
-                            <h4>Recent Tweets</h4>
-                            <div class="tmargin20">
-                                <img class="fleft tw" src="{% static 'img/social_tweet.png' %}" alt="">
-                                <div class="mleft40">
-                                    <span>1234 Street </span>
-                                    <span>4r6yg 456hv  </span>
-                                    <span>Lorem ipus ex vixc ilflf nfnfoof wrfoo rcgetg  erger </span>
-                                    <br>
-                                    <a class="green">http://www.envato.com</a>
-                                </div>
-                                <div class="clear foot"></div>
-                                <img class="fleft tw" src="{% static 'img/social_tweet.png' %}" alt="">
-                                <div class=" mleft40">
-                                    <span>1234 Street </span>
-                                    <span>4r6yg 456hv  </span>
-                                    <span>Lorem ipus ex vixc ilflf n </span>
-                                    <br>
-                                    <a class="green">http://www.envato.com</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="span3 foot">
-                            <h4>Recent Posts</h4>
-                            <div class="tmargin20">
-                                <div class="recents">
-                                    <p class="green"><a href="#">Lorem ipsus dolor sit amet</a></p>
-                                    <p class="green"><a href="#">Proin nibh aufu suscript</a></p>
-                                    <p class="green"><a href="#">Lorem ipsus dolor sit amet</a></p>
-                                </div>
-                                <p class="green recents"><a href="#">LQuri wfcw ertvc</a></p>
-                            </div>
-                        </div>
-                        <div class="span3 foot">
-                            <h4>Flickr Feed</h4>
-                            <div class="flckr">
-                                <div>
-                                    <div class="flickr"></div>
-                                    <div class="flickr"></div>
-                                    <div class="flickr"></div>
-                                    <div class="flickrl"></div>
-
-                                    <div class="flickr"></div>
-                                    <div class="flickr"></div>
-                                    <div class="flickr"></div>
-                                    <div class="flickrl"></div>
-
-                                    <div class="flickr"></div>
-                                    <div class="flickr"></div>
-                                    <div class="flickr"></div>
-                                    <div class="flickrl"></div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="footer_bot">
-                    <div class="footer_bott">
-                        <div class="fleft">© All Rights Reserved. Design by UOU Design.</div>
-                        <div class="fright">
-                            <ul id="social_b" class="socialbott inline">
-                                <li>
-                                    <a href="https://twitter.com/" target="_blank" original-title="twitter"><img src="{% static " img/social/icon_footer_face.png " %}" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="https://plus.google.com" target="_blank" original-title="googleplus"><img src="{% static " img/social/icon_footer_g.png " %}" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="https://www.facebook.com" title="facebook" target="_blank"><img src="{% static " img/social/icon_footer_tw.png " %}" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="http://www.linkedin.com/" target="_blank" original-title="linkedin"><img src="{% static " img/social/icon_footer_in.png " %}" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="http://www.linkedin.com/" target="_self" original-title="mail"><img src="{% static " img/social/icon_footer_p.png " %}" alt=""></a>
-                                </li>
-                                <li>
-                                    <a href="http://www.linkedin.com/" target="_self" original-title="mail"><img src="{% static " img/social/icon_footer_ball.png " %}" alt=""></a>
-                                </li>
-                            </ul>
-                        </div>
-                        <div class="clear"></div>
-                    </div>
-                </div>
-            </div>
-
-            <script>
-                /* <![CDATA[ */
-                $("#link_pledges_block_info_link_1").click(function() {
-                    if ($('#pledges_block_info_1').is(':visible')) {
-                        $('#link_pledges_block_info_link_1').addClass('not_active');
-                        $("#pledges_block_info_1").toggle();
-                    } else {
-                        $('#link_pledges_block_info_link_1').removeClass('not_active');
-                        $("#pledges_block_info_1").toggle();
-                    } <<
-                    << << < HEAD
-                });
-
-                $("#link_pledges_block_info_link_2").click(function() {
-                    if ($('#pledges_block_info_2').is(':visible')) {
-                        $('#link_pledges_block_info_link_2').addClass('not_active');
-                        $("#pledges_block_info_2").toggle();
-                    } else {
-                        $('#link_pledges_block_info_link_2').removeClass('not_active');
-                        $("#pledges_block_info_2").toggle();
-                    }
-                });
-
-                $("#link_pledges_block_info_link_3").click(function() {
-                    if ($('#pledges_block_info_3').is(':visible')) {
-                        $('#link_pledges_block_info_link_3').addClass('not_active');
-                        $("#pledges_block_info_3").toggle();
-                    } else {
-                        $('#link_pledges_block_info_link_3').removeClass('not_active');
-                        $("#pledges_block_info_3").toggle();
-                    }
-                });
-
-                $("#link_pledges_block_info_link_4").click(function() {
-                    if ($('#pledges_block_info_4').is(':visible')) {
-                        $('#link_pledges_block_info_link_4').addClass('not_active');
-                        $("#pledges_block_info_4").toggle();
-                    } else {
-                        $('#link_pledges_block_info_link_4').removeClass('not_active');
-                        $("#pledges_block_info_4").toggle();
-                    }
-                });
-
-                $("#link_pledges_block_info_link_5").click(function() {
-                    if ($('#pledges_block_info_5').is(':visible')) {
-                        $('#link_pledges_block_info_link_5').addClass('not_active');
-                        $("#pledges_block_info_5").toggle();
-                    } else {
-                        $('#link_pledges_block_info_link_5').removeClass('not_active');
-                        $("#pledges_block_info_5").toggle();
-                    }
-                });
-
-                $("#link_pledges_block_info_link_6").click(function() {
-                    if ($('#pledges_block_info_6').is(':visible')) {
-                        $('#link_pledges_block_info_link_6').addClass('not_active');
-                        $("#pledges_block_info_6").toggle();
-                    } else {
-                        $('#link_pledges_block_info_link_6').removeClass('not_active');
-                        $("#pledges_block_info_6").toggle();
-                    }
-                });
-
-                $("#link_pledges_block_info_link_7").click(function() {
-                    if ($('#pledges_block_info_7').is(':visible')) {
-                        $('#link_pledges_block_info_link_7').addClass('not_active');
-                        $("#pledges_block_info_7").toggle();
-                    } else {
-                        $('#link_pledges_block_info_link_7').removeClass('not_active');
-                        $("#pledges_block_info_7").toggle();
-                    }
-                });
-
-                $(function() {
-                var iframe = $('#player1')[0];
-                var player = $f(iframe);
-                var $myCarousel = $('#myCarousel');
-
-                player.addEvent('ready', function() {
-                    // player.addEvent('pause', onPause);
-                    player.addEvent('play', onPlay);
-                    //player.addEvent('playProgress', onPlayProgress);
-                });
-
-
-                $('#myCarousel').bind('slide', function() {
-                    player.api('pause');
-                    $('#myCarousel').carousel({
-                        interval: 6000
-                    })
-                });
-
-
-                function onPlay(id) {
-                    $myCarousel.carousel('pause');
+    <script>
+        /* <![CDATA[ */
+        $('#myCarousel').hover(function() {
+            $('#visiblepanel').toggle();
+        });
+        /* ]]> */
+    </script>
+    <script>
+        /* <![CDATA[ */
+        $(function() {
+            // bind change event to select
+            $('#dynamic_select').bind('change', function() {
+                var url = $(this).val(); // get selected value
+                if (url) { // require a URL
+                    window.location = url; // redirect
                 }
-
-
-                });
-
-                ===
-                === =
-                });
-                $("#link_pledges_block_info_link_2").click(function() {
-                    if ($('#pledges_block_info_2').is(':visible')) {
-                        $('#link_pledges_block_info_link_2').addClass('not_active');
-                        $("#pledges_block_info_2").toggle();
-                    } else {
-                        $('#link_pledges_block_info_link_2').removeClass('not_active');
-                        $("#pledges_block_info_2").toggle();
-                    }
-                });
-                $("#link_pledges_block_info_link_3").click(function() {
-                    if ($('#pledges_block_info_3').is(':visible')) {
-                        $('#link_pledges_block_info_link_3').addClass('not_active');
-                        $("#pledges_block_info_3").toggle();
-                    } else {
-                        $('#link_pledges_block_info_link_3').removeClass('not_active');
-                        $("#pledges_block_info_3").toggle();
-                    }
-                });
-                $("#link_pledges_block_info_link_4").click(function() {
-                    if ($('#pledges_block_info_4').is(':visible')) {
-                        $('#link_pledges_block_info_link_4').addClass('not_active');
-                        $("#pledges_block_info_4").toggle();
-                    } else {
-                        $('#link_pledges_block_info_link_4').removeClass('not_active');
-                        $("#pledges_block_info_4").toggle();
-                    }
-                });
-                $("#link_pledges_block_info_link_5").click(function() {
-                    if ($('#pledges_block_info_5').is(':visible')) {
-                        $('#link_pledges_block_info_link_5').addClass('not_active');
-                        $("#pledges_block_info_5").toggle();
-                    } else {
-                        $('#link_pledges_block_info_link_5').removeClass('not_active');
-                        $("#pledges_block_info_5").toggle();
-                    }
-                });
-                $("#link_pledges_block_info_link_6").click(function() {
-                    if ($('#pledges_block_info_6').is(':visible')) {
-                        $('#link_pledges_block_info_link_6').addClass('not_active');
-                        $("#pledges_block_info_6").toggle();
-                    } else {
-                        $('#link_pledges_block_info_link_6').removeClass('not_active');
-                        $("#pledges_block_info_6").toggle();
-                    }
-                });
-                $("#link_pledges_block_info_link_7").click(function() {
-                    if ($('#pledges_block_info_7').is(':visible')) {
-                        $('#link_pledges_block_info_link_7').addClass('not_active');
-                        $("#pledges_block_info_7").toggle();
-                    } else {
-                        $('#link_pledges_block_info_link_7').removeClass('not_active');
-                        $("#pledges_block_info_7").toggle();
-                    }
-                });
-                $(function() {
-                    var iframe = $('#player1')[0];
-                    var player = $f(iframe);
-                    var $myCarousel = $('#myCarousel');
-                    player.addEvent('ready', function() {
-                        // player.addEvent('pause', onPause);
-                        player.addEvent('play', onPlay);
-                        //player.addEvent('playProgress', onPlayProgress);
-                    });
-                    $('#myCarousel').bind('slide', function() {
-                        player.api('pause');
-                        $('#myCarousel').carousel({
-                            interval: 6000
-                        })
-                    });
-
-                    function onPlay(id) {
-                        $myCarousel.carousel('pause');
-                    }
-                }); >>>
-                >>> > e7e3ea3e5f7c53a092c06ebc4d16fc20ac8ef76f
-                /* ]]> */
-            </script>
-            <script>
-                /* <![CDATA[ */
-                var a = $('.left_content_descr').height();
-                $('.sidebar_descr').height(a - 70);
-                /* ]]> */
-            </script>
-
-            <script>
-                /* <![CDATA[ */
-                $('#myCarousel').hover(function() {
-                    $('#visiblepanel').toggle();
-                });
-                /* ]]> */
-            </script>
-            <script>
-                /* <![CDATA[ */
-                $(function() {
-                    // bind change event to select
-                    $('#dynamic_select').bind('change', function() {
-                        var url = $(this).val(); // get selected value
-                        if (url) { // require a URL
-                            window.location = url; // redirect
-                        }
-                        return false;
-                    });
-                });
-                /* ]]> */
-            </script>
+                return false;
+            });
+        });
+        /* ]]> */
+    </script>
 </body>
 
 </html>
