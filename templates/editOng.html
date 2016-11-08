@@ -16,7 +16,7 @@
     <link href="{% static 'css/bootstrap.css' %}" rel="stylesheet">
     <link href="{% static 'css/jquery-ui.css' %}" rel="stylesheet">
     <link href="{% static 'css/resp.css' %}" rel="stylesheet">
-    <link href="{% static 'css/colorbox.css' %}"rel="stylesheet">
+    <link href="{% static 'css/colorbox.css' %}" rel="stylesheet">
 
     <script type="text/javascript" src="{% static 'js/jquery.selectbox.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jquery.js' %}"></script>
@@ -80,10 +80,10 @@
 <div id="header" class="header">
     <a name="id_home"></a>
         <div class="width titul">
-            <div class="reg inline">
+            <!--<div class="reg inline">
                 <div class="bleft inline login"><a href="#" id="login-link" class="login-link">Login</a></div>
                 <div class="bleft bright inline login"><a href="#" id="reg-link" class="login-link">mudou</a></div>
-            </div>
+            </div>-->
 
             <div class="social inline fright">
                 <ul id="social">
@@ -114,9 +114,9 @@
 
                 <div class="navigation inline">
                     <ul class="nav inline menuleft">
-                        <li class="active"><a class="bleft" href="index.html">Editar ONG</a></li>
-                        <li><a id="link_contact" class="bleft" href="#">Excluir ONG</a></li>
-                        <li><a id="link_partners" class="bleft last" href="#">Sair</a></li>
+                        <li class="active"><a class="bleft" href="">Editar ONG</a></li>
+                        <li><a class="bleft" href="">Excluir ONG</a></li>
+                        <li><a class="bleft last" href="{% url 'index' %}">Sair</a></li>
                     </ul>
                 </div>
             </div>
