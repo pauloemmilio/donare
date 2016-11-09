@@ -228,15 +228,17 @@
 <div class="container-fluid line">
 
     <div class="slides">
-            <div class="search_top">
-                <div class="search" id="searchh">
-                    <span class="white"><strong>Buscar Projeto:</strong></span>
-                    <input id="autocomplete" title="" type="text" class="span7 search-query">
-                    <input type="submit" class="submit" value="search" name="submit">
-                </div>
+        <div class="search_top">
+            <div class="search" id="searchh">
+                <form>
+                <span class="white"><strong>Buscar Projeto:</strong></span>
+                <input id="autocomplete" title="" type="text" class="span7 search-query" name="q">
+                <input type="submit" class="submit" value="search" name="submit">
+                </form>
             </div>
+        </div>
     </div>
-
+    
     <div class="top_widgets black">
         <section class="black">
             <div class="search-wrapper clearfix">
@@ -668,7 +670,7 @@
         {% if ongs.has_previous %}
             <a href="?page={{ ongs.previous_page_number }}">previous</a>
         {% endif %}
-        <span class="current"> Page {{ ongs.number }} of {{ contacts.paginator.num_pages }}. </span>
+        <span class="current"> Page {{ ongs.number }} of {{ ongs.paginator.num_pages }}. </span>
         {% if ongs.has_next %}
             <a href="?page={{ ongs.next_page_number }}">next</a>
         {% endif %}
