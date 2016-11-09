@@ -21,6 +21,7 @@
     <script type="text/javascript" src="{% static 'js/css3-mediaqueries.js' %}"></script>
 
     <style type="text/css">
+
     </style>
 
     <!-- HTML5 shim, for IE6-8 support of HTML5 elements -->
@@ -178,11 +179,10 @@
                                 <div id="backers_content">
                                     <div class="row-fluid">
                                         <div class="updates_block_text">
-                                            
-                                            {%for de in despesas%}
-                                              {% if de.ong.id == ong.id %}
-                                              <div>
-                                                <div class=" span10"> 
+
+                                            {%for de in despesas%} {% if de.ong.id == ong.id %}
+                                            <div>
+                                                <div class=" span10">
                                                     <h4>{{de.tipo}}</h4>
                                                     <p>{{de.descricao}}</p>
                                                     <h4>R$ = {{de.valor}}</h4>
@@ -196,26 +196,24 @@
                                                     <button class="btn btn-large make_payment" type="button">
                                     <small><a href="{% url 'deletar_despesas' ong.id de.id%}" id="reg-link" class="login-link">Excluir</a></small></button>
                                                 </div>
-                                              </div>
+                                            </div>
                                             <br>
                                             <br>
                                             <br>
                                             <br>
                                             <br>
                                             <br>
-                                            <br>
-                                              {% endif %}
-                                            {% endfor %}
-                                            
+                                            <br> {% endif %} {% endfor %}
+
                                             <div class="payment_getaway_button">
                                                 <button class="btn btn-large make_payment" type="button">
                                 <small><a href="{% url 'criar_despesas' ong.id %}" id="reg-link" class="login-link">Cadastrar Despesas</a></small>
                              </button>
                                             </div>
                                         </div>
-                                        
+
                                     </div>
-                                    
+
                                 </div>
                             </div>
                             <div class="tab-pane" id="tab3">
@@ -286,7 +284,7 @@
                         </div>
                     </div>
                     <div class="clear"></div>
-                    
+
                 </div>
                 <div class="sidebar_descr span4">
                     <div id="back_this_project_block">
@@ -537,6 +535,7 @@
                     interval: 6000
                 })
             });
+
             function onPlay(id) {
                 $myCarousel.carousel('pause');
             }

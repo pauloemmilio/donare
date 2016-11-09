@@ -14,7 +14,7 @@ class Ong(models.Model):
     fotos = models.ImageField(
         null = True,
         blank = True,
-        upload_to = 'static/img/ong',
+        upload_to = 'img/ong',
     )
     videoUrl = models.URLField()
     descricao = models.TextField(max_length=500)

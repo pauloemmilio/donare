@@ -8,9 +8,18 @@ from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
 from ong.models import Ong, Despesas
 from ong.form import OngForm, DespesasForm
-
+from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 def index(request):
-    return render(request, 'index.html')
+    ongs = Ong.objects.all()
+    filtro = request.GET.get('q')
+    if filtro:
+        ongs = ongs.filter(name__icontains = filtro)
+        ong = ongs.filter(categoria__icontains = filtro)
+    paginator = Paginator(ongs, 6)
+    page = request.GET.get('page', 1)
+    ongs = paginator.page(page)
+    print("deu certo")
+    return render(request, 'index.html',{'ongs': ongs, 'filtro': filtro })
 
 def ong(request, ong_id):
     ong = Ong.objects.get(pk=ong_id)
@@ -19,12 +28,32 @@ def ong(request, ong_id):
     context_dict = {'ong': ong, 'despesas': despesas}
     return render(request, 'ongs.html', context=context_dict)
 
+
 def ongs_list(request):
     ongs = Ong.objects.all()
     data = {}
     data['object_list'] = ongs
     return render(request, 'index.html', data)
 
+class Busca_Ong(ListView):  
+    ong = Ong.objects.all()
+    context_dict = {'ong': ong}
+    paginate_by = 6
+
+    def get_queryset(self):
+        result = super(Busca_Ong, self).get_queryset()
+
+        query = self.request.GET.get('q')
+        if query:
+            query_list = query.split()
+            result = result.filter(
+                reduce(operator.and_,
+                       (Ong(name__icontains=q) for q in query_list)) |
+                reduce(operator.and_,
+                       (Ong(tipo__icontains=q) for q in query_list))
+            )
+
+        return result
 def criar_ong(request):
 
     form = OngForm()
