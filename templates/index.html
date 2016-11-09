@@ -709,7 +709,7 @@
             <a href="?page={{ ongs.previous_page_number }}">previous</a> {% endif %}
 
                         <span class="current">
-            Page {{ ongs.number }} of {{ contacts.paginator.num_pages }}.
+            Page {{ ongs.number }} of {{ ongs.paginator.num_pages }}.
         </span> {% if ongs.has_next %}
                             <a href="?page={{ ongs.next_page_number }}">next</a> {% endif %}
                             </span>
