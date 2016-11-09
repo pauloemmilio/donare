@@ -116,7 +116,7 @@
 					</section>
 				</section>
 
-				<section id="modelCadastro">
+				<!--<section id="modelCadastro">
             	 		
 					<section id="MeuModalCadastro" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="meuModalLabel" aria-hidden="true">
 						<header class="modal-header">
@@ -131,7 +131,7 @@
 								<h4 class="text-center">Informações e contato:</h4>
 
                    					<h5>Nome</h5>
-                    				<label id="labelForm" for="{{ form.name.auto_id }}"> {{ form.doador.name }} </label>
+                    				<label id="labelForm" for="{{ form.name.auto_id }}"> {{ form.name }} </label>
 
                     				<h5>Data de nascimento</h5>
                     				<label for="{{ form.dataDeNascimento.auto_id }}"> {{ form.dataDeNascimento }} </label>
@@ -154,12 +154,12 @@
 							<button class="button-2-green">Cadastrar</button>
 						</footer>
 					</section>
-				</section>
+				</section> -->
 
 
 				                
         		<div class="bleft inline login"><a href="#MeuModal" id="login-link" class="login-link" role="button" data-toggle="modal">Entrar</a></div>
-                <div class="bleft inline login"><a href="#MeuModalCadastro" id="reg-link" class="login-link" role="button" data-toggle="modal">Cadastre-se</a></div>
+                <div class="bleft inline login"><a href="{% url 'cadastrar' %}" id="reg-link" class="login-link" role="button" data-toggle="modal">Cadastre-se</a></div>
             </div>
 
             <div class="social inline fright">
