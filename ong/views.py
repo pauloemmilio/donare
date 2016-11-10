@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-
+from django.contrib.auth.models import User
 from django.http import HttpResponse
 from django.views.generic import TemplateView,ListView, CreateView
 from django.core.urlresolvers import reverse_lazy
@@ -7,11 +7,30 @@ from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
 from ong.models import Ong, Despesas
-from ong.form import OngForm, DespesasForm
+from ong.form import OngForm, DespesasForm, LoginForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
+from django.contrib.auth import authenticate, login, logout
 def index(request):
     ongs = Ong.objects.all()
     filtro = request.GET.get('q')
+    message = "Pegoo"
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            nome = request.POST['username']
+            senha = request.POST['password']
+            user = authenticate(username = nome, password = senha)
+            if user is not None:
+                if user.is_active:
+                    login(request,user)
+                    print("deu csssderto")
+                    return redirect('index')
+                else:
+                    message = "Não funcionou"
+            else:
+                message = "erro"
+        else:
+            form = LoginForm()
     if filtro:
         ongs = ongs.filter(name__icontains = filtro)
         ong = ongs.filter(categoria__icontains = filtro)
@@ -35,37 +54,49 @@ def ongs_list(request):
     data['object_list'] = ongs
     return render(request, 'index.html', data)
 
-class Busca_Ong(ListView):  
-    ong = Ong.objects.all()
-    context_dict = {'ong': ong}
-    paginate_by = 6
-
-    def get_queryset(self):
-        result = super(Busca_Ong, self).get_queryset()
-
-        query = self.request.GET.get('q')
-        if query:
-            query_list = query.split()
-            result = result.filter(
-                reduce(operator.and_,
-                       (Ong(name__icontains=q) for q in query_list)) |
-                reduce(operator.and_,
-                       (Ong(tipo__icontains=q) for q in query_list))
-            )
-
-        return result
+def logout_page(request):
+    logout(request)
+    return redirect('login')
 def criar_ong(request):
 
     form = OngForm()
     context_dict = {'form': form}
     if request.method == 'POST':
         form = OngForm(request.POST)
-        new_ong = form.save()
+        if form.is_valid():
+            login = form.cleaned_data['email']
+            senha = form.cleaned_data['senha']
+            new_user = User.objects.create_user(login, password=senha)
+            new_user.save()
+            new_ong = form.save()
+        else:
+            message = "Informacoes incorretas"
+       
         return redirect('ong', ong_id = new_ong.id)
     else:
         form = OngForm()
     return render(request, 'register.html', context_dict)
 
+def login_ong(request):
+    message = "Pegoo"
+    if request.method == 'POST':
+        form = LoginForm(request.POST)
+        if form.is_valid():
+            nome = request.POST['username']
+            senha = request.POST['passowrd']
+            user = authenticate(username = nome, password = senha)
+            if user is not None:
+                if user.is_active:
+                    login(request,user)
+                    print("deu csssderto")
+                    return redirect('index')
+                else:
+                    message = "Não funcionou"
+            else:
+                message = "erro"
+        else:
+            form = LoginForm()
+    return render(request, 'login.html',{'message':message, 'form':form})
 def alterar_ong(request, ong_id):
 	template_name = 'editOng.html'
 	ong = Ong.objects.get(pk = ong_id)
