@@ -1,6 +1,8 @@
 from django.conf.urls import url
 from ong import views
 from django.contrib.auth.decorators import login_required
+from django.conf import settings
+from django.conf.urls.static import static
 urlpatterns = [
 
  url(r'^$', views.index, name='index'),
@@ -15,4 +17,4 @@ urlpatterns = [
  url(r'^ong/despesas/(?P<ong_id>[0-9]+)/delete(?P<despesas_id>[0-9]+)/', views.deletar_despesas, name='deletar_despesas'),
 url(r'^logout/', login_required(views.logout_page), name='logout'),
 
-]
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
