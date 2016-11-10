@@ -17,13 +17,13 @@ def profile(request, doador_id):
 	return render(request, 'profile.html', context=context_dict)
 
 def cadastrar_doador(request):
-
+    
     form = DoadorForm()
     context_dict = {'form': form}
     if request.method == 'POST':
         form = DoadorForm(request.POST)
-        form.save()
-        return redirect('index')
+        new_doador = form.save()
+        return redirect('profile', doador_id = new_doador.id)
     else:
         form = DoadorForm()
     return render(request, 'cadastrar.html', context_dict)
@@ -34,6 +34,7 @@ def editar_doador(request,doador_id):
     if request.method == 'POST':
         form = DoadorForm(request.POST, instance=doador)
         form.save()
+        return redirect('profile', doador_id = doador.id)
     else:
         form = DoadorForm(instance=doador)
     context_dict = {'form': form, 'doador_id': doador_id}

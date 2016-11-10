@@ -1,5 +1,5 @@
 from django.db import models
-
+from django.contrib.auth.models import User
 class Ong(models.Model):
     name = models.CharField(max_length=200)
     categoria = models.CharField(max_length=100)
@@ -24,9 +24,10 @@ class Ong(models.Model):
     def __unicode__(self):
         return self.name
 
-    def get_absolute_url(self):
-        return reverse('alterar_ong', kwargs={'pk': self.pk})
-
+class OngLogin(models.Model):
+    ong = models.ForeignKey(Ong, null = False, blank = True, on_delete=models.CASCADE)
+    user = models.OneToOneField(User)
+    
 class Despesas(models.Model):
     tipo = models.CharField(max_length=200)
     descricao = models.TextField(max_length=500)
