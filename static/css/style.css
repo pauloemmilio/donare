@@ -43,6 +43,12 @@ table {
     border-spacing: 0;
 }
 
+#ongDescription {
+  white-space: nowrap;
+  width: 85%;                   
+  overflow: hidden;              /* "overflow" value must be different from "visible" */ 
+  text-overflow:    ellipsis;
+}
 
     /*  HEADER  STYLE   */
 .logodonare{
