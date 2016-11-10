@@ -124,9 +124,12 @@ def Despesas_list(request):
 def criar_despesas(request, ong_id):
     form = DespesasForm()
     context_dict = {'form': form}
+    o = Ong.objects.get(pk = ong_id)
     if request.method == 'POST':
         form = DespesasForm(request.POST)
-        new_despesa = form.save()
+        despesa = Despesas(tipo=request.POST['tipo'], descricao=request.POST['descricao'], valor=request.POST['valor'], ong= o)
+        despesa.save()
+        # new_despesa = form.save()
         return redirect('ong', ong_id)
     else:
         form = DespesasForm()

@@ -33,6 +33,10 @@ class Despesas(models.Model):
     descricao = models.TextField(max_length=500)
     valor = models.IntegerField()
     ong = models.ForeignKey(Ong)
+    # def save(self, ong_id):
+    #     if not self.pk :
+    #        self.ong = ong_id
+    #     super(Despesas , self).save()
     def __str__(self):
         return self.tipo
     def __unicode__(self):

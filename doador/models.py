@@ -1,4 +1,5 @@
 from django.db import models
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -14,5 +15,7 @@ class Doador(models.Model):
     def __unicode__(self):
         return self.name
 
-    def get_absolute_url(self):
-        return reverse('alterar_doador', kwargs={'pk': self.pk})
+class DoadorLogin(models.Model):
+    doador = models.ForeignKey(Doador, null = False, blank = True, on_delete=models.CASCADE)
+    user = models.OneToOneField(User)
+    
