@@ -795,7 +795,8 @@
                                     </div>
                                     <div class="folder border">
                                         <a href="{% url 'ong' o.id %}">
-                                            <div class="author_proj proj_1"></div>
+                                            <div>                                                <img src="{% static o.fotos %}" alt="">
+</div>
                                         </a>
                                     </div>
                                     <div class="folder lorem lines">
@@ -831,20 +832,20 @@
                     <div class="decoration text-center proj">
                         <div class="btn-group nobacgr">
                             <ul id="portfolio-filter">
-                            {% if ongs.has_previous %}
+                                {% if ongs.has_previous %}
                                 <li>
-                                <a href="?page={{ ongs.previous_page_number }}"><button class="btn">anterior</button></a>
+                                    <a href="?page={{ ongs.previous_page_number }}"><button class="btn">anterior</button></a>
                                 </li>
-                            {% endif %}
-                            <li>
-                            <button class="btn">página {{ongs.number}} de {{ ongs.paginator.num_pages }}</button>
-                            </li>
-                            {% if ongs.has_next %}
+                                {% endif %}
                                 <li>
-                                <a href="?page={{ ongs.next_page_number }}"><button class="btn">próximo</button></a>
+                                    <button class="btn">página {{ongs.number}} de {{ ongs.paginator.num_pages }}</button>
                                 </li>
-                            {% endif %}
-                            </ul>    
+                                {% if ongs.has_next %}
+                                <li>
+                                    <a href="?page={{ ongs.next_page_number }}"><button class="btn">próximo</button></a>
+                                </li>
+                                {% endif %}
+                            </ul>
                         </div>
                         <a name="id_reg" id="registr"></a>
                     </div>
@@ -908,28 +909,28 @@
         </div>-->
             <a name="id_cont"></a>
             <div class="partner_bott">
-            <div class="partners">
-            <h1 class="decoration text-center conts"><span class="nobacgr">Entre em contato conosco</span></h1>
-            <div class="contacts">
-                <div class="bborder">
-                    <p><strong>Envie-nos uma <span class="green">Mensagem</span></strong></p>
-                </div>
-                <form id="contact-us-form" class="row-fluid message" data-ajax="true">
-                    <div class="controls controls-row">
-                        <input class="inputp search-query span4" type="text" name="name" placeholder="Nome*">
-                        <input class="inputp search-query span4" type="text" name="email" placeholder="Email*">
-                        <input class="inputp search-query span4" type="text" name="website" placeholder="Website*">
-                        <div class="clear"></div>
-                        <textarea id="redex" name="message" class="inputp search-query span12" rows="5" placeholder="Descrição do projeto"></textarea>
-                        <div class="clear"></div>
-                        <div class="tmargin20">
-                            <button type="button" class="btn" name="submit" value="submit" id="contact_submit"><strong>Envie a Mensagem</strong></button>
+                <div class="partners">
+                    <h1 class="decoration text-center conts"><span class="nobacgr">Entre em contato conosco</span></h1>
+                    <div class="contacts">
+                        <div class="bborder">
+                            <p><strong>Envie-nos uma <span class="green">Mensagem</span></strong></p>
                         </div>
-                        <div id="error_placeholder" class="form-message text-green"></div>
+                        <form id="contact-us-form" class="row-fluid message" data-ajax="true">
+                            <div class="controls controls-row">
+                                <input class="inputp search-query span4" type="text" name="name" placeholder="Nome*">
+                                <input class="inputp search-query span4" type="text" name="email" placeholder="Email*">
+                                <input class="inputp search-query span4" type="text" name="website" placeholder="Website*">
+                                <div class="clear"></div>
+                                <textarea id="redex" name="message" class="inputp search-query span12" rows="5" placeholder="Descrição do projeto"></textarea>
+                                <div class="clear"></div>
+                                <div class="tmargin20">
+                                    <button type="button" class="btn" name="submit" value="submit" id="contact_submit"><strong>Envie a Mensagem</strong></button>
+                                </div>
+                                <div id="error_placeholder" class="form-message text-green"></div>
+                            </div>
+                        </form>
                     </div>
-                </form>
-            </div>
-            </div>
+                </div>
             </div>
             <div class="decoration text-center line_decor"></div>
             <div class="row-fluid contacts_row">
