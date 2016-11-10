@@ -136,16 +136,18 @@ def criar_despesas(request, ong_id):
     return render(request, 'cadastrarDespesas.html', context_dict)
 
 def alterar_despesas(request, ong_id, despesas_id):
-	template_name = 'editDespesas.html'
-	despesas = Despesas.objects.get(pk = despesas_id)
-	if request.method == 'POST':
-		form = DespesasForm(request.POST, instance=despesas)
-		new_despesa = form.save()
-		return redirect('ong', ong_id)
-	else:
-		form = DespesasForm(instance = despesas)
-	context_dict = {'form': form, 'despesas_id': despesas_id}
-	return render(request, template_name, context_dict)
+    template_name = 'editDespesas.html'
+    despesas = Despesas.objects.get(pk = despesas_id)
+    o = Ong.objects.get(pk = ong_id)
+    if request.method == 'POST':
+        form = DespesasForm(request.POST, instance=despesas)
+        despesa = Despesas(tipo=request.POST['tipo'], descricao=request.POST['descricao'], valor=request.POST['valor'], ong= o)
+        despesa.save()
+        return redirect('ong', ong_id)
+    else:
+        form = DespesasForm(instance = despesas)
+    context_dict = {'form': form, 'despesas_id': despesas_id}
+    return render(request, template_name, context_dict)
 
 def deletar_despesas(request, ong_id, despesas_id):
     despesas = Despesas.objects.get(pk = despesas_id)
