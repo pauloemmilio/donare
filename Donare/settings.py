@@ -118,3 +118,9 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# Physical system path where the static files are stored. Files that are being uploaded by the user.
+MEDIA_ROOT = os.path.join(BASE_DIR, '../donare/static/')
+
+# URL that your MEDIA files will be accessible through the browser.
+MEDIA_URL = '/media/'
