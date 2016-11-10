@@ -1,5 +1,7 @@
 from doador.forms import DoadorForm
 from doador.models import Doador
+from django.contrib.auth import authenticate, login, logout
+from django.contrib.auth.models import User
 
 from django.forms import ModelForm
 from django.shortcuts import render, redirect, get_object_or_404
@@ -22,7 +24,15 @@ def cadastrar_doador(request):
     context_dict = {'form': form}
     if request.method == 'POST':
         form = DoadorForm(request.POST)
-        new_doador = form.save()
+        if form.is_valid():
+            login = form.cleaned_data['email']
+            senha = form.cleaned_data['senha']
+            new_user = User.objects.create_user(login, password=senha)
+            new_user.save()
+            new_doador = form.save()
+        else:
+            message = "Informacoes incorretas"
+        
         return redirect('profile', doador_id = new_doador.id)
     else:
         form = DoadorForm()
