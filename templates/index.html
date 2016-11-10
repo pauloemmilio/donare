@@ -92,8 +92,8 @@
                             <button class="close" data-dismiss="modal" aria-hidden="true">x</button>
                             <h3 class="text-center" id="meuModalLabel">Logar no sistema</h3>
                         </header>
+                        <form action="" class="form-horizontal" method="post">
                         <section class="modal-body">
-                            <form action="" class="form-horizontal" method="post">
                                 {{message}} {%csrf_token%}
                                 <div class="control-group">
                                     <label for="" class="control-label">Email</label>
@@ -106,16 +106,15 @@
                                     <div class="controls">
                                         <input type="Password" id="inputPassword" placeholder="Senha" name="password" type="password" value="">
                                     </div>
-                                    <label>
-                                    <input type="submit" value="logar" class="btn btn-primary" />
                                 </label>
                                 </div>
-                            </form>
+                            
                         </section>
                         <footer class="modal-footer">
-                            <button class="button-2-green" data-dismiss="modal" aria-hidden="true">Fechar</button>
-                            <button class="button-2-green">Entrar</button>
+                            <label>
+                            <input type="submit" value="logar" class="btn btn-primary" />
                         </footer>
+                        </form>
                     </section>
                 </section>
 
