@@ -227,6 +227,7 @@ table {
 
 }
 .search input[type="text"]{
+	color: white;
     height: 33px;
     border-radius: 25px;
     width: 66%;
