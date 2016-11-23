@@ -23,9 +23,11 @@ def index(request):
             senha = request.POST['password']
             user = authenticate(username = nome, password = senha)
             if user is not None:
+                ong = get_ong(nome, senha)
                 if user.is_active:
                     login(request,user)
-                    return redirect('index')
+                    return redirect('ong', ong_id = ong.id)
+                    
                 else:
                     message = "Não funcionou"
             else:
@@ -48,6 +50,10 @@ def ong(request, ong_id):
     context_dict = {'ong': ong, 'despesas': despesas}
     return render(request, 'ongs.html', context=context_dict)
 
+def get_ong(email, senha):
+    for ong in Ong.objects.all():
+        if (ong.email == email) and (ong.senha == senha):
+            return ong
 
 def ongs_list(request):
     ongs = Ong.objects.all()
