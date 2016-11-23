@@ -104,9 +104,16 @@
 
                 <div class="navigation inline fright">
                     <ul class="nav inline menuleft">
-                        <li class=""><a class="bleft" href="{% url 'alterar_ong' ong.id %}">Editar ONG</a></li>
-                        <li><a class="bleft" href="{% url 'deletar_ong' ong.id %}">Excluir ONG</a></li>
-                        <li><a class="bleft" href="{% url 'logout' %}">Sair</a></li>
+
+                        {% if request.user.is_authenticated %}
+                            {% if request.user.username == ong.email %}
+                                <li class=""><a class="bleft" href="{% url 'alterar_ong' ong.id %}">Editar ONG</a></li>
+                                <li><a class="bleft" href="{% url 'deletar_ong' ong.id %}">Excluir ONG</a></li>
+                                <li><a class="bleft" href="{% url 'logout' %}">Sair</a></li>
+                            {% else %}
+                                <li><a class="bleft" href="{% url 'logout' %}">Sair</a></li>
+                            {% endif %}
+                        {% endif %}
                     </ul>
                 </div>
             </div>
