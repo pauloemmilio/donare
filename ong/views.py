@@ -151,8 +151,11 @@ def alterar_despesas(request, ong_id, despesas_id):
     o = Ong.objects.get(pk = ong_id)
     if request.method == 'POST':
         form = DespesasForm(request.POST, instance=despesas)
-        despesa = Despesas(tipo=request.POST['tipo'], descricao=request.POST['descricao'], valor=request.POST['valor'], ong= o)
-        despesa.save()
+        despesas.tipo=request.POST['tipo']
+        despesas.descricao=request.POST['descricao']
+        despesas.valor=request.POST['valor']
+        despesas.ong= o
+        despesas.save()
         return redirect('ong', ong_id)
     else:
         form = DespesasForm(instance = despesas)
