@@ -57,7 +57,7 @@ def ongs_list(request):
 
 def logout_page(request):
     logout(request)
-    return redirect('login')
+    return redirect('index')
 
 def is_ong(user):
     return user.groups.filter(name='Ong').exists()
@@ -65,6 +65,7 @@ def is_ong(user):
 def is_ong(user):
     return user.groups.filter(name='Doador').exists()
 def criar_ong(request):
+    
     g = Group.objects.get(name='Ong')
 
     form = OngForm()
