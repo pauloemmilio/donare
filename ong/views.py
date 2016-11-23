@@ -57,7 +57,7 @@ def ongs_list(request):
 
 def logout_page(request):
     logout(request)
-    return redirect('index')
+    return redirect(index)
 
 def is_ong(user):
     return user.groups.filter(name='Ong').exists()
@@ -99,7 +99,6 @@ def login_ong(request):
                 if user.is_active:
                     login(request,user)
                     print("deu csssderto")
-                    return redirect('index')
                 else:
                     message = "Não funcionou"
             else:
