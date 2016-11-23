@@ -239,6 +239,7 @@
     </div>
 
     <div class="contentt">
+
         <div class="container-fluid line">
 
             <div class="slides">
@@ -246,8 +247,8 @@
                     <div class="search" id="searchh">
                         <form>
                             <span class="white"><strong>Buscar Projeto:</strong></span>
-                            <input id="autocomplete" title="" type="text" class="span7 search-query" name="q">
-                            <input type="submit" class="submit" value="search" name="submit">
+                            <input id="autocomplete" title="" type="text"  class="span7 search-query" name="q">
+                            <input type="submit" class="submit" value="Buscar" name="submit" onclick="parent.location.href='#ongs'">
                         </form>
                     </div>
                 </div>
@@ -747,6 +748,7 @@
                         </div>
                     </div>
             </div>
+            <div id="ongs">
             <h1 class="decoration text-center proj"><span class="nobacgr">Projetos</span></h1>
             <section class="section content" id="portfolio-list">
                 <div class="wrapper row-fluid projects font_p" id="contentWrapper">
@@ -776,7 +778,7 @@
                             <div class="portfolio-listing creative development block" style="display: block;">
                                 <div class="span4 bordered">
                                     <div class="folder">
-                                        <h4 class="text-center title"><a href="{% url 'ong' o.id %}">{{o.name}}</h4></div>
+                                        <h4 class="text-center title"><a href="{% url 'ong' o.id %}">{{o.name}}</a></h4></div>
                             <div class="proj_name">
                                 <div class="clear"></div>
                                 <span class="fleft author">{{o.categoria}}</span>
@@ -794,8 +796,9 @@
                                     </div>
                                     <div class="folder border">
                                         <a href="{% url 'ong' o.id %}">
-                                            <div>                                                <img src="{% static o.fotos %}" alt="">
-</div>
+                                            <div>                                                
+                                           		<img src="{% static o.fotos %}" alt="">
+											</div>
                                         </a>
                                     </div>
                                     <div class="folder lorem lines">
@@ -826,6 +829,8 @@
                 </div>
                 <!-- end of .content-wrapper -->
             </section>
+            </div>
+
             <div class="btns">
                 <div class="btn-toolbar text-center">
                     <div class="decoration text-center proj">
@@ -847,6 +852,7 @@
                             </ul>
                         </div>
                         <a name="id_reg" id="registr"></a>
+                        
                     </div>
                 </div>
             </div>
