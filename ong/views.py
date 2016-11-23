@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.contrib.auth.models import User
+from django.contrib.auth.models import User, Group
 from django.http import HttpResponse
 from django.views.generic import TemplateView,ListView, CreateView
 from django.core.urlresolvers import reverse_lazy
@@ -10,6 +10,8 @@ from ong.models import Ong, Despesas
 from ong.form import OngForm, DespesasForm, LoginForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth import authenticate, login, logout
+
+    
 def index(request):
     ongs = Ong.objects.all()
     filtro = request.GET.get('q')
@@ -23,7 +25,6 @@ def index(request):
             if user is not None:
                 if user.is_active:
                     login(request,user)
-                    print("deu csssderto")
                     return redirect('index')
                 else:
                     message = "Não funcionou"
@@ -57,18 +58,26 @@ def ongs_list(request):
 def logout_page(request):
     logout(request)
     return redirect('login')
+
+def is_ong(user):
+    return user.groups.filter(name='Ong').exists()
+
+def is_ong(user):
+    return user.groups.filter(name='Doador').exists()
 def criar_ong(request):
+    g = Group.objects.get(name='Ong')
 
     form = OngForm()
     context_dict = {'form': form}
     if request.method == 'POST':
-        form = OngForm(request.POST)
+        form = OngForm(request.POST,request.FILES)
         if form.is_valid():
             login = form.cleaned_data['email']
             senha = form.cleaned_data['senha']
             new_user = User.objects.create_user(login, password=senha)
             new_user.save()
             new_ong = form.save()
+            new_user.groups.add(Group.objects.get(name='Ong'))
         else:
             message = "Informacoes incorretas"
        
@@ -80,7 +89,7 @@ def criar_ong(request):
 def login_ong(request):
     message = "Pegoo"
     if request.method == 'POST':
-        form = LoginForm(request.POST)
+        form = LoginForm(request.POST, request.FILE)
         if form.is_valid():
             nome = request.POST['username']
             senha = request.POST['passowrd']
