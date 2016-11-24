@@ -28,6 +28,10 @@
     <script type="text/javascript" src="{% static 'js/jquery.tweet.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/jflickrfeed.min.js' %}"></script>
     <script type="text/javascript" src="{% static 'js/scripts.js' %}"></script>
+    <script type="text/javascript" src="{% static 'js/jquery.maskedinput.min.js' %}"></script>
+    
+
+    
 
 
     <link rel="shortcut icon" href="favicon.png" />
@@ -72,6 +76,14 @@
             }
         });
         /* ]]> */
+    </script>
+
+    <script>
+    	$(function() {
+    		$("#data").mask("99/99/9999");
+
+    	})
+
     </script>
 
 </head>
@@ -421,25 +433,22 @@
         <div class="row-fluid border_proj duration">
             <div class="span12 ">
                 <div class="column_project">
-                    <h4 class="text-center">Informações e contato:</h4>
+                   <h4 class="text-center">Informações e contato:</h4>
 
-                    <h5>Nome</h5>
-                    <label id="labelForm" for="{{ form.name.auto_id }}"> {{ form.name }} </label>
+                   <h5>Nome</h5>
+	               <label id="labelForm" for="{{ form.name.auto_id }}"> {{ form.name }} </label>
 
-                    <h5>Data de nascimento</h5>
-                    <label for="{{ form.dataDeNascimento.auto_id }}"> {{ form.dataDeNascimento }} </label>
+                   <h5>Data de nascimento</h5>
+                   <label name="data" id="data" for="{{ form.dataDeNascimento.auto_id }}" > {{ form.dataDeNascimento }} </label>
+                    
+                   <h5>CPF</h5>
+                   <label for="{{ form.cpf.auto_id }}"> {{ form.cpf }} </label>
 
-                    <h5>CPF</h5>
+                   <h5>E-mail</h5>
+                   <label for="{{ form.email.auto_id }}"> {{ form.email }} </label>
                     
-                    <label for="{{ form.cpf.auto_id }}"> {{ form.cpf }} </label>
-                    
-                    <h5>E-mail</h5>
-                    
-                    <label for="{{ form.email.auto_id }}"> {{ form.email }} </label>
-                    
-                    <h5>Senha</h5>
-                    
-                    <label for="{{ form.senha.auto_id }}"> {{ form.senha }} </label>
+                   <h5>Senha</h5>
+                   <label for="{{ form.senha.auto_id }}"> {{ form.senha }} </label>
 
                 </div>
             </div>
