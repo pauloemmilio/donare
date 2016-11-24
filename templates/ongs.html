@@ -187,30 +187,41 @@
                                     <div class="row-fluid">
                                         <div class="updates_block_text">
 
-                                            {%for de in despesas%} {% if de.ong.id == ong.id %}
-                                            <div>
-                                                <div class=" span10">
-                                                    <h4>{{de.tipo}}</h4>
-                                                    <p>{{de.descricao}}</p>
-                                                    <h4>R$ = {{de.valor}}</h4>
-                                                </div>
-                                                <div class=" span2">
+                                            {%for de in despesas%}
+                                                {% if de.ong.id == ong.id %}
+                                                <div>
+                                                    {% if request.user.is_authenticated %}
+                                                        {% if request.user.username == ong.email %}
+                                                            <div class=" span10">
+                                                                <h4>{{de.tipo}}</h4>
+                                                                <p>{{de.descricao}}</p>
+                                                                <h4>R$ = {{de.valor}}</h4>
+                                                            </div>
+                                                            <div class=" span2">
 
-                                                    <button class="btn btn-large make_payment" type="button">
-                                    <small><a href="{% url 'alterar_despesas' ong.id de.id %}" id="reg-link" class="login-link">Editar</a></small></button>
-                                                    <br>
-                                                    <br>
-                                                    <button class="btn btn-large make_payment" type="button">
-                                    <small><a href="{% url 'deletar_despesas' ong.id de.id%}" id="reg-link" class="login-link">Excluir</a></small></button>
+                                                                <button class="btn btn-large make_payment" type="button"><small><a href="{% url 'alterar_despesas' ong.id de.id %}" id="reg-link" class="login-link">Editar</a></small></button>
+                                                                <br>
+                                                                <br>
+                                                                <button class="btn btn-large make_payment" type="button"><small><a href="{% url 'deletar_despesas' ong.id de.id%}" id="reg-link" class="login-link">Excluir</a></small></button>
+                                                            </div>
+                                                        {% else %}
+                                                            <div class=" span12">
+                                                                <h4>{{de.tipo}}</h4>
+                                                                <p>{{de.descricao}}</p>
+                                                                <h4>R$ = {{de.valor}}</h4>
+                                                            </div>
+                                                        {% endif %}
+                                                    {% endif %}
                                                 </div>
-                                            </div>
-                                            <br>
-                                            <br>
-                                            <br>
-                                            <br>
-                                            <br>
-                                            <br>
-                                            <br> {% endif %} {% endfor %}
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                <br>
+                                                {% endif %}
+                                            {% endfor %}
 
                                             <div class="payment_getaway_button">
                                                 <button class="btn btn-large make_payment" type="button">
@@ -244,20 +255,23 @@
                                                 <p>{{ong.email}}</p>
                                             </div>
                                             </br>
-                                            <h3>Dados da conta</h3>
-                                            <div class="updates_block_text">
-                                                <h4>Nome do Titular</h4>
-                                                <p>{{ong.nomeTitular}}</p>
-                                            </div>
-                                            <div class="updates_block_text">
-                                                <h4>Agência</h4>
-                                                <p>{{ong.agencia}}</p>
-                                            </div>
-                                            <div class="updates_block_text">
-                                                <h4>Conta</h4>
-                                                <p>{{ong.conta}}</p>
-                                            </div>
-
+                                            {% if request.user.is_authenticated %}
+                                                {% if request.user.username == ong.email %}
+                                                    <h3>Dados da conta</h3>
+                                                    <div class="updates_block_text">
+                                                        <h4>Nome do Titular</h4>
+                                                        <p>{{ong.nomeTitular}}</p>
+                                                    </div>
+                                                    <div class="updates_block_text">
+                                                        <h4>Agência</h4>
+                                                        <p>{{ong.agencia}}</p>
+                                                    </div>
+                                                    <div class="updates_block_text">
+                                                        <h4>Conta</h4>
+                                                        <p>{{ong.conta}}</p>
+                                                    </div>
+                                                {% endif %}
+                                            {% endif %}
                                         </div>
                                     </div>
                                 </div>
