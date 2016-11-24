@@ -41,3 +41,15 @@ class Despesas(models.Model):
         return self.tipo
     def __unicode__(self):
         return self.tipo
+
+class Doacao(models.Model):
+    name = models.CharField(max_length = 1000)
+    dataDeNascimento = models.CharField(max_length = 10)
+    cpf = models.IntegerField()
+    valor = models.IntegerField()
+    ong = models.ForeignKey(Ong)
+
+    def __str__(self):
+        return self.valor
+    def __unicode__(self):
+        return self.valor

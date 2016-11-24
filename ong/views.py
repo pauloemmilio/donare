@@ -6,8 +6,8 @@ from django.core.urlresolvers import reverse_lazy
 from django.forms import ModelForm
 from django.contrib.auth.forms import UserCreationForm
 # Create your views here.
-from ong.models import Ong, Despesas
-from ong.form import OngForm, DespesasForm, LoginForm
+from ong.models import Ong, Despesas, Doacao
+from ong.form import OngForm, DespesasForm, LoginForm, DoacaoForm
 from django.core.paginator import Paginator, EmptyPage, PageNotAnInteger
 from django.contrib.auth import authenticate, login, logout
 
@@ -71,9 +71,7 @@ def is_ong(user):
 def is_ong(user):
     return user.groups.filter(name='Doador').exists()
 def criar_ong(request):
-    
     g = Group.objects.get(name='Ong')
-
     form = OngForm()
     context_dict = {'form': form}
     if request.method == 'POST':
@@ -87,11 +85,29 @@ def criar_ong(request):
             new_user.groups.add(Group.objects.get(name='Ong'))
         else:
             message = "Informacoes incorretas"
-       
         return redirect('ong', ong_id = new_ong.id)
     else:
         form = OngForm()
     return render(request, 'register.html', context_dict)
+
+def doar_ong(request, ong_id):
+    o = Ong.objects.get(pk = ong_id)
+    form = DoacaoForm()
+    context_dict = {'form': form}
+    if request.method == 'POST':
+        form = DoacaoForm(request.POST)
+        doacao = Doacao(name=request.POST['name'], dataDeNascimento=request.POST['dataDeNascimento'], cpf=request.POST['cpf'], valor=request.POST['valor'], ong = o)
+        doacao.save()
+        return redirect('ong', ong_id)
+    else:
+        form = DoacaoForm()
+    return render(request, 'doacao.html', context_dict)
+
+def Doacoes_list(request):
+    doacoes = Doacoes.objects.all()
+    data = {}
+    data['object_list'] = doacoes
+    return render(request, 'index.html', data)
 
 def login_ong(request):
     message = "Pegoo"
@@ -128,7 +144,6 @@ def deletar_ong(request, ong_id):
     ong = Ong.objects.get(pk = ong_id)
     ong.delete()
     return redirect('index')
-
 
 def Despesas_list(request):
     despesas = Despesas.objects.all()

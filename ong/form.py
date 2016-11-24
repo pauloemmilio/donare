@@ -1,5 +1,5 @@
 from django import forms
-from ong.models import Ong, Despesas
+from ong.models import Ong, Despesas, Doacao
 
 class OngForm(forms.ModelForm):
         class Meta:
@@ -38,3 +38,12 @@ class LoginForm(forms.Form):
 			'username': forms.TextInput(attrs={'class':'form-control', 'type':'text'}),
 			'password': forms.CharField(widget=forms.PasswordInput())
 		}
+
+class DoacaoForm (forms.ModelForm):
+      class Meta:
+            model = Doacao
+            fields=['name',
+            'dataDeNascimento',
+            'cpf',
+            'valor',
+            'ong']

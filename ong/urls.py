@@ -10,6 +10,7 @@ urlpatterns = [
  url(r'^new', views.criar_ong, name='criar'),
  url(r'^$', views.login_ong, name='logar'),
  url(r'^ong/(?P<ong_id>[0-9]+)/edit', views.alterar_ong, name='alterar_ong'),
+ url(r'^ong/(?P<ong_id>[0-9]+)/doar', views.doar_ong, name='doar_ong'),
  url(r'^ong/delete/(?P<ong_id>[0-9]+)/', views.deletar_ong, name='deletar_ong'),
  url(r'^ong/(?P<ong_id>[0-9]+)/', login_required(views.ong), name='ong'),
  url(r'^ong/despesas/(?P<ong_id>[0-9]+)/new', login_required(views.criar_despesas), name='criar_despesas'),
